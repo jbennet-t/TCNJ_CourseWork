@@ -1,0 +1,617 @@
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 16 0
+  38              		.syntax unified
+  39              	@ 16 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 2
+
+
+  42              		.thumb
+  43              		.syntax unified
+  44              	.L2:
+  17:main.c        **** 
+  18:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  19:main.c        **** 
+  20:main.c        ****     for(;;)
+  21:main.c        ****     {
+  22:main.c        ****         
+  23:main.c        ****         LED1_Write(0);
+  45              		.loc 1 23 0 discriminator 1
+  46 0004 0020     		movs	r0, #0
+  47 0006 FFF7FEFF 		bl	LED1_Write
+  48              	.LVL0:
+  24:main.c        ****         CyDelay( 500);
+  49              		.loc 1 24 0 discriminator 1
+  50 000a 4FF4FA70 		mov	r0, #500
+  51 000e FFF7FEFF 		bl	CyDelay
+  52              	.LVL1:
+  25:main.c        ****         LED1_Write(1);
+  53              		.loc 1 25 0 discriminator 1
+  54 0012 0120     		movs	r0, #1
+  55 0014 FFF7FEFF 		bl	LED1_Write
+  56              	.LVL2:
+  26:main.c        ****         CyDelay( 500);
+  57              		.loc 1 26 0 discriminator 1
+  58 0018 4FF4FA70 		mov	r0, #500
+  59 001c FFF7FEFF 		bl	CyDelay
+  60              	.LVL3:
+  27:main.c        ****         
+  28:main.c        ****         LED2_Write( ~Button1_Read() );
+  61              		.loc 1 28 0 discriminator 1
+  62 0020 FFF7FEFF 		bl	Button1_Read
+  63              	.LVL4:
+  64 0024 C043     		mvns	r0, r0
+  65 0026 C0B2     		uxtb	r0, r0
+  66 0028 FFF7FEFF 		bl	LED2_Write
+  67              	.LVL5:
+  68 002c EAE7     		b	.L2
+  69              		.cfi_endproc
+  70              	.LFE63:
+  71              		.size	main, .-main
+  72 002e 00BF     		.text
+  73              	.Letext0:
+  74              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  75              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  76              		.file 4 "Generated_Source\\PSoC5/LED1.h"
+  77              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+  78              		.file 6 "Generated_Source\\PSoC5/Button1.h"
+  79              		.file 7 "Generated_Source\\PSoC5/LED2.h"
+  80              		.file 8 "Generated_Source\\PSoC5/core_cm3.h"
+  81              		.section	.debug_info,"",%progbits
+  82              	.Ldebug_info0:
+  83 0000 5A010000 		.4byte	0x15a
+  84 0004 0400     		.2byte	0x4
+  85 0006 00000000 		.4byte	.Ldebug_abbrev0
+  86 000a 04       		.byte	0x4
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 3
+
+
+  87 000b 01       		.uleb128 0x1
+  88 000c 45000000 		.4byte	.LASF20
+  89 0010 0C       		.byte	0xc
+  90 0011 39000000 		.4byte	.LASF21
+  91 0015 8F010000 		.4byte	.LASF22
+  92 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  93 001d 00000000 		.4byte	0
+  94 0021 00000000 		.4byte	.Ldebug_line0
+  95 0025 02       		.uleb128 0x2
+  96 0026 01       		.byte	0x1
+  97 0027 06       		.byte	0x6
+  98 0028 4A010000 		.4byte	.LASF0
+  99 002c 02       		.uleb128 0x2
+ 100 002d 01       		.byte	0x1
+ 101 002e 08       		.byte	0x8
+ 102 002f 04010000 		.4byte	.LASF1
+ 103 0033 02       		.uleb128 0x2
+ 104 0034 02       		.byte	0x2
+ 105 0035 05       		.byte	0x5
+ 106 0036 7D010000 		.4byte	.LASF2
+ 107 003a 02       		.uleb128 0x2
+ 108 003b 02       		.byte	0x2
+ 109 003c 07       		.byte	0x7
+ 110 003d 0E000000 		.4byte	.LASF3
+ 111 0041 03       		.uleb128 0x3
+ 112 0042 62010000 		.4byte	.LASF9
+ 113 0046 02       		.byte	0x2
+ 114 0047 3F       		.byte	0x3f
+ 115 0048 4C000000 		.4byte	0x4c
+ 116 004c 02       		.uleb128 0x2
+ 117 004d 04       		.byte	0x4
+ 118 004e 05       		.byte	0x5
+ 119 004f 17010000 		.4byte	.LASF4
+ 120 0053 02       		.uleb128 0x2
+ 121 0054 04       		.byte	0x4
+ 122 0055 07       		.byte	0x7
+ 123 0056 DB000000 		.4byte	.LASF5
+ 124 005a 02       		.uleb128 0x2
+ 125 005b 08       		.byte	0x8
+ 126 005c 05       		.byte	0x5
+ 127 005d 00000000 		.4byte	.LASF6
+ 128 0061 02       		.uleb128 0x2
+ 129 0062 08       		.byte	0x8
+ 130 0063 07       		.byte	0x7
+ 131 0064 ED000000 		.4byte	.LASF7
+ 132 0068 04       		.uleb128 0x4
+ 133 0069 04       		.byte	0x4
+ 134 006a 05       		.byte	0x5
+ 135 006b 696E7400 		.ascii	"int\000"
+ 136 006f 02       		.uleb128 0x2
+ 137 0070 04       		.byte	0x4
+ 138 0071 07       		.byte	0x7
+ 139 0072 21000000 		.4byte	.LASF8
+ 140 0076 03       		.uleb128 0x3
+ 141 0077 87010000 		.4byte	.LASF10
+ 142 007b 03       		.byte	0x3
+ 143 007c 2C       		.byte	0x2c
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 4
+
+
+ 144 007d 41000000 		.4byte	0x41
+ 145 0081 02       		.uleb128 0x2
+ 146 0082 04       		.byte	0x4
+ 147 0083 04       		.byte	0x4
+ 148 0084 77010000 		.4byte	.LASF11
+ 149 0088 02       		.uleb128 0x2
+ 150 0089 08       		.byte	0x8
+ 151 008a 04       		.byte	0x4
+ 152 008b 2D010000 		.4byte	.LASF12
+ 153 008f 02       		.uleb128 0x2
+ 154 0090 01       		.byte	0x1
+ 155 0091 08       		.byte	0x8
+ 156 0092 12010000 		.4byte	.LASF13
+ 157 0096 02       		.uleb128 0x2
+ 158 0097 04       		.byte	0x4
+ 159 0098 07       		.byte	0x7
+ 160 0099 34010000 		.4byte	.LASF14
+ 161 009d 02       		.uleb128 0x2
+ 162 009e 08       		.byte	0x8
+ 163 009f 04       		.byte	0x4
+ 164 00a0 56010000 		.4byte	.LASF15
+ 165 00a4 05       		.uleb128 0x5
+ 166 00a5 40000000 		.4byte	.LASF23
+ 167 00a9 01       		.byte	0x1
+ 168 00aa 0E       		.byte	0xe
+ 169 00ab 68000000 		.4byte	0x68
+ 170 00af 00000000 		.4byte	.LFB63
+ 171 00b3 2E000000 		.4byte	.LFE63-.LFB63
+ 172 00b7 01       		.uleb128 0x1
+ 173 00b8 9C       		.byte	0x9c
+ 174 00b9 20010000 		.4byte	0x120
+ 175 00bd 06       		.uleb128 0x6
+ 176 00be 0A000000 		.4byte	.LVL0
+ 177 00c2 31010000 		.4byte	0x131
+ 178 00c6 D0000000 		.4byte	0xd0
+ 179 00ca 07       		.uleb128 0x7
+ 180 00cb 01       		.uleb128 0x1
+ 181 00cc 50       		.byte	0x50
+ 182 00cd 01       		.uleb128 0x1
+ 183 00ce 30       		.byte	0x30
+ 184 00cf 00       		.byte	0
+ 185 00d0 06       		.uleb128 0x6
+ 186 00d1 12000000 		.4byte	.LVL1
+ 187 00d5 3C010000 		.4byte	0x13c
+ 188 00d9 E5000000 		.4byte	0xe5
+ 189 00dd 07       		.uleb128 0x7
+ 190 00de 01       		.uleb128 0x1
+ 191 00df 50       		.byte	0x50
+ 192 00e0 03       		.uleb128 0x3
+ 193 00e1 0A       		.byte	0xa
+ 194 00e2 F401     		.2byte	0x1f4
+ 195 00e4 00       		.byte	0
+ 196 00e5 06       		.uleb128 0x6
+ 197 00e6 18000000 		.4byte	.LVL2
+ 198 00ea 31010000 		.4byte	0x131
+ 199 00ee F8000000 		.4byte	0xf8
+ 200 00f2 07       		.uleb128 0x7
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 5
+
+
+ 201 00f3 01       		.uleb128 0x1
+ 202 00f4 50       		.byte	0x50
+ 203 00f5 01       		.uleb128 0x1
+ 204 00f6 31       		.byte	0x31
+ 205 00f7 00       		.byte	0
+ 206 00f8 06       		.uleb128 0x6
+ 207 00f9 20000000 		.4byte	.LVL3
+ 208 00fd 3C010000 		.4byte	0x13c
+ 209 0101 0D010000 		.4byte	0x10d
+ 210 0105 07       		.uleb128 0x7
+ 211 0106 01       		.uleb128 0x1
+ 212 0107 50       		.byte	0x50
+ 213 0108 03       		.uleb128 0x3
+ 214 0109 0A       		.byte	0xa
+ 215 010a F401     		.2byte	0x1f4
+ 216 010c 00       		.byte	0
+ 217 010d 08       		.uleb128 0x8
+ 218 010e 24000000 		.4byte	.LVL4
+ 219 0112 47010000 		.4byte	0x147
+ 220 0116 08       		.uleb128 0x8
+ 221 0117 2C000000 		.4byte	.LVL5
+ 222 011b 52010000 		.4byte	0x152
+ 223 011f 00       		.byte	0
+ 224 0120 09       		.uleb128 0x9
+ 225 0121 3D010000 		.4byte	.LASF24
+ 226 0125 08       		.byte	0x8
+ 227 0126 1207     		.2byte	0x712
+ 228 0128 2C010000 		.4byte	0x12c
+ 229 012c 0A       		.uleb128 0xa
+ 230 012d 76000000 		.4byte	0x76
+ 231 0131 0B       		.uleb128 0xb
+ 232 0132 6C010000 		.4byte	.LASF16
+ 233 0136 6C010000 		.4byte	.LASF16
+ 234 013a 04       		.byte	0x4
+ 235 013b 26       		.byte	0x26
+ 236 013c 0B       		.uleb128 0xb
+ 237 013d D3000000 		.4byte	.LASF17
+ 238 0141 D3000000 		.4byte	.LASF17
+ 239 0145 05       		.byte	0x5
+ 240 0146 76       		.byte	0x76
+ 241 0147 0B       		.uleb128 0xb
+ 242 0148 20010000 		.4byte	.LASF18
+ 243 014c 20010000 		.4byte	.LASF18
+ 244 0150 06       		.byte	0x6
+ 245 0151 29       		.byte	0x29
+ 246 0152 0B       		.uleb128 0xb
+ 247 0153 2E000000 		.4byte	.LASF19
+ 248 0157 2E000000 		.4byte	.LASF19
+ 249 015b 07       		.byte	0x7
+ 250 015c 26       		.byte	0x26
+ 251 015d 00       		.byte	0
+ 252              		.section	.debug_abbrev,"",%progbits
+ 253              	.Ldebug_abbrev0:
+ 254 0000 01       		.uleb128 0x1
+ 255 0001 11       		.uleb128 0x11
+ 256 0002 01       		.byte	0x1
+ 257 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 6
+
+
+ 258 0004 0E       		.uleb128 0xe
+ 259 0005 13       		.uleb128 0x13
+ 260 0006 0B       		.uleb128 0xb
+ 261 0007 03       		.uleb128 0x3
+ 262 0008 0E       		.uleb128 0xe
+ 263 0009 1B       		.uleb128 0x1b
+ 264 000a 0E       		.uleb128 0xe
+ 265 000b 55       		.uleb128 0x55
+ 266 000c 17       		.uleb128 0x17
+ 267 000d 11       		.uleb128 0x11
+ 268 000e 01       		.uleb128 0x1
+ 269 000f 10       		.uleb128 0x10
+ 270 0010 17       		.uleb128 0x17
+ 271 0011 00       		.byte	0
+ 272 0012 00       		.byte	0
+ 273 0013 02       		.uleb128 0x2
+ 274 0014 24       		.uleb128 0x24
+ 275 0015 00       		.byte	0
+ 276 0016 0B       		.uleb128 0xb
+ 277 0017 0B       		.uleb128 0xb
+ 278 0018 3E       		.uleb128 0x3e
+ 279 0019 0B       		.uleb128 0xb
+ 280 001a 03       		.uleb128 0x3
+ 281 001b 0E       		.uleb128 0xe
+ 282 001c 00       		.byte	0
+ 283 001d 00       		.byte	0
+ 284 001e 03       		.uleb128 0x3
+ 285 001f 16       		.uleb128 0x16
+ 286 0020 00       		.byte	0
+ 287 0021 03       		.uleb128 0x3
+ 288 0022 0E       		.uleb128 0xe
+ 289 0023 3A       		.uleb128 0x3a
+ 290 0024 0B       		.uleb128 0xb
+ 291 0025 3B       		.uleb128 0x3b
+ 292 0026 0B       		.uleb128 0xb
+ 293 0027 49       		.uleb128 0x49
+ 294 0028 13       		.uleb128 0x13
+ 295 0029 00       		.byte	0
+ 296 002a 00       		.byte	0
+ 297 002b 04       		.uleb128 0x4
+ 298 002c 24       		.uleb128 0x24
+ 299 002d 00       		.byte	0
+ 300 002e 0B       		.uleb128 0xb
+ 301 002f 0B       		.uleb128 0xb
+ 302 0030 3E       		.uleb128 0x3e
+ 303 0031 0B       		.uleb128 0xb
+ 304 0032 03       		.uleb128 0x3
+ 305 0033 08       		.uleb128 0x8
+ 306 0034 00       		.byte	0
+ 307 0035 00       		.byte	0
+ 308 0036 05       		.uleb128 0x5
+ 309 0037 2E       		.uleb128 0x2e
+ 310 0038 01       		.byte	0x1
+ 311 0039 3F       		.uleb128 0x3f
+ 312 003a 19       		.uleb128 0x19
+ 313 003b 03       		.uleb128 0x3
+ 314 003c 0E       		.uleb128 0xe
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 7
+
+
+ 315 003d 3A       		.uleb128 0x3a
+ 316 003e 0B       		.uleb128 0xb
+ 317 003f 3B       		.uleb128 0x3b
+ 318 0040 0B       		.uleb128 0xb
+ 319 0041 27       		.uleb128 0x27
+ 320 0042 19       		.uleb128 0x19
+ 321 0043 49       		.uleb128 0x49
+ 322 0044 13       		.uleb128 0x13
+ 323 0045 8701     		.uleb128 0x87
+ 324 0047 19       		.uleb128 0x19
+ 325 0048 11       		.uleb128 0x11
+ 326 0049 01       		.uleb128 0x1
+ 327 004a 12       		.uleb128 0x12
+ 328 004b 06       		.uleb128 0x6
+ 329 004c 40       		.uleb128 0x40
+ 330 004d 18       		.uleb128 0x18
+ 331 004e 9742     		.uleb128 0x2117
+ 332 0050 19       		.uleb128 0x19
+ 333 0051 01       		.uleb128 0x1
+ 334 0052 13       		.uleb128 0x13
+ 335 0053 00       		.byte	0
+ 336 0054 00       		.byte	0
+ 337 0055 06       		.uleb128 0x6
+ 338 0056 898201   		.uleb128 0x4109
+ 339 0059 01       		.byte	0x1
+ 340 005a 11       		.uleb128 0x11
+ 341 005b 01       		.uleb128 0x1
+ 342 005c 31       		.uleb128 0x31
+ 343 005d 13       		.uleb128 0x13
+ 344 005e 01       		.uleb128 0x1
+ 345 005f 13       		.uleb128 0x13
+ 346 0060 00       		.byte	0
+ 347 0061 00       		.byte	0
+ 348 0062 07       		.uleb128 0x7
+ 349 0063 8A8201   		.uleb128 0x410a
+ 350 0066 00       		.byte	0
+ 351 0067 02       		.uleb128 0x2
+ 352 0068 18       		.uleb128 0x18
+ 353 0069 9142     		.uleb128 0x2111
+ 354 006b 18       		.uleb128 0x18
+ 355 006c 00       		.byte	0
+ 356 006d 00       		.byte	0
+ 357 006e 08       		.uleb128 0x8
+ 358 006f 898201   		.uleb128 0x4109
+ 359 0072 00       		.byte	0
+ 360 0073 11       		.uleb128 0x11
+ 361 0074 01       		.uleb128 0x1
+ 362 0075 31       		.uleb128 0x31
+ 363 0076 13       		.uleb128 0x13
+ 364 0077 00       		.byte	0
+ 365 0078 00       		.byte	0
+ 366 0079 09       		.uleb128 0x9
+ 367 007a 34       		.uleb128 0x34
+ 368 007b 00       		.byte	0
+ 369 007c 03       		.uleb128 0x3
+ 370 007d 0E       		.uleb128 0xe
+ 371 007e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 8
+
+
+ 372 007f 0B       		.uleb128 0xb
+ 373 0080 3B       		.uleb128 0x3b
+ 374 0081 05       		.uleb128 0x5
+ 375 0082 49       		.uleb128 0x49
+ 376 0083 13       		.uleb128 0x13
+ 377 0084 3F       		.uleb128 0x3f
+ 378 0085 19       		.uleb128 0x19
+ 379 0086 3C       		.uleb128 0x3c
+ 380 0087 19       		.uleb128 0x19
+ 381 0088 00       		.byte	0
+ 382 0089 00       		.byte	0
+ 383 008a 0A       		.uleb128 0xa
+ 384 008b 35       		.uleb128 0x35
+ 385 008c 00       		.byte	0
+ 386 008d 49       		.uleb128 0x49
+ 387 008e 13       		.uleb128 0x13
+ 388 008f 00       		.byte	0
+ 389 0090 00       		.byte	0
+ 390 0091 0B       		.uleb128 0xb
+ 391 0092 2E       		.uleb128 0x2e
+ 392 0093 00       		.byte	0
+ 393 0094 3F       		.uleb128 0x3f
+ 394 0095 19       		.uleb128 0x19
+ 395 0096 3C       		.uleb128 0x3c
+ 396 0097 19       		.uleb128 0x19
+ 397 0098 6E       		.uleb128 0x6e
+ 398 0099 0E       		.uleb128 0xe
+ 399 009a 03       		.uleb128 0x3
+ 400 009b 0E       		.uleb128 0xe
+ 401 009c 3A       		.uleb128 0x3a
+ 402 009d 0B       		.uleb128 0xb
+ 403 009e 3B       		.uleb128 0x3b
+ 404 009f 0B       		.uleb128 0xb
+ 405 00a0 00       		.byte	0
+ 406 00a1 00       		.byte	0
+ 407 00a2 00       		.byte	0
+ 408              		.section	.debug_aranges,"",%progbits
+ 409 0000 1C000000 		.4byte	0x1c
+ 410 0004 0200     		.2byte	0x2
+ 411 0006 00000000 		.4byte	.Ldebug_info0
+ 412 000a 04       		.byte	0x4
+ 413 000b 00       		.byte	0
+ 414 000c 0000     		.2byte	0
+ 415 000e 0000     		.2byte	0
+ 416 0010 00000000 		.4byte	.LFB63
+ 417 0014 2E000000 		.4byte	.LFE63-.LFB63
+ 418 0018 00000000 		.4byte	0
+ 419 001c 00000000 		.4byte	0
+ 420              		.section	.debug_ranges,"",%progbits
+ 421              	.Ldebug_ranges0:
+ 422 0000 00000000 		.4byte	.LFB63
+ 423 0004 2E000000 		.4byte	.LFE63
+ 424 0008 00000000 		.4byte	0
+ 425 000c 00000000 		.4byte	0
+ 426              		.section	.debug_line,"",%progbits
+ 427              	.Ldebug_line0:
+ 428 0000 9A010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 9
+
+
+ 428      02006B01 
+ 428      00000201 
+ 428      FB0E0D00 
+ 428      01010101 
+ 429              	.LASF6:
+ 430 0000 6C6F6E67 		.ascii	"long long int\000"
+ 430      206C6F6E 
+ 430      6720696E 
+ 430      7400
+ 431              	.LASF3:
+ 432 000e 73686F72 		.ascii	"short unsigned int\000"
+ 432      7420756E 
+ 432      7369676E 
+ 432      65642069 
+ 432      6E7400
+ 433              	.LASF8:
+ 434 0021 756E7369 		.ascii	"unsigned int\000"
+ 434      676E6564 
+ 434      20696E74 
+ 434      00
+ 435              	.LASF19:
+ 436 002e 4C454432 		.ascii	"LED2_Write\000"
+ 436      5F577269 
+ 436      746500
+ 437              	.LASF21:
+ 438 0039 6D61696E 		.ascii	"main.c\000"
+ 438      2E6300
+ 439              	.LASF23:
+ 440 0040 6D61696E 		.ascii	"main\000"
+ 440      00
+ 441              	.LASF20:
+ 442 0045 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 442      43313120 
+ 442      352E342E 
+ 442      31203230 
+ 442      31363036 
+ 443 0078 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 443      20726576 
+ 443      6973696F 
+ 443      6E203233 
+ 443      37373135 
+ 444 00ab 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 444      66756E63 
+ 444      74696F6E 
+ 444      2D736563 
+ 444      74696F6E 
+ 445              	.LASF17:
+ 446 00d3 43794465 		.ascii	"CyDelay\000"
+ 446      6C617900 
+ 447              	.LASF5:
+ 448 00db 6C6F6E67 		.ascii	"long unsigned int\000"
+ 448      20756E73 
+ 448      69676E65 
+ 448      6420696E 
+ 448      7400
+ 449              	.LASF7:
+ 450 00ed 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 10
+
+
+ 450      206C6F6E 
+ 450      6720756E 
+ 450      7369676E 
+ 450      65642069 
+ 451              	.LASF1:
+ 452 0104 756E7369 		.ascii	"unsigned char\000"
+ 452      676E6564 
+ 452      20636861 
+ 452      7200
+ 453              	.LASF13:
+ 454 0112 63686172 		.ascii	"char\000"
+ 454      00
+ 455              	.LASF4:
+ 456 0117 6C6F6E67 		.ascii	"long int\000"
+ 456      20696E74 
+ 456      00
+ 457              	.LASF18:
+ 458 0120 42757474 		.ascii	"Button1_Read\000"
+ 458      6F6E315F 
+ 458      52656164 
+ 458      00
+ 459              	.LASF12:
+ 460 012d 646F7562 		.ascii	"double\000"
+ 460      6C6500
+ 461              	.LASF14:
+ 462 0134 73697A65 		.ascii	"sizetype\000"
+ 462      74797065 
+ 462      00
+ 463              	.LASF24:
+ 464 013d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 464      52784275 
+ 464      66666572 
+ 464      00
+ 465              	.LASF0:
+ 466 014a 7369676E 		.ascii	"signed char\000"
+ 466      65642063 
+ 466      68617200 
+ 467              	.LASF15:
+ 468 0156 6C6F6E67 		.ascii	"long double\000"
+ 468      20646F75 
+ 468      626C6500 
+ 469              	.LASF9:
+ 470 0162 5F5F696E 		.ascii	"__int32_t\000"
+ 470      7433325F 
+ 470      7400
+ 471              	.LASF16:
+ 472 016c 4C454431 		.ascii	"LED1_Write\000"
+ 472      5F577269 
+ 472      746500
+ 473              	.LASF11:
+ 474 0177 666C6F61 		.ascii	"float\000"
+ 474      7400
+ 475              	.LASF2:
+ 476 017d 73686F72 		.ascii	"short int\000"
+ 476      7420696E 
+ 476      7400
+ 477              	.LASF10:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccrGPNGJ.s 			page 11
+
+
+ 478 0187 696E7433 		.ascii	"int32_t\000"
+ 478      325F7400 
+ 479              	.LASF22:
+ 480 018f 433A5C55 		.ascii	"C:\\Users\\sinow\\Documents\\PSoC Creator\\Workspac"
+ 480      73657273 
+ 480      5C73696E 
+ 480      6F775C44 
+ 480      6F63756D 
+ 481 01bd 6530345C 		.ascii	"e04\\BlinkLED.cydsn\000"
+ 481      426C696E 
+ 481      6B4C4544 
+ 481      2E637964 
+ 481      736E00
+ 482              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

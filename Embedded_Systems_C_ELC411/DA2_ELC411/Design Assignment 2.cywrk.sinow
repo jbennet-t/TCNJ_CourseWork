@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Design Assignment 2">
+<ExpandedNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\TopDesign</v>
+<v>Design Assignment 2\Design01\Design01.cydwr</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Pins</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Analog</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Clocks</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Interrupts</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\DMA</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\System</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Directives</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Flash Security</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\EEPROM</v>
+<v>Design Assignment 2\Design01\Header Files</v>
+<v>Design Assignment 2\Design01\Header Files\cyapicallbacks.h</v>
+<v>Design Assignment 2\Design01\Source Files</v>
+<v>Design Assignment 2\Design01\Source Files\inner_prod_asm.s</v>
+<v>Design Assignment 2\Design01\Source Files\main.c</v>
+<v>Design Assignment 2\Design01\Generated_Source</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\TopDesign</v>
+<v>Design Assignment 2\Design01\Design01.cydwr</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Pins</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Analog</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Clocks</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Interrupts</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\DMA</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\System</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Directives</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\Flash Security</v>
+<v>Design Assignment 2\Design01\Design01.cydwr\EEPROM</v>
+<v>Design Assignment 2\Design01\Header Files</v>
+<v>Design Assignment 2\Design01\Header Files\cyapicallbacks.h</v>
+<v>Design Assignment 2\Design01\Source Files</v>
+<v>Design Assignment 2\Design01\Source Files\inner_prod_asm.s</v>
+<v>Design Assignment 2\Design01\Source Files\main.c</v>
+<v>Design Assignment 2\Design01\Generated_Source</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cy_boot</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\Pin_1</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\Pin_2</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydevice.h</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Design Assignment 2\Design01\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\TopDesign</v>
+<v>Design Assignment 2\Design01\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\TopDesign</v>
+<v>Design Assignment 2\Design01\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\CortexM3</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\inner_prod_asm.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
+<v>Design Assignment 2\Design01\Design01.gpdsc</v>
+<v>Design Assignment 2\Design01\Design01.rpt</v>
+<v>Design Assignment 2\Design01\Design01_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\CortexM3</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\inner_prod_asm.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
+<v>Design Assignment 2\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
+<v>Design Assignment 2\Design01\Design01.gpdsc</v>
+<v>Design Assignment 2\Design01\Design01.rpt</v>
+<v>Design Assignment 2\Design01\Design01_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\PSoC 5LP Architecture TRM</v>
+<v>Design Assignment 2\Design01\CY8C58LP Family Datasheet</v>
+<v>Design Assignment 2\Design01\System Reference Guides</v>
+<v>Design Assignment 2\Design01\System Reference Guides\cy_boot_v5_70</v>
+<v>Design Assignment 2\Design01\cy_pins_v2_20</v>
+<v>Design Assignment 2\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design Assignment 2</v>
+<v>Design Assignment 2\Design01</v>
+<v>Design Assignment 2\Design01\PSoC 5LP Architecture TRM</v>
+<v>Design Assignment 2\Design01\CY8C58LP Family Datasheet</v>
+<v>Design Assignment 2\Design01\System Reference Guides</v>
+<v>Design Assignment 2\Design01\System Reference Guides\cy_boot_v5_70</v>
+<v>Design Assignment 2\Design01\cy_pins_v2_20</v>
+<v>Design Assignment 2\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\main.c" />
+<name v=".\inner_prod_asm.s" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="963, 466" SelectedTabbedMdiWindow="c74e8dbc-7fb9-4a66-bbc2-e2ac50c918a8"><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Design Assignment 2\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="cc06e3ca-9189-4d7e-88f6-d30db14dfdee" /><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Design Assignment 2\Design01.cydsn\main.c" Guid="c74e8dbc-7fb9-4a66-bbc2-e2ac50c918a8" /><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Design Assignment 2\inner_prod_asm.s" Guid="ec880182-2f2b-4cae-92eb-685364e30cf2" /><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Design Assignment 2\Design01.cydsn\Design01.cydwr" Guid="ac691b15-8812-4bc3-9ad0-166ccf5d3c40" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

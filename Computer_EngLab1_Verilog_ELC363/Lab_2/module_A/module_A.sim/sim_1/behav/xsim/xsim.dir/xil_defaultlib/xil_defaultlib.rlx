@@ -1,0 +1,7 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/sinow/Documents/ELC363-Lab/Lab_2/module_A/module_A.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/sinow/Documents/ELC363-Lab/Lab_2/module_A/module_A.srcs/sim_1/new/ripple_adder_64_tb.v,1569445951,verilog,,,,ripple_adder_64_tb,,,,,,,,
+C:/Users/sinow/Documents/ELC363-Lab/Lab_2/module_A/module_A.srcs/sources_1/new/ripple_adder_64.v,1569445599,verilog,,C:/Users/sinow/Documents/ELC363-Lab/Lab_2/module_A/module_A.srcs/sim_1/new/ripple_adder_64_tb.v,,AND_gate;OR_gate;XOR_gate;full_adder;ripple_adder_64,,,,,,,,

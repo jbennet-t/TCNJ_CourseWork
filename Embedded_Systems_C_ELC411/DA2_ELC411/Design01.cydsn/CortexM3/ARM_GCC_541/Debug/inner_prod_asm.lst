@@ -1,0 +1,38 @@
+ARM GAS  ..\inner_prod_asm.s 			page 1
+
+
+   1              	  .syntax unified
+   2              	    .text
+   3              	
+   4              	
+   5              	    .global inner_prod_asm
+   6              	    .func inner_prod_asm, inner_prod_asm
+   7              	    .thumb_func
+   8              	inner_prod_asm:
+   9              	   
+  10 0000 F0B4     	    PUSH {r4,r5,r6,r7}
+  11 0002 4FF00004 	    MOV r4,#0
+  12 0006 4FF00007 	    MOV r7,#0
+  13              	   
+  14              	   
+  15              	    Loop:
+  16 000a BA42     	    CMP r2,r7
+  17 000c 09DD     	    BLE continue
+  18              	   
+  19 000e 07F10107 	    ADD r7,r7,#1
+  20 0012 30F9025B 	    LDRSH r5,[r0],#2
+  21 0016 31F9026B 	    LDRSH r6,[r1],#2
+  22 001a 05FB06F5 	    MUL r5,r5,r6
+  23 001e 2C44     	    ADD r4,r4,r5
+  24              	    
+  25 0020 F3E7     	    B Loop
+  26              	   
+  27              	    continue:
+  28 0022 4FEA2440 	    ASR r0,r4,#16
+  29 0026 F0BC     	    POP {r4,r5,r6,r7}
+  30              	   
+  31 0028 7047     	    BX lr
+  32              	    .endfunc
+  33              	
+  34              	
+  35              	    .end

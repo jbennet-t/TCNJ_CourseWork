@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../module_B.srcs/sources_1/new/ripple_adder_64_2bit_look_ahead.v" \
+"../../../../module_B.srcs/sim_1/new/LA_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

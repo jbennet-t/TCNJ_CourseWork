@@ -1,0 +1,7 @@
+C:\Users\sinow\Documents\PSoC Creator\Workspace04\GenSquareWave.cydsn\GenSquareWave.cyprj|1fc336f8-87cb-4864-a83b-72f3adac3d6f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|62ceb322-1c66-4db3-9cb8-c3b378475106
+C:\Users\sinow\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|bda8a118-da85-4c4b-b4ad-48c83883d111
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|13c34dcf-be49-42b8-95f0-a0b6d31c04e5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|069bba18-fda4-4ef5-a67c-ae2af72ca974
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3ed8d134-4fc4-4a08-8ebb-7a9ffd009f27
+C:\Users\sinow\Documents\PSoC Creator\Workspace04\BlinkLED.cydsn\BlinkLED.cyprj|2a1bce9a-a00d-4535-a41f-69bf37e7a03a

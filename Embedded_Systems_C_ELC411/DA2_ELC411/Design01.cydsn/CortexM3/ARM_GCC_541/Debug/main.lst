@@ -1,0 +1,995 @@
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	h_tst
+  20              		.data
+  21              		.align	2
+  22              		.type	h_tst, %object
+  23              		.size	h_tst, 64
+  24              	h_tst:
+  25 0000 990B     		.short	2969
+  26 0002 A10D     		.short	3489
+  27 0004 2F1A     		.short	6703
+  28 0006 BFE8     		.short	-5953
+  29 0008 17FA     		.short	-1513
+  30 000a 6519     		.short	6501
+  31 000c 8902     		.short	649
+  32 000e 2522     		.short	8741
+  33 0010 8002     		.short	640
+  34 0012 23EE     		.short	-4573
+  35 0014 100B     		.short	2832
+  36 0016 01D0     		.short	-12287
+  37 0018 BAE7     		.short	-6214
+  38 001a 4CFB     		.short	-1204
+  39 001c E0ED     		.short	-4640
+  40 001e 37EA     		.short	-5577
+  41 0020 F301     		.short	499
+  42 0022 2EF0     		.short	-4050
+  43 0024 1803     		.short	792
+  44 0026 93FC     		.short	-877
+  45 0028 9105     		.short	1425
+  46 002a 9228     		.short	10386
+  47 002c 94FA     		.short	-1388
+  48 002e BAF3     		.short	-3142
+  49 0030 0CCD     		.short	-13044
+  50 0032 16F8     		.short	-2026
+  51 0034 1AF4     		.short	-3046
+  52 0036 5229     		.short	10578
+  53 0038 5AF5     		.short	-2726
+  54 003a 8216     		.short	5762
+  55 003c 95EC     		.short	-4971
+  56 003e 5E22     		.short	8798
+  57              		.global	x_tst
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 2
+
+
+  58              		.align	2
+  59              		.type	x_tst, %object
+  60              		.size	x_tst, 64
+  61              	x_tst:
+  62 0040 4311     		.short	4419
+  63 0042 140B     		.short	2836
+  64 0044 B4F7     		.short	-2124
+  65 0046 152E     		.short	11797
+  66 0048 C8F8     		.short	-1848
+  67 004a AA1B     		.short	7082
+  68 004c 8EF3     		.short	-3186
+  69 004e 81F6     		.short	-2431
+  70 0050 49CB     		.short	-13495
+  71 0052 95F0     		.short	-3947
+  72 0054 79F2     		.short	-3463
+  73 0056 5E1C     		.short	7262
+  74 0058 FC03     		.short	1020
+  75 005a 5DF9     		.short	-1699
+  76 005c 2CFB     		.short	-1236
+  77 005e 1E39     		.short	14622
+  78 0060 26FD     		.short	-730
+  79 0062 3C27     		.short	10044
+  80 0064 B109     		.short	2481
+  81 0066 B411     		.short	4532
+  82 0068 A6FB     		.short	-1114
+  83 006a 431F     		.short	8003
+  84 006c A715     		.short	5543
+  85 006e 06F2     		.short	-3578
+  86 0070 38DD     		.short	-8904
+  87 0072 A7FF     		.short	-89
+  88 0074 52F7     		.short	-2222
+  89 0076 E611     		.short	4582
+  90 0078 BF01     		.short	447
+  91 007a 6AF7     		.short	-2198
+  92 007c 5105     		.short	1361
+  93 007e A705     		.short	1447
+  94              		.section	.text.inner_prod,"ax",%progbits
+  95              		.align	2
+  96              		.global	inner_prod
+  97              		.thumb
+  98              		.thumb_func
+  99              		.type	inner_prod, %function
+ 100              	inner_prod:
+ 101              	.LFB63:
+ 102              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** 
+   3:main.c        **** #define VEC_SZ (32)
+   4:main.c        **** 
+   5:main.c        **** // Define arrays for testing, these values have been strategically
+   6:main.c        **** // created!  
+   7:main.c        **** 
+   8:main.c        **** // Once you run the code -- see if you can figure out
+   9:main.c        **** // what is special about them!
+  10:main.c        **** int16_t h_tst[] = { 2969,  3489,   6703, -5953,  -1513,   6501,    
+  11:main.c        ****                      649,  8741,    640, -4573,   2832, -12287,  
+  12:main.c        ****                    -6214, -1204,  -4640, -5577,    499,  -4050,    
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 3
+
+
+  13:main.c        ****                      792,  -877,   1425, 10386,  -1388,  -3142, 
+  14:main.c        ****                   -13044, -2026,  -3046, 10578,  -2726,   5762,  
+  15:main.c        ****                    -4971,  8798};
+  16:main.c        **** 
+  17:main.c        **** int16_t x_tst[] = { 4419,   2836,  -2124,  11797,  -1848,   7082,  
+  18:main.c        ****                    -3186,  -2431, -13495,  -3947,  -3463,   7262,   
+  19:main.c        ****                     1020,  -1699,  -1236,  14622,   -730,  10044,   
+  20:main.c        ****                     2481,   4532,  -1114,   8003,   5543,  -3578,  
+  21:main.c        ****                    -8904,    -89,  -2222,   4582,    447,  -2198,   
+  22:main.c        ****                     1361,   1447};
+  23:main.c        ****                     
+  24:main.c        **** 
+  25:main.c        **** // Prototype declarations    
+  26:main.c        **** int16_t inner_prod( int16_t *h, int16_t *x, int n );
+  27:main.c        **** int16_t inner_prod_asm( int16_t *h, int16_t *x, int n );
+  28:main.c        **** 
+  29:main.c        **** 
+  30:main.c        **** // Function:    inner_prod
+  31:main.c        **** // Description: Computes the inner product between two length-n arrays of
+  32:main.c        **** //              signed 16-bit values, with a right-shift of 16-bits.
+  33:main.c        **** // Inputs:      h - pointer to array of int16_t values, length n
+  34:main.c        **** //              x - pointer to array of int16_t values, length n
+  35:main.c        **** // Returns:     [x (dot) h] >> 16, as an int16_t value
+  36:main.c        **** 
+  37:main.c        **** int16_t inner_prod( int16_t *h, int16_t *x, int n )
+  38:main.c        **** {
+ 103              		.loc 1 38 0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 24
+ 106              		@ frame_needed = 1, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+ 108 0000 80B4     		push	{r7}
+ 109              		.cfi_def_cfa_offset 4
+ 110              		.cfi_offset 7, -4
+ 111 0002 87B0     		sub	sp, sp, #28
+ 112              		.cfi_def_cfa_offset 32
+ 113 0004 00AF     		add	r7, sp, #0
+ 114              		.cfi_def_cfa_register 7
+ 115 0006 F860     		str	r0, [r7, #12]
+ 116 0008 B960     		str	r1, [r7, #8]
+ 117 000a 7A60     		str	r2, [r7, #4]
+  39:main.c        ****     int i;
+  40:main.c        ****     int32_t sum = 0;            // initialize running sum to zero
+ 118              		.loc 1 40 0
+ 119 000c 0023     		movs	r3, #0
+ 120 000e 3B61     		str	r3, [r7, #16]
+  41:main.c        ****     
+  42:main.c        ****     for (i = 0; i < n; ++i)
+ 121              		.loc 1 42 0
+ 122 0010 0023     		movs	r3, #0
+ 123 0012 7B61     		str	r3, [r7, #20]
+ 124 0014 14E0     		b	.L2
+ 125              	.L3:
+  43:main.c        ****     {
+  44:main.c        ****         sum += (h[i] * x[i]);   // accumulate each of the 'n' product terms
+ 126              		.loc 1 44 0 discriminator 3
+ 127 0016 7B69     		ldr	r3, [r7, #20]
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 4
+
+
+ 128 0018 5B00     		lsls	r3, r3, #1
+ 129 001a FA68     		ldr	r2, [r7, #12]
+ 130 001c 1344     		add	r3, r3, r2
+ 131 001e B3F90030 		ldrsh	r3, [r3]
+ 132 0022 1946     		mov	r1, r3
+ 133 0024 7B69     		ldr	r3, [r7, #20]
+ 134 0026 5B00     		lsls	r3, r3, #1
+ 135 0028 BA68     		ldr	r2, [r7, #8]
+ 136 002a 1344     		add	r3, r3, r2
+ 137 002c B3F90030 		ldrsh	r3, [r3]
+ 138 0030 03FB01F3 		mul	r3, r3, r1
+ 139 0034 3A69     		ldr	r2, [r7, #16]
+ 140 0036 1344     		add	r3, r3, r2
+ 141 0038 3B61     		str	r3, [r7, #16]
+  42:main.c        ****     {
+ 142              		.loc 1 42 0 discriminator 3
+ 143 003a 7B69     		ldr	r3, [r7, #20]
+ 144 003c 0133     		adds	r3, r3, #1
+ 145 003e 7B61     		str	r3, [r7, #20]
+ 146              	.L2:
+  42:main.c        ****     {
+ 147              		.loc 1 42 0 is_stmt 0 discriminator 1
+ 148 0040 7A69     		ldr	r2, [r7, #20]
+ 149 0042 7B68     		ldr	r3, [r7, #4]
+ 150 0044 9A42     		cmp	r2, r3
+ 151 0046 E6DB     		blt	.L3
+  45:main.c        ****     }
+  46:main.c        ****     sum = sum >> 16;            // right shift to normalize
+ 152              		.loc 1 46 0 is_stmt 1
+ 153 0048 3B69     		ldr	r3, [r7, #16]
+ 154 004a 1B14     		asrs	r3, r3, #16
+ 155 004c 3B61     		str	r3, [r7, #16]
+  47:main.c        ****     
+  48:main.c        ****     return (int16_t) sum;       // return value truncated to int16_t range
+ 156              		.loc 1 48 0
+ 157 004e 3B69     		ldr	r3, [r7, #16]
+ 158 0050 1BB2     		sxth	r3, r3
+  49:main.c        **** }
+ 159              		.loc 1 49 0
+ 160 0052 1846     		mov	r0, r3
+ 161 0054 1C37     		adds	r7, r7, #28
+ 162              		.cfi_def_cfa_offset 4
+ 163 0056 BD46     		mov	sp, r7
+ 164              		.cfi_def_cfa_register 13
+ 165              		@ sp needed
+ 166 0058 80BC     		pop	{r7}
+ 167              		.cfi_restore 7
+ 168              		.cfi_def_cfa_offset 0
+ 169 005a 7047     		bx	lr
+ 170              		.cfi_endproc
+ 171              	.LFE63:
+ 172              		.size	inner_prod, .-inner_prod
+ 173              		.section	.text.main,"ax",%progbits
+ 174              		.align	2
+ 175              		.global	main
+ 176              		.thumb
+ 177              		.thumb_func
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 5
+
+
+ 178              		.type	main, %function
+ 179              	main:
+ 180              	.LFB64:
+  50:main.c        **** 
+  51:main.c        **** int main(void)
+  52:main.c        **** {
+ 181              		.loc 1 52 0
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 16
+ 184              		@ frame_needed = 1, uses_anonymous_args = 0
+ 185 0000 80B5     		push	{r7, lr}
+ 186              		.cfi_def_cfa_offset 8
+ 187              		.cfi_offset 7, -8
+ 188              		.cfi_offset 14, -4
+ 189 0002 84B0     		sub	sp, sp, #16
+ 190              		.cfi_def_cfa_offset 24
+ 191 0004 00AF     		add	r7, sp, #0
+ 192              		.cfi_def_cfa_register 7
+ 193              	.L6:
+  53:main.c        ****     int16_t t1;
+  54:main.c        ****     int16_t t2;
+  55:main.c        ****     int16_t t3;
+  56:main.c        **** 
+  57:main.c        ****     int16_t y1;
+  58:main.c        ****     int16_t y2;
+  59:main.c        ****     int16_t y3;
+  60:main.c        **** 
+  61:main.c        ****     for(;;)
+  62:main.c        ****     {
+  63:main.c        ****         // 'C' version
+  64:main.c        ****         // ===========
+  65:main.c        ****         
+  66:main.c        ****         // **** NOTE: YOU MUST:
+  67:main.c        ****         // insert code here to set port P0[0] to 0
+  68:main.c        ****         Pin_1_Write(0);
+ 194              		.loc 1 68 0 discriminator 1
+ 195 0006 0020     		movs	r0, #0
+ 196 0008 FFF7FEFF 		bl	Pin_1_Write
+  69:main.c        ****         // The time when the pin is ZERO represents how long it takes for the compiled 'C' code to 
+  70:main.c        ****         
+  71:main.c        ****         t1 = inner_prod( h_tst, x_tst, VEC_SZ );    // 'C' inner product between h and x
+ 197              		.loc 1 71 0 discriminator 1
+ 198 000c 2022     		movs	r2, #32
+ 199 000e 1649     		ldr	r1, .L7
+ 200 0010 1648     		ldr	r0, .L7+4
+ 201 0012 FFF7FEFF 		bl	inner_prod
+ 202 0016 0346     		mov	r3, r0
+ 203 0018 FB81     		strh	r3, [r7, #14]	@ movhi
+  72:main.c        ****         t2 = inner_prod( h_tst, h_tst, VEC_SZ );    // 'C' inner product between h and h
+ 204              		.loc 1 72 0 discriminator 1
+ 205 001a 2022     		movs	r2, #32
+ 206 001c 1349     		ldr	r1, .L7+4
+ 207 001e 1348     		ldr	r0, .L7+4
+ 208 0020 FFF7FEFF 		bl	inner_prod
+ 209 0024 0346     		mov	r3, r0
+ 210 0026 BB81     		strh	r3, [r7, #12]	@ movhi
+  73:main.c        ****         t3 = inner_prod( x_tst, x_tst, VEC_SZ );    // 'C' inner product between x and x
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 6
+
+
+ 211              		.loc 1 73 0 discriminator 1
+ 212 0028 2022     		movs	r2, #32
+ 213 002a 0F49     		ldr	r1, .L7
+ 214 002c 0E48     		ldr	r0, .L7
+ 215 002e FFF7FEFF 		bl	inner_prod
+ 216 0032 0346     		mov	r3, r0
+ 217 0034 7B81     		strh	r3, [r7, #10]	@ movhi
+  74:main.c        ****         
+  75:main.c        ****         // **** NOTE: YOU MUST:
+  76:main.c        ****         // insert code here to set port P0[0] to 1
+  77:main.c        ****         Pin_1_Write(1);
+ 218              		.loc 1 77 0 discriminator 1
+ 219 0036 0120     		movs	r0, #1
+ 220 0038 FFF7FEFF 		bl	Pin_1_Write
+  78:main.c        ****         // The time when the pin is ONE represents how long it takes for your assembly code to run
+  79:main.c        ****         
+  80:main.c        ****         // ASM version (uncomment to test your ASM code)
+  81:main.c        ****         // =============================================
+  82:main.c        ****         y1 = inner_prod_asm( h_tst, x_tst, VEC_SZ );   // asm inner product between h and x
+ 221              		.loc 1 82 0 discriminator 1
+ 222 003c 2022     		movs	r2, #32
+ 223 003e 0A49     		ldr	r1, .L7
+ 224 0040 0A48     		ldr	r0, .L7+4
+ 225 0042 FFF7FEFF 		bl	inner_prod_asm
+ 226 0046 0346     		mov	r3, r0
+ 227 0048 3B81     		strh	r3, [r7, #8]	@ movhi
+  83:main.c        ****         y2 = inner_prod_asm( h_tst, h_tst, VEC_SZ );   // asm inner product between h and h
+ 228              		.loc 1 83 0 discriminator 1
+ 229 004a 2022     		movs	r2, #32
+ 230 004c 0749     		ldr	r1, .L7+4
+ 231 004e 0748     		ldr	r0, .L7+4
+ 232 0050 FFF7FEFF 		bl	inner_prod_asm
+ 233 0054 0346     		mov	r3, r0
+ 234 0056 FB80     		strh	r3, [r7, #6]	@ movhi
+  84:main.c        ****         y3 = inner_prod_asm( x_tst, x_tst, VEC_SZ );   // asm inner product between x and x
+ 235              		.loc 1 84 0 discriminator 1
+ 236 0058 2022     		movs	r2, #32
+ 237 005a 0349     		ldr	r1, .L7
+ 238 005c 0248     		ldr	r0, .L7
+ 239 005e FFF7FEFF 		bl	inner_prod_asm
+ 240 0062 0346     		mov	r3, r0
+ 241 0064 BB80     		strh	r3, [r7, #4]	@ movhi
+  85:main.c        ****     }
+ 242              		.loc 1 85 0 discriminator 1
+ 243 0066 CEE7     		b	.L6
+ 244              	.L8:
+ 245              		.align	2
+ 246              	.L7:
+ 247 0068 00000000 		.word	x_tst
+ 248 006c 00000000 		.word	h_tst
+ 249              		.cfi_endproc
+ 250              	.LFE64:
+ 251              		.size	main, .-main
+ 252              		.text
+ 253              	.Letext0:
+ 254              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 255              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 7
+
+
+ 256              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 257              		.section	.debug_info,"",%progbits
+ 258              	.Ldebug_info0:
+ 259 0000 C0010000 		.4byte	0x1c0
+ 260 0004 0400     		.2byte	0x4
+ 261 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 262 000a 04       		.byte	0x4
+ 263 000b 01       		.uleb128 0x1
+ 264 000c 0E000000 		.4byte	.LASF23
+ 265 0010 0C       		.byte	0xc
+ 266 0011 9F010000 		.4byte	.LASF24
+ 267 0015 BD000000 		.4byte	.LASF25
+ 268 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 269 001d 00000000 		.4byte	0
+ 270 0021 00000000 		.4byte	.Ldebug_line0
+ 271 0025 02       		.uleb128 0x2
+ 272 0026 01       		.byte	0x1
+ 273 0027 06       		.byte	0x6
+ 274 0028 CA010000 		.4byte	.LASF0
+ 275 002c 02       		.uleb128 0x2
+ 276 002d 01       		.byte	0x1
+ 277 002e 08       		.byte	0x8
+ 278 002f 0C010000 		.4byte	.LASF1
+ 279 0033 03       		.uleb128 0x3
+ 280 0034 9C000000 		.4byte	.LASF4
+ 281 0038 02       		.byte	0x2
+ 282 0039 29       		.byte	0x29
+ 283 003a 3E000000 		.4byte	0x3e
+ 284 003e 02       		.uleb128 0x2
+ 285 003f 02       		.byte	0x2
+ 286 0040 05       		.byte	0x5
+ 287 0041 AB010000 		.4byte	.LASF2
+ 288 0045 02       		.uleb128 0x2
+ 289 0046 02       		.byte	0x2
+ 290 0047 07       		.byte	0x7
+ 291 0048 1A010000 		.4byte	.LASF3
+ 292 004c 03       		.uleb128 0x3
+ 293 004d A6000000 		.4byte	.LASF5
+ 294 0051 02       		.byte	0x2
+ 295 0052 3F       		.byte	0x3f
+ 296 0053 57000000 		.4byte	0x57
+ 297 0057 02       		.uleb128 0x2
+ 298 0058 04       		.byte	0x4
+ 299 0059 05       		.byte	0x5
+ 300 005a B5010000 		.4byte	.LASF6
+ 301 005e 02       		.uleb128 0x2
+ 302 005f 04       		.byte	0x4
+ 303 0060 07       		.byte	0x7
+ 304 0061 3A010000 		.4byte	.LASF7
+ 305 0065 02       		.uleb128 0x2
+ 306 0066 08       		.byte	0x8
+ 307 0067 05       		.byte	0x5
+ 308 0068 00000000 		.4byte	.LASF8
+ 309 006c 02       		.uleb128 0x2
+ 310 006d 08       		.byte	0x8
+ 311 006e 07       		.byte	0x7
+ 312 006f 6F010000 		.4byte	.LASF9
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 8
+
+
+ 313 0073 04       		.uleb128 0x4
+ 314 0074 04       		.byte	0x4
+ 315 0075 05       		.byte	0x5
+ 316 0076 696E7400 		.ascii	"int\000"
+ 317 007a 02       		.uleb128 0x2
+ 318 007b 04       		.byte	0x4
+ 319 007c 07       		.byte	0x7
+ 320 007d 62010000 		.4byte	.LASF10
+ 321 0081 03       		.uleb128 0x3
+ 322 0082 86010000 		.4byte	.LASF11
+ 323 0086 03       		.byte	0x3
+ 324 0087 20       		.byte	0x20
+ 325 0088 33000000 		.4byte	0x33
+ 326 008c 03       		.uleb128 0x3
+ 327 008d 8E010000 		.4byte	.LASF12
+ 328 0091 03       		.byte	0x3
+ 329 0092 2C       		.byte	0x2c
+ 330 0093 4C000000 		.4byte	0x4c
+ 331 0097 02       		.uleb128 0x2
+ 332 0098 04       		.byte	0x4
+ 333 0099 04       		.byte	0x4
+ 334 009a 06010000 		.4byte	.LASF13
+ 335 009e 02       		.uleb128 0x2
+ 336 009f 08       		.byte	0x8
+ 337 00a0 04       		.byte	0x4
+ 338 00a1 B0000000 		.4byte	.LASF14
+ 339 00a5 02       		.uleb128 0x2
+ 340 00a6 01       		.byte	0x1
+ 341 00a7 08       		.byte	0x8
+ 342 00a8 A6010000 		.4byte	.LASF15
+ 343 00ac 02       		.uleb128 0x2
+ 344 00ad 04       		.byte	0x4
+ 345 00ae 07       		.byte	0x7
+ 346 00af 96010000 		.4byte	.LASF16
+ 347 00b3 02       		.uleb128 0x2
+ 348 00b4 08       		.byte	0x8
+ 349 00b5 04       		.byte	0x4
+ 350 00b6 BE010000 		.4byte	.LASF17
+ 351 00ba 05       		.uleb128 0x5
+ 352 00bb 52010000 		.4byte	.LASF18
+ 353 00bf 01       		.byte	0x1
+ 354 00c0 25       		.byte	0x25
+ 355 00c1 81000000 		.4byte	0x81
+ 356 00c5 00000000 		.4byte	.LFB63
+ 357 00c9 5C000000 		.4byte	.LFE63-.LFB63
+ 358 00cd 01       		.uleb128 0x1
+ 359 00ce 9C       		.byte	0x9c
+ 360 00cf 12010000 		.4byte	0x112
+ 361 00d3 06       		.uleb128 0x6
+ 362 00d4 6800     		.ascii	"h\000"
+ 363 00d6 01       		.byte	0x1
+ 364 00d7 25       		.byte	0x25
+ 365 00d8 12010000 		.4byte	0x112
+ 366 00dc 02       		.uleb128 0x2
+ 367 00dd 91       		.byte	0x91
+ 368 00de 6C       		.sleb128 -20
+ 369 00df 06       		.uleb128 0x6
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 9
+
+
+ 370 00e0 7800     		.ascii	"x\000"
+ 371 00e2 01       		.byte	0x1
+ 372 00e3 25       		.byte	0x25
+ 373 00e4 12010000 		.4byte	0x112
+ 374 00e8 02       		.uleb128 0x2
+ 375 00e9 91       		.byte	0x91
+ 376 00ea 68       		.sleb128 -24
+ 377 00eb 06       		.uleb128 0x6
+ 378 00ec 6E00     		.ascii	"n\000"
+ 379 00ee 01       		.byte	0x1
+ 380 00ef 25       		.byte	0x25
+ 381 00f0 73000000 		.4byte	0x73
+ 382 00f4 02       		.uleb128 0x2
+ 383 00f5 91       		.byte	0x91
+ 384 00f6 64       		.sleb128 -28
+ 385 00f7 07       		.uleb128 0x7
+ 386 00f8 6900     		.ascii	"i\000"
+ 387 00fa 01       		.byte	0x1
+ 388 00fb 27       		.byte	0x27
+ 389 00fc 73000000 		.4byte	0x73
+ 390 0100 02       		.uleb128 0x2
+ 391 0101 91       		.byte	0x91
+ 392 0102 74       		.sleb128 -12
+ 393 0103 07       		.uleb128 0x7
+ 394 0104 73756D00 		.ascii	"sum\000"
+ 395 0108 01       		.byte	0x1
+ 396 0109 28       		.byte	0x28
+ 397 010a 8C000000 		.4byte	0x8c
+ 398 010e 02       		.uleb128 0x2
+ 399 010f 91       		.byte	0x91
+ 400 0110 70       		.sleb128 -16
+ 401 0111 00       		.byte	0
+ 402 0112 08       		.uleb128 0x8
+ 403 0113 04       		.byte	0x4
+ 404 0114 81000000 		.4byte	0x81
+ 405 0118 09       		.uleb128 0x9
+ 406 0119 5D010000 		.4byte	.LASF19
+ 407 011d 01       		.byte	0x1
+ 408 011e 33       		.byte	0x33
+ 409 011f 73000000 		.4byte	0x73
+ 410 0123 00000000 		.4byte	.LFB64
+ 411 0127 70000000 		.4byte	.LFE64-.LFB64
+ 412 012b 01       		.uleb128 0x1
+ 413 012c 9C       		.byte	0x9c
+ 414 012d 80010000 		.4byte	0x180
+ 415 0131 07       		.uleb128 0x7
+ 416 0132 743100   		.ascii	"t1\000"
+ 417 0135 01       		.byte	0x1
+ 418 0136 35       		.byte	0x35
+ 419 0137 81000000 		.4byte	0x81
+ 420 013b 02       		.uleb128 0x2
+ 421 013c 91       		.byte	0x91
+ 422 013d 76       		.sleb128 -10
+ 423 013e 07       		.uleb128 0x7
+ 424 013f 743200   		.ascii	"t2\000"
+ 425 0142 01       		.byte	0x1
+ 426 0143 36       		.byte	0x36
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 10
+
+
+ 427 0144 81000000 		.4byte	0x81
+ 428 0148 02       		.uleb128 0x2
+ 429 0149 91       		.byte	0x91
+ 430 014a 74       		.sleb128 -12
+ 431 014b 07       		.uleb128 0x7
+ 432 014c 743300   		.ascii	"t3\000"
+ 433 014f 01       		.byte	0x1
+ 434 0150 37       		.byte	0x37
+ 435 0151 81000000 		.4byte	0x81
+ 436 0155 02       		.uleb128 0x2
+ 437 0156 91       		.byte	0x91
+ 438 0157 72       		.sleb128 -14
+ 439 0158 07       		.uleb128 0x7
+ 440 0159 793100   		.ascii	"y1\000"
+ 441 015c 01       		.byte	0x1
+ 442 015d 39       		.byte	0x39
+ 443 015e 81000000 		.4byte	0x81
+ 444 0162 02       		.uleb128 0x2
+ 445 0163 91       		.byte	0x91
+ 446 0164 70       		.sleb128 -16
+ 447 0165 07       		.uleb128 0x7
+ 448 0166 793200   		.ascii	"y2\000"
+ 449 0169 01       		.byte	0x1
+ 450 016a 3A       		.byte	0x3a
+ 451 016b 81000000 		.4byte	0x81
+ 452 016f 02       		.uleb128 0x2
+ 453 0170 91       		.byte	0x91
+ 454 0171 6E       		.sleb128 -18
+ 455 0172 07       		.uleb128 0x7
+ 456 0173 793300   		.ascii	"y3\000"
+ 457 0176 01       		.byte	0x1
+ 458 0177 3B       		.byte	0x3b
+ 459 0178 81000000 		.4byte	0x81
+ 460 017c 02       		.uleb128 0x2
+ 461 017d 91       		.byte	0x91
+ 462 017e 6C       		.sleb128 -20
+ 463 017f 00       		.byte	0
+ 464 0180 0A       		.uleb128 0xa
+ 465 0181 2D010000 		.4byte	.LASF20
+ 466 0185 04       		.byte	0x4
+ 467 0186 1207     		.2byte	0x712
+ 468 0188 8C010000 		.4byte	0x18c
+ 469 018c 0B       		.uleb128 0xb
+ 470 018d 8C000000 		.4byte	0x8c
+ 471 0191 0C       		.uleb128 0xc
+ 472 0192 81000000 		.4byte	0x81
+ 473 0196 A1010000 		.4byte	0x1a1
+ 474 019a 0D       		.uleb128 0xd
+ 475 019b AC000000 		.4byte	0xac
+ 476 019f 1F       		.byte	0x1f
+ 477 01a0 00       		.byte	0
+ 478 01a1 0E       		.uleb128 0xe
+ 479 01a2 B7000000 		.4byte	.LASF21
+ 480 01a6 01       		.byte	0x1
+ 481 01a7 0A       		.byte	0xa
+ 482 01a8 91010000 		.4byte	0x191
+ 483 01ac 05       		.uleb128 0x5
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 11
+
+
+ 484 01ad 03       		.byte	0x3
+ 485 01ae 00000000 		.4byte	h_tst
+ 486 01b2 0E       		.uleb128 0xe
+ 487 01b3 4C010000 		.4byte	.LASF22
+ 488 01b7 01       		.byte	0x1
+ 489 01b8 11       		.byte	0x11
+ 490 01b9 91010000 		.4byte	0x191
+ 491 01bd 05       		.uleb128 0x5
+ 492 01be 03       		.byte	0x3
+ 493 01bf 00000000 		.4byte	x_tst
+ 494 01c3 00       		.byte	0
+ 495              		.section	.debug_abbrev,"",%progbits
+ 496              	.Ldebug_abbrev0:
+ 497 0000 01       		.uleb128 0x1
+ 498 0001 11       		.uleb128 0x11
+ 499 0002 01       		.byte	0x1
+ 500 0003 25       		.uleb128 0x25
+ 501 0004 0E       		.uleb128 0xe
+ 502 0005 13       		.uleb128 0x13
+ 503 0006 0B       		.uleb128 0xb
+ 504 0007 03       		.uleb128 0x3
+ 505 0008 0E       		.uleb128 0xe
+ 506 0009 1B       		.uleb128 0x1b
+ 507 000a 0E       		.uleb128 0xe
+ 508 000b 55       		.uleb128 0x55
+ 509 000c 17       		.uleb128 0x17
+ 510 000d 11       		.uleb128 0x11
+ 511 000e 01       		.uleb128 0x1
+ 512 000f 10       		.uleb128 0x10
+ 513 0010 17       		.uleb128 0x17
+ 514 0011 00       		.byte	0
+ 515 0012 00       		.byte	0
+ 516 0013 02       		.uleb128 0x2
+ 517 0014 24       		.uleb128 0x24
+ 518 0015 00       		.byte	0
+ 519 0016 0B       		.uleb128 0xb
+ 520 0017 0B       		.uleb128 0xb
+ 521 0018 3E       		.uleb128 0x3e
+ 522 0019 0B       		.uleb128 0xb
+ 523 001a 03       		.uleb128 0x3
+ 524 001b 0E       		.uleb128 0xe
+ 525 001c 00       		.byte	0
+ 526 001d 00       		.byte	0
+ 527 001e 03       		.uleb128 0x3
+ 528 001f 16       		.uleb128 0x16
+ 529 0020 00       		.byte	0
+ 530 0021 03       		.uleb128 0x3
+ 531 0022 0E       		.uleb128 0xe
+ 532 0023 3A       		.uleb128 0x3a
+ 533 0024 0B       		.uleb128 0xb
+ 534 0025 3B       		.uleb128 0x3b
+ 535 0026 0B       		.uleb128 0xb
+ 536 0027 49       		.uleb128 0x49
+ 537 0028 13       		.uleb128 0x13
+ 538 0029 00       		.byte	0
+ 539 002a 00       		.byte	0
+ 540 002b 04       		.uleb128 0x4
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 12
+
+
+ 541 002c 24       		.uleb128 0x24
+ 542 002d 00       		.byte	0
+ 543 002e 0B       		.uleb128 0xb
+ 544 002f 0B       		.uleb128 0xb
+ 545 0030 3E       		.uleb128 0x3e
+ 546 0031 0B       		.uleb128 0xb
+ 547 0032 03       		.uleb128 0x3
+ 548 0033 08       		.uleb128 0x8
+ 549 0034 00       		.byte	0
+ 550 0035 00       		.byte	0
+ 551 0036 05       		.uleb128 0x5
+ 552 0037 2E       		.uleb128 0x2e
+ 553 0038 01       		.byte	0x1
+ 554 0039 3F       		.uleb128 0x3f
+ 555 003a 19       		.uleb128 0x19
+ 556 003b 03       		.uleb128 0x3
+ 557 003c 0E       		.uleb128 0xe
+ 558 003d 3A       		.uleb128 0x3a
+ 559 003e 0B       		.uleb128 0xb
+ 560 003f 3B       		.uleb128 0x3b
+ 561 0040 0B       		.uleb128 0xb
+ 562 0041 27       		.uleb128 0x27
+ 563 0042 19       		.uleb128 0x19
+ 564 0043 49       		.uleb128 0x49
+ 565 0044 13       		.uleb128 0x13
+ 566 0045 11       		.uleb128 0x11
+ 567 0046 01       		.uleb128 0x1
+ 568 0047 12       		.uleb128 0x12
+ 569 0048 06       		.uleb128 0x6
+ 570 0049 40       		.uleb128 0x40
+ 571 004a 18       		.uleb128 0x18
+ 572 004b 9742     		.uleb128 0x2117
+ 573 004d 19       		.uleb128 0x19
+ 574 004e 01       		.uleb128 0x1
+ 575 004f 13       		.uleb128 0x13
+ 576 0050 00       		.byte	0
+ 577 0051 00       		.byte	0
+ 578 0052 06       		.uleb128 0x6
+ 579 0053 05       		.uleb128 0x5
+ 580 0054 00       		.byte	0
+ 581 0055 03       		.uleb128 0x3
+ 582 0056 08       		.uleb128 0x8
+ 583 0057 3A       		.uleb128 0x3a
+ 584 0058 0B       		.uleb128 0xb
+ 585 0059 3B       		.uleb128 0x3b
+ 586 005a 0B       		.uleb128 0xb
+ 587 005b 49       		.uleb128 0x49
+ 588 005c 13       		.uleb128 0x13
+ 589 005d 02       		.uleb128 0x2
+ 590 005e 18       		.uleb128 0x18
+ 591 005f 00       		.byte	0
+ 592 0060 00       		.byte	0
+ 593 0061 07       		.uleb128 0x7
+ 594 0062 34       		.uleb128 0x34
+ 595 0063 00       		.byte	0
+ 596 0064 03       		.uleb128 0x3
+ 597 0065 08       		.uleb128 0x8
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 13
+
+
+ 598 0066 3A       		.uleb128 0x3a
+ 599 0067 0B       		.uleb128 0xb
+ 600 0068 3B       		.uleb128 0x3b
+ 601 0069 0B       		.uleb128 0xb
+ 602 006a 49       		.uleb128 0x49
+ 603 006b 13       		.uleb128 0x13
+ 604 006c 02       		.uleb128 0x2
+ 605 006d 18       		.uleb128 0x18
+ 606 006e 00       		.byte	0
+ 607 006f 00       		.byte	0
+ 608 0070 08       		.uleb128 0x8
+ 609 0071 0F       		.uleb128 0xf
+ 610 0072 00       		.byte	0
+ 611 0073 0B       		.uleb128 0xb
+ 612 0074 0B       		.uleb128 0xb
+ 613 0075 49       		.uleb128 0x49
+ 614 0076 13       		.uleb128 0x13
+ 615 0077 00       		.byte	0
+ 616 0078 00       		.byte	0
+ 617 0079 09       		.uleb128 0x9
+ 618 007a 2E       		.uleb128 0x2e
+ 619 007b 01       		.byte	0x1
+ 620 007c 3F       		.uleb128 0x3f
+ 621 007d 19       		.uleb128 0x19
+ 622 007e 03       		.uleb128 0x3
+ 623 007f 0E       		.uleb128 0xe
+ 624 0080 3A       		.uleb128 0x3a
+ 625 0081 0B       		.uleb128 0xb
+ 626 0082 3B       		.uleb128 0x3b
+ 627 0083 0B       		.uleb128 0xb
+ 628 0084 27       		.uleb128 0x27
+ 629 0085 19       		.uleb128 0x19
+ 630 0086 49       		.uleb128 0x49
+ 631 0087 13       		.uleb128 0x13
+ 632 0088 11       		.uleb128 0x11
+ 633 0089 01       		.uleb128 0x1
+ 634 008a 12       		.uleb128 0x12
+ 635 008b 06       		.uleb128 0x6
+ 636 008c 40       		.uleb128 0x40
+ 637 008d 18       		.uleb128 0x18
+ 638 008e 9642     		.uleb128 0x2116
+ 639 0090 19       		.uleb128 0x19
+ 640 0091 01       		.uleb128 0x1
+ 641 0092 13       		.uleb128 0x13
+ 642 0093 00       		.byte	0
+ 643 0094 00       		.byte	0
+ 644 0095 0A       		.uleb128 0xa
+ 645 0096 34       		.uleb128 0x34
+ 646 0097 00       		.byte	0
+ 647 0098 03       		.uleb128 0x3
+ 648 0099 0E       		.uleb128 0xe
+ 649 009a 3A       		.uleb128 0x3a
+ 650 009b 0B       		.uleb128 0xb
+ 651 009c 3B       		.uleb128 0x3b
+ 652 009d 05       		.uleb128 0x5
+ 653 009e 49       		.uleb128 0x49
+ 654 009f 13       		.uleb128 0x13
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 14
+
+
+ 655 00a0 3F       		.uleb128 0x3f
+ 656 00a1 19       		.uleb128 0x19
+ 657 00a2 3C       		.uleb128 0x3c
+ 658 00a3 19       		.uleb128 0x19
+ 659 00a4 00       		.byte	0
+ 660 00a5 00       		.byte	0
+ 661 00a6 0B       		.uleb128 0xb
+ 662 00a7 35       		.uleb128 0x35
+ 663 00a8 00       		.byte	0
+ 664 00a9 49       		.uleb128 0x49
+ 665 00aa 13       		.uleb128 0x13
+ 666 00ab 00       		.byte	0
+ 667 00ac 00       		.byte	0
+ 668 00ad 0C       		.uleb128 0xc
+ 669 00ae 01       		.uleb128 0x1
+ 670 00af 01       		.byte	0x1
+ 671 00b0 49       		.uleb128 0x49
+ 672 00b1 13       		.uleb128 0x13
+ 673 00b2 01       		.uleb128 0x1
+ 674 00b3 13       		.uleb128 0x13
+ 675 00b4 00       		.byte	0
+ 676 00b5 00       		.byte	0
+ 677 00b6 0D       		.uleb128 0xd
+ 678 00b7 21       		.uleb128 0x21
+ 679 00b8 00       		.byte	0
+ 680 00b9 49       		.uleb128 0x49
+ 681 00ba 13       		.uleb128 0x13
+ 682 00bb 2F       		.uleb128 0x2f
+ 683 00bc 0B       		.uleb128 0xb
+ 684 00bd 00       		.byte	0
+ 685 00be 00       		.byte	0
+ 686 00bf 0E       		.uleb128 0xe
+ 687 00c0 34       		.uleb128 0x34
+ 688 00c1 00       		.byte	0
+ 689 00c2 03       		.uleb128 0x3
+ 690 00c3 0E       		.uleb128 0xe
+ 691 00c4 3A       		.uleb128 0x3a
+ 692 00c5 0B       		.uleb128 0xb
+ 693 00c6 3B       		.uleb128 0x3b
+ 694 00c7 0B       		.uleb128 0xb
+ 695 00c8 49       		.uleb128 0x49
+ 696 00c9 13       		.uleb128 0x13
+ 697 00ca 3F       		.uleb128 0x3f
+ 698 00cb 19       		.uleb128 0x19
+ 699 00cc 02       		.uleb128 0x2
+ 700 00cd 18       		.uleb128 0x18
+ 701 00ce 00       		.byte	0
+ 702 00cf 00       		.byte	0
+ 703 00d0 00       		.byte	0
+ 704              		.section	.debug_aranges,"",%progbits
+ 705 0000 24000000 		.4byte	0x24
+ 706 0004 0200     		.2byte	0x2
+ 707 0006 00000000 		.4byte	.Ldebug_info0
+ 708 000a 04       		.byte	0x4
+ 709 000b 00       		.byte	0
+ 710 000c 0000     		.2byte	0
+ 711 000e 0000     		.2byte	0
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 15
+
+
+ 712 0010 00000000 		.4byte	.LFB63
+ 713 0014 5C000000 		.4byte	.LFE63-.LFB63
+ 714 0018 00000000 		.4byte	.LFB64
+ 715 001c 70000000 		.4byte	.LFE64-.LFB64
+ 716 0020 00000000 		.4byte	0
+ 717 0024 00000000 		.4byte	0
+ 718              		.section	.debug_ranges,"",%progbits
+ 719              	.Ldebug_ranges0:
+ 720 0000 00000000 		.4byte	.LFB63
+ 721 0004 5C000000 		.4byte	.LFE63
+ 722 0008 00000000 		.4byte	.LFB64
+ 723 000c 70000000 		.4byte	.LFE64
+ 724 0010 00000000 		.4byte	0
+ 725 0014 00000000 		.4byte	0
+ 726              		.section	.debug_line,"",%progbits
+ 727              	.Ldebug_line0:
+ 728 0000 A9010000 		.section	.debug_str,"MS",%progbits,1
+ 728      02003F01 
+ 728      00000201 
+ 728      FB0E0D00 
+ 728      01010101 
+ 729              	.LASF8:
+ 730 0000 6C6F6E67 		.ascii	"long long int\000"
+ 730      206C6F6E 
+ 730      6720696E 
+ 730      7400
+ 731              	.LASF23:
+ 732 000e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 732      43313120 
+ 732      352E342E 
+ 732      31203230 
+ 732      31363036 
+ 733 0041 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 733      20726576 
+ 733      6973696F 
+ 733      6E203233 
+ 733      37373135 
+ 734 0074 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 734      66756E63 
+ 734      74696F6E 
+ 734      2D736563 
+ 734      74696F6E 
+ 735              	.LASF4:
+ 736 009c 5F5F696E 		.ascii	"__int16_t\000"
+ 736      7431365F 
+ 736      7400
+ 737              	.LASF5:
+ 738 00a6 5F5F696E 		.ascii	"__int32_t\000"
+ 738      7433325F 
+ 738      7400
+ 739              	.LASF14:
+ 740 00b0 646F7562 		.ascii	"double\000"
+ 740      6C6500
+ 741              	.LASF21:
+ 742 00b7 685F7473 		.ascii	"h_tst\000"
+ 742      7400
+ 743              	.LASF25:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 16
+
+
+ 744 00bd 433A5C55 		.ascii	"C:\\Users\\sinow\\Documents\\PSoC Creator\\Design A"
+ 744      73657273 
+ 744      5C73696E 
+ 744      6F775C44 
+ 744      6F63756D 
+ 745 00eb 73736967 		.ascii	"ssignment 2\\Design01.cydsn\000"
+ 745      6E6D656E 
+ 745      7420325C 
+ 745      44657369 
+ 745      676E3031 
+ 746              	.LASF13:
+ 747 0106 666C6F61 		.ascii	"float\000"
+ 747      7400
+ 748              	.LASF1:
+ 749 010c 756E7369 		.ascii	"unsigned char\000"
+ 749      676E6564 
+ 749      20636861 
+ 749      7200
+ 750              	.LASF3:
+ 751 011a 73686F72 		.ascii	"short unsigned int\000"
+ 751      7420756E 
+ 751      7369676E 
+ 751      65642069 
+ 751      6E7400
+ 752              	.LASF20:
+ 753 012d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 753      52784275 
+ 753      66666572 
+ 753      00
+ 754              	.LASF7:
+ 755 013a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 755      20756E73 
+ 755      69676E65 
+ 755      6420696E 
+ 755      7400
+ 756              	.LASF22:
+ 757 014c 785F7473 		.ascii	"x_tst\000"
+ 757      7400
+ 758              	.LASF18:
+ 759 0152 696E6E65 		.ascii	"inner_prod\000"
+ 759      725F7072 
+ 759      6F6400
+ 760              	.LASF19:
+ 761 015d 6D61696E 		.ascii	"main\000"
+ 761      00
+ 762              	.LASF10:
+ 763 0162 756E7369 		.ascii	"unsigned int\000"
+ 763      676E6564 
+ 763      20696E74 
+ 763      00
+ 764              	.LASF9:
+ 765 016f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 765      206C6F6E 
+ 765      6720756E 
+ 765      7369676E 
+ 765      65642069 
+ 766              	.LASF11:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccGSZQTw.s 			page 17
+
+
+ 767 0186 696E7431 		.ascii	"int16_t\000"
+ 767      365F7400 
+ 768              	.LASF12:
+ 769 018e 696E7433 		.ascii	"int32_t\000"
+ 769      325F7400 
+ 770              	.LASF16:
+ 771 0196 73697A65 		.ascii	"sizetype\000"
+ 771      74797065 
+ 771      00
+ 772              	.LASF24:
+ 773 019f 6D61696E 		.ascii	"main.c\000"
+ 773      2E6300
+ 774              	.LASF15:
+ 775 01a6 63686172 		.ascii	"char\000"
+ 775      00
+ 776              	.LASF2:
+ 777 01ab 73686F72 		.ascii	"short int\000"
+ 777      7420696E 
+ 777      7400
+ 778              	.LASF6:
+ 779 01b5 6C6F6E67 		.ascii	"long int\000"
+ 779      20696E74 
+ 779      00
+ 780              	.LASF17:
+ 781 01be 6C6F6E67 		.ascii	"long double\000"
+ 781      20646F75 
+ 781      626C6500 
+ 782              	.LASF0:
+ 783 01ca 7369676E 		.ascii	"signed char\000"
+ 783      65642063 
+ 783      68617200 
+ 784              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
