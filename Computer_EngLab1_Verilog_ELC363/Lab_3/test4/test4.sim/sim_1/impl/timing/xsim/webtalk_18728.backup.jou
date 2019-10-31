@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Oct 27 13:56:05 2019
+# Process ID: 18728
+# Current directory: C:/Users/sinow/Documents/ELC363-Lab/test4/test4.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/sinow/Documents/ELC363-Lab/test4/test4.sim/sim_1/impl/timing/xsim/xsim.dir/Processor_TB_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/sinow/Documents/ELC363-Lab/test4/test4.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/Users/sinow/Documents/ELC363-Lab/test4/test4.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/sinow/Documents/ELC363-Lab/test4/test4.sim/sim_1/impl/timing/xsim/xsim.dir/Processor_TB_time_impl/webtalk/xsim_webtalk.tcl -notrace

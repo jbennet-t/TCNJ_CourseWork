@@ -1,0 +1,13 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 0
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 1
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 2
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 4
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 5
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 6
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 7
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 9
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 10
+WARNING: Data truncated while reading Datafile: C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem, while loading at index: 11
+WARNING: Too many words specified in data file C:/Users/sinow/Documents/ELC363-Lab/test4/data.mem
