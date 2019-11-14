@@ -1,0 +1,1005 @@
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.startup.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** #include <stdio.h>
+   3:main.c        **** 
+   4:main.c        **** //#define FLOATING_VER
+   5:main.c        **** 
+   6:main.c        **** #define FIXED_N         (15)
+   7:main.c        **** #define FIXED_M         (32-FIXED_N-1)
+   8:main.c        **** #define FIXED_ONE       (1<<FIXED_N)
+   9:main.c        **** #define FIXED_ONE_HALF  (FIXED_ONE >> 1)
+  10:main.c        **** 
+  11:main.c        **** #define SQR(x) ((x) * (x))
+  12:main.c        **** 
+  13:main.c        **** // Define w0 as PI/100
+  14:main.c        **** 
+  15:main.c        **** // cos(w0) ~ 1.0
+  16:main.c        **** // sin(w0) ~ w0, small angle approximation
+  17:main.c        **** #define COS_0   (FIXED_ONE)
+  18:main.c        **** #define SIN_0   ( (int) (FIXED_ONE * 3.1415926535897 / 100 + 0.5))
+  19:main.c        **** 
+  20:main.c        **** #define DCOS_0 (1.0)
+  21:main.c        **** #define DSIN_0 (2 * 3.1415926535897 / 100)
+  22:main.c        **** 
+  23:main.c        **** #ifdef FLOATING_VER
+  24:main.c        ****     double      dx_real = 1.0;
+  25:main.c        ****     double      dx_imag = 0.0;
+  26:main.c        ****     double      drsq;
+  27:main.c        ****     double      disq;
+  28:main.c        **** #else    
+  29:main.c        ****     int32_t     x_real=FIXED_ONE;   // Initial value of x (complex number) is 1+j0, in fixed point
+  30:main.c        ****     int32_t     x_imag=0;           // Initial value of x (complex number) is 1+j0, in fixed point
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 2
+
+
+  31:main.c        ****     
+  32:main.c        ****     int32_t     rsq;                // Holds square of real component
+  33:main.c        ****     int32_t     isq;                // Holds square of imag component
+  34:main.c        **** #endif
+  35:main.c        **** 
+  36:main.c        ****     int32_t     sgn_real;           // +/-1, based on x_real > 0 or < 0
+  37:main.c        ****     int32_t     sgn_imag;           // +/-1, based on x_imag > 0 or < 0
+  38:main.c        **** 
+  39:main.c        **** int main(void)
+  40:main.c        **** {
+  28              		.loc 1 40 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 1024
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+  33              		.cfi_def_cfa_offset 32
+  34              		.cfi_offset 4, -32
+  35              		.cfi_offset 5, -28
+  36              		.cfi_offset 6, -24
+  37              		.cfi_offset 7, -20
+  38              		.cfi_offset 8, -16
+  39              		.cfi_offset 9, -12
+  40              		.cfi_offset 10, -8
+  41              		.cfi_offset 14, -4
+  42 0004 ADF5806D 		sub	sp, sp, #1024
+  43              		.cfi_def_cfa_offset 1056
+  41:main.c        ****     int         i;
+  42:main.c        ****     char        msg_str[1024];
+  43:main.c        ****     
+  44:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  44              		.loc 1 44 0
+  45              		.syntax unified
+  46              	@ 44 "main.c" 1
+  47 0008 62B6     		CPSIE   i
+  48              	@ 0 "" 2
+  45:main.c        ****     
+  46:main.c        ****     UART_Start();
+  49              		.loc 1 46 0
+  50              		.thumb
+  51              		.syntax unified
+  52 000a FFF7FEFF 		bl	UART_Start
+  53              	.LVL0:
+  54 000e 2F4E     		ldr	r6, .L12
+  55 0010 2F4D     		ldr	r5, .L12+4
+  56 0012 DFF8C8A0 		ldr	r10, .L12+16
+  57 0016 DFF8C890 		ldr	r9, .L12+20
+  58 001a DFF8C880 		ldr	r8, .L12+24
+  59 001e 2D4F     		ldr	r7, .L12+8
+  60 0020 4FF4C874 		mov	r4, #400
+  61              	.LVL1:
+  62              	.L6:
+  47:main.c        ****     
+  48:main.c        ****     for(i = 0; i < 400; ++i)
+  49:main.c        ****     {
+  50:main.c        **** #ifdef FLOATING_VER
+  51:main.c        ****         dx_real = dx_real*DCOS_0 - dx_imag*DSIN_0;
+  52:main.c        ****         dx_imag = dx_real*DSIN_0 + dx_imag*DCOS_0;
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 3
+
+
+  53:main.c        **** 
+  54:main.c        ****         sgn_real = dx_real >= 0 ? 1 : -1;                // signum of x_real
+  55:main.c        ****         sgn_imag = dx_imag >= 0 ? 1 : -1;                // signum of x_imag
+  56:main.c        **** 
+  57:main.c        ****         drsq = SQR(dx_real);
+  58:main.c        ****         disq = SQR(dx_imag);
+  59:main.c        **** 
+  60:main.c        ****         if (drsq+disq > 1.0)
+  61:main.c        ****         {
+  62:main.c        ****             dx_real -= 0.001 * sgn_real;
+  63:main.c        ****             dx_imag -= 0.001 * sgn_imag;
+  64:main.c        ****         }
+  65:main.c        ****         else
+  66:main.c        ****         {
+  67:main.c        ****             dx_real += 0.001 * sgn_real;
+  68:main.c        ****             dx_imag += 0.001 * sgn_imag;
+  69:main.c        ****         }
+  70:main.c        ****         
+  71:main.c        ****         sprintf( msg_str, "%5d\t%5d\n\r", (int) (dx_real*1000), (int) (dx_imag*1000) );
+  72:main.c        ****         UART_PutString(msg_str);
+  73:main.c        **** #else
+  74:main.c        ****         x_real = x_real*COS_0 - x_imag*SIN_0;//x_real << FIXED_N;                     // QM.N * QM.
+  63              		.loc 1 74 0
+  64 0024 3168     		ldr	r1, [r6]
+  75:main.c        ****         x_real = (x_real + FIXED_ONE_HALF) >> FIXED_N;  // convert back to QM.N, with rounding
+  65              		.loc 1 75 0
+  66 0026 2A68     		ldr	r2, [r5]
+  67 0028 C1EB8153 		rsb	r3, r1, r1, lsl #22
+  68 002c C1EB0323 		rsb	r3, r1, r3, lsl #8
+  69 0030 C1EB8303 		rsb	r3, r1, r3, lsl #2
+  70 0034 03EBC233 		add	r3, r3, r2, lsl #15
+  71 0038 03F58043 		add	r3, r3, #16384
+  72 003c DB13     		asrs	r3, r3, #15
+  76:main.c        ****         
+  77:main.c        ****         x_imag = x_real*SIN_0 + x_imag*COS_0;                           // QM.N * QM.N -> Q2M.2N
+  78:main.c        ****         x_imag = (x_imag + FIXED_ONE_HALF) >> FIXED_N;  // convert back to QM.N, with rounding
+  73              		.loc 1 78 0
+  74 003e 03EB0322 		add	r2, r3, r3, lsl #8
+  75 0042 03EB8202 		add	r2, r3, r2, lsl #2
+  76 0046 02EBC132 		add	r2, r2, r1, lsl #15
+  79:main.c        ****         
+  80:main.c        ****         sgn_real = x_real >= 0 ? 1 : -1;                // signum of x_real
+  77              		.loc 1 80 0
+  78 004a 002B     		cmp	r3, #0
+  78:main.c        ****         
+  79              		.loc 1 78 0
+  80 004c 02F58042 		add	r2, r2, #16384
+  81              		.loc 1 80 0
+  82 0050 ACBF     		ite	ge
+  83 0052 0120     		movge	r0, #1
+  84 0054 4FF0FF30 		movlt	r0, #-1
+  81:main.c        ****         sgn_imag = x_imag >= 0 ? 1 : -1;                // signum of x_imag
+  85              		.loc 1 81 0
+  86 0058 002A     		cmp	r2, #0
+  87 005a ACBF     		ite	ge
+  88 005c 4FF0010E 		movge	lr, #1
+  89 0060 4FF0FF3E 		movlt	lr, #-1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 4
+
+
+  90 0064 D213     		asrs	r2, r2, #15
+  82:main.c        ****         
+  83:main.c        ****         rsq = SQR(x_real);                              // QM.N * QM.N -> Q2M.2N
+  84:main.c        ****         rsq = (rsq + FIXED_ONE_HALF) >> FIXED_N;        // convert back to QM.N, with rounding
+  85:main.c        ****         
+  86:main.c        ****         isq = SQR(x_imag);                            // QM.N * QM.N -> Q2M.2N
+  87:main.c        ****         isq = (isq + FIXED_ONE_HALF) >> FIXED_N;        // convert back to QM.N, with rounding
+  91              		.loc 1 87 0
+  92 0066 02FB02F1 		mul	r1, r2, r2
+  84:main.c        ****         
+  93              		.loc 1 84 0
+  94 006a 03FB03FC 		mul	ip, r3, r3
+  95              		.loc 1 87 0
+  96 006e 01F58041 		add	r1, r1, #16384
+  84:main.c        ****         
+  97              		.loc 1 84 0
+  98 0072 0CF5804C 		add	ip, ip, #16384
+  99 0076 4FEAEC3C 		asr	ip, ip, #15
+ 100              		.loc 1 87 0
+ 101 007a C913     		asrs	r1, r1, #15
+ 102 007c 3960     		str	r1, [r7]
+  88:main.c        ****         
+  89:main.c        ****         // The goal is for 'x' to represent a value on the unit circle, i.e. complex magnitue
+  90:main.c        ****         // should be unity.  Because of quantization error (which will even occur with double
+  91:main.c        ****         // precision, need some way of avoiding collapsing to zero, or growing to infinity
+  92:main.c        ****         //
+  93:main.c        ****         // My quick and dirty solution is to push both real and imaginary part down toward
+  94:main.c        ****         // zero a smidgen if the magnitude is greater than one, and away from zero otherwise 
+  95:main.c        ****         if (rsq+isq > FIXED_ONE)
+ 103              		.loc 1 95 0
+ 104 007e 6144     		add	r1, r1, ip
+ 105 0080 B1F5004F 		cmp	r1, #32768
+  84:main.c        ****         
+ 106              		.loc 1 84 0
+ 107 0084 C8F800C0 		str	ip, [r8]
+  96:main.c        ****         {
+  97:main.c        ****             x_real -= sgn_real;
+ 108              		.loc 1 97 0
+ 109 0088 CCBF     		ite	gt
+ 110 008a C0EB030C 		rsbgt	ip, r0, r3
+  98:main.c        ****             x_imag -= sgn_imag;
+  99:main.c        ****         }
+ 100:main.c        ****         else
+ 101:main.c        ****         {
+ 102:main.c        ****             x_real += sgn_real;
+ 111              		.loc 1 102 0
+ 112 008e 00EB030C 		addle	ip, r0, r3
+ 103:main.c        ****             x_imag += sgn_imag;
+ 104:main.c        ****         }
+ 105:main.c        ****         
+ 106:main.c        ****         sprintf( msg_str, "%5d\t%5d\n\r", (int) (x_real/100000), (int) (x_imag/100000) );
+ 113              		.loc 1 106 0
+ 114 0092 4FF00003 		mov	r3, #0
+  81:main.c        ****         
+ 115              		.loc 1 81 0
+ 116 0096 C9F800E0 		str	lr, [r9]
+  80:main.c        ****         sgn_imag = x_imag >= 0 ? 1 : -1;                // signum of x_imag
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 5
+
+
+ 117              		.loc 1 80 0
+ 118 009a CAF80000 		str	r0, [r10]
+  98:main.c        ****         }
+ 119              		.loc 1 98 0
+ 120 009e CCBF     		ite	gt
+ 121 00a0 CEEB020E 		rsbgt	lr, lr, r2
+ 103:main.c        ****         }
+ 122              		.loc 1 103 0
+ 123 00a4 9644     		addle	lr, lr, r2
+ 124              		.loc 1 106 0
+ 125 00a6 0C49     		ldr	r1, .L12+12
+ 126 00a8 1A46     		mov	r2, r3
+ 127 00aa 6846     		mov	r0, sp
+ 128 00ac C6F800E0 		str	lr, [r6]
+ 129 00b0 C5F800C0 		str	ip, [r5]
+ 130 00b4 FFF7FEFF 		bl	sprintf
+ 131              	.LVL2:
+ 107:main.c        ****         UART_PutString(msg_str);
+ 132              		.loc 1 107 0
+ 133 00b8 6846     		mov	r0, sp
+ 134 00ba FFF7FEFF 		bl	UART_PutString
+ 135              	.LVL3:
+  48:main.c        ****     {
+ 136              		.loc 1 48 0
+ 137 00be 013C     		subs	r4, r4, #1
+ 138 00c0 B0D1     		bne	.L6
+ 108:main.c        **** #endif        
+ 109:main.c        **** 
+ 110:main.c        ****     }
+ 111:main.c        **** }
+ 139              		.loc 1 111 0
+ 140 00c2 2046     		mov	r0, r4
+ 141 00c4 0DF5806D 		add	sp, sp, #1024
+ 142              		.cfi_def_cfa_offset 32
+ 143              		@ sp needed
+ 144 00c8 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 145              	.L13:
+ 146              		.align	2
+ 147              	.L12:
+ 148 00cc 00000000 		.word	.LANCHOR0
+ 149 00d0 00000000 		.word	.LANCHOR1
+ 150 00d4 00000000 		.word	isq
+ 151 00d8 00000000 		.word	.LC0
+ 152 00dc 00000000 		.word	sgn_real
+ 153 00e0 00000000 		.word	sgn_imag
+ 154 00e4 00000000 		.word	rsq
+ 155              		.cfi_endproc
+ 156              	.LFE64:
+ 157              		.size	main, .-main
+ 158              		.comm	sgn_imag,4,4
+ 159              		.comm	sgn_real,4,4
+ 160              		.comm	isq,4,4
+ 161              		.comm	rsq,4,4
+ 162              		.global	x_imag
+ 163              		.global	x_real
+ 164              		.data
+ 165              		.align	2
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 6
+
+
+ 166              		.set	.LANCHOR1,. + 0
+ 167              		.type	x_real, %object
+ 168              		.size	x_real, 4
+ 169              	x_real:
+ 170 0000 00800000 		.word	32768
+ 171              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 172              		.align	2
+ 173              	.LC0:
+ 174 0000 25356409 		.ascii	"%5d\011%5d\012\015\000"
+ 174      2535640A 
+ 174      0D00
+ 175              		.bss
+ 176              		.align	2
+ 177              		.set	.LANCHOR0,. + 0
+ 178              		.type	x_imag, %object
+ 179              		.size	x_imag, 4
+ 180              	x_imag:
+ 181 0000 00000000 		.space	4
+ 182              		.text
+ 183              	.Letext0:
+ 184              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 185              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 186              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 187              		.file 5 "Generated_Source\\PSoC5/UART.h"
+ 188              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 189              		.section	.debug_info,"",%progbits
+ 190              	.Ldebug_info0:
+ 191 0000 C0010000 		.4byte	0x1c0
+ 192 0004 0400     		.2byte	0x4
+ 193 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 194 000a 04       		.byte	0x4
+ 195 000b 01       		.uleb128 0x1
+ 196 000c 09000000 		.4byte	.LASF25
+ 197 0010 0C       		.byte	0xc
+ 198 0011 AF010000 		.4byte	.LASF26
+ 199 0015 39010000 		.4byte	.LASF27
+ 200 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 201 001d 00000000 		.4byte	0
+ 202 0021 00000000 		.4byte	.Ldebug_line0
+ 203 0025 02       		.uleb128 0x2
+ 204 0026 01       		.byte	0x1
+ 205 0027 06       		.byte	0x6
+ 206 0028 DE010000 		.4byte	.LASF0
+ 207 002c 02       		.uleb128 0x2
+ 208 002d 01       		.byte	0x1
+ 209 002e 08       		.byte	0x8
+ 210 002f B6000000 		.4byte	.LASF1
+ 211 0033 02       		.uleb128 0x2
+ 212 0034 02       		.byte	0x2
+ 213 0035 05       		.byte	0x5
+ 214 0036 C2010000 		.4byte	.LASF2
+ 215 003a 02       		.uleb128 0x2
+ 216 003b 02       		.byte	0x2
+ 217 003c 07       		.byte	0x7
+ 218 003d DE000000 		.4byte	.LASF3
+ 219 0041 03       		.uleb128 0x3
+ 220 0042 97000000 		.4byte	.LASF9
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 7
+
+
+ 221 0046 02       		.byte	0x2
+ 222 0047 3F       		.byte	0x3f
+ 223 0048 4C000000 		.4byte	0x4c
+ 224 004c 02       		.uleb128 0x2
+ 225 004d 04       		.byte	0x4
+ 226 004e 05       		.byte	0x5
+ 227 004f CC010000 		.4byte	.LASF4
+ 228 0053 02       		.uleb128 0x2
+ 229 0054 04       		.byte	0x4
+ 230 0055 07       		.byte	0x7
+ 231 0056 CC000000 		.4byte	.LASF5
+ 232 005a 02       		.uleb128 0x2
+ 233 005b 08       		.byte	0x8
+ 234 005c 05       		.byte	0x5
+ 235 005d A1010000 		.4byte	.LASF6
+ 236 0061 02       		.uleb128 0x2
+ 237 0062 08       		.byte	0x8
+ 238 0063 07       		.byte	0x7
+ 239 0064 22010000 		.4byte	.LASF7
+ 240 0068 04       		.uleb128 0x4
+ 241 0069 04       		.byte	0x4
+ 242 006a 05       		.byte	0x5
+ 243 006b 696E7400 		.ascii	"int\000"
+ 244 006f 02       		.uleb128 0x2
+ 245 0070 04       		.byte	0x4
+ 246 0071 07       		.byte	0x7
+ 247 0072 15010000 		.4byte	.LASF8
+ 248 0076 03       		.uleb128 0x3
+ 249 0077 A8000000 		.4byte	.LASF10
+ 250 007b 03       		.byte	0x3
+ 251 007c 2C       		.byte	0x2c
+ 252 007d 41000000 		.4byte	0x41
+ 253 0081 02       		.uleb128 0x2
+ 254 0082 04       		.byte	0x4
+ 255 0083 04       		.byte	0x4
+ 256 0084 B0000000 		.4byte	.LASF11
+ 257 0088 02       		.uleb128 0x2
+ 258 0089 08       		.byte	0x8
+ 259 008a 04       		.byte	0x4
+ 260 008b FC000000 		.4byte	.LASF12
+ 261 008f 02       		.uleb128 0x2
+ 262 0090 01       		.byte	0x1
+ 263 0091 08       		.byte	0x8
+ 264 0092 B6010000 		.4byte	.LASF13
+ 265 0096 02       		.uleb128 0x2
+ 266 0097 08       		.byte	0x8
+ 267 0098 04       		.byte	0x4
+ 268 0099 8C010000 		.4byte	.LASF14
+ 269 009d 02       		.uleb128 0x2
+ 270 009e 04       		.byte	0x4
+ 271 009f 07       		.byte	0x7
+ 272 00a0 98010000 		.4byte	.LASF15
+ 273 00a4 05       		.uleb128 0x5
+ 274 00a5 03010000 		.4byte	.LASF28
+ 275 00a9 01       		.byte	0x1
+ 276 00aa 27       		.byte	0x27
+ 277 00ab 68000000 		.4byte	0x68
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 8
+
+
+ 278 00af 00000000 		.4byte	.LFB64
+ 279 00b3 E8000000 		.4byte	.LFE64-.LFB64
+ 280 00b7 01       		.uleb128 0x1
+ 281 00b8 9C       		.byte	0x9c
+ 282 00b9 1A010000 		.4byte	0x11a
+ 283 00bd 06       		.uleb128 0x6
+ 284 00be 6900     		.ascii	"i\000"
+ 285 00c0 01       		.byte	0x1
+ 286 00c1 29       		.byte	0x29
+ 287 00c2 68000000 		.4byte	0x68
+ 288 00c6 00000000 		.4byte	.LLST0
+ 289 00ca 07       		.uleb128 0x7
+ 290 00cb C4000000 		.4byte	.LASF16
+ 291 00cf 01       		.byte	0x1
+ 292 00d0 2A       		.byte	0x2a
+ 293 00d1 1A010000 		.4byte	0x11a
+ 294 00d5 03       		.uleb128 0x3
+ 295 00d6 91       		.byte	0x91
+ 296 00d7 E077     		.sleb128 -1056
+ 297 00d9 08       		.uleb128 0x8
+ 298 00da 0E000000 		.4byte	.LVL0
+ 299 00de A2010000 		.4byte	0x1a2
+ 300 00e2 09       		.uleb128 0x9
+ 301 00e3 B8000000 		.4byte	.LVL2
+ 302 00e7 AD010000 		.4byte	0x1ad
+ 303 00eb 09010000 		.4byte	0x109
+ 304 00ef 0A       		.uleb128 0xa
+ 305 00f0 01       		.uleb128 0x1
+ 306 00f1 50       		.byte	0x50
+ 307 00f2 02       		.uleb128 0x2
+ 308 00f3 7D       		.byte	0x7d
+ 309 00f4 00       		.sleb128 0
+ 310 00f5 0A       		.uleb128 0xa
+ 311 00f6 01       		.uleb128 0x1
+ 312 00f7 51       		.byte	0x51
+ 313 00f8 05       		.uleb128 0x5
+ 314 00f9 03       		.byte	0x3
+ 315 00fa 00000000 		.4byte	.LC0
+ 316 00fe 0A       		.uleb128 0xa
+ 317 00ff 01       		.uleb128 0x1
+ 318 0100 52       		.byte	0x52
+ 319 0101 01       		.uleb128 0x1
+ 320 0102 30       		.byte	0x30
+ 321 0103 0A       		.uleb128 0xa
+ 322 0104 01       		.uleb128 0x1
+ 323 0105 53       		.byte	0x53
+ 324 0106 01       		.uleb128 0x1
+ 325 0107 30       		.byte	0x30
+ 326 0108 00       		.byte	0
+ 327 0109 0B       		.uleb128 0xb
+ 328 010a BE000000 		.4byte	.LVL3
+ 329 010e B8010000 		.4byte	0x1b8
+ 330 0112 0A       		.uleb128 0xa
+ 331 0113 01       		.uleb128 0x1
+ 332 0114 50       		.byte	0x50
+ 333 0115 02       		.uleb128 0x2
+ 334 0116 7D       		.byte	0x7d
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 9
+
+
+ 335 0117 00       		.sleb128 0
+ 336 0118 00       		.byte	0
+ 337 0119 00       		.byte	0
+ 338 011a 0C       		.uleb128 0xc
+ 339 011b 8F000000 		.4byte	0x8f
+ 340 011f 2B010000 		.4byte	0x12b
+ 341 0123 0D       		.uleb128 0xd
+ 342 0124 9D000000 		.4byte	0x9d
+ 343 0128 FF03     		.2byte	0x3ff
+ 344 012a 00       		.byte	0
+ 345 012b 0E       		.uleb128 0xe
+ 346 012c 08010000 		.4byte	.LASF17
+ 347 0130 04       		.byte	0x4
+ 348 0131 1207     		.2byte	0x712
+ 349 0133 37010000 		.4byte	0x137
+ 350 0137 0F       		.uleb128 0xf
+ 351 0138 76000000 		.4byte	0x76
+ 352 013c 10       		.uleb128 0x10
+ 353 013d BB010000 		.4byte	.LASF18
+ 354 0141 01       		.byte	0x1
+ 355 0142 1D       		.byte	0x1d
+ 356 0143 76000000 		.4byte	0x76
+ 357 0147 05       		.uleb128 0x5
+ 358 0148 03       		.byte	0x3
+ 359 0149 00000000 		.4byte	x_real
+ 360 014d 10       		.uleb128 0x10
+ 361 014e A1000000 		.4byte	.LASF19
+ 362 0152 01       		.byte	0x1
+ 363 0153 1E       		.byte	0x1e
+ 364 0154 76000000 		.4byte	0x76
+ 365 0158 05       		.uleb128 0x5
+ 366 0159 03       		.byte	0x3
+ 367 015a 00000000 		.4byte	x_imag
+ 368 015e 11       		.uleb128 0x11
+ 369 015f 72737100 		.ascii	"rsq\000"
+ 370 0163 01       		.byte	0x1
+ 371 0164 20       		.byte	0x20
+ 372 0165 76000000 		.4byte	0x76
+ 373 0169 05       		.uleb128 0x5
+ 374 016a 03       		.byte	0x3
+ 375 016b 00000000 		.4byte	rsq
+ 376 016f 11       		.uleb128 0x11
+ 377 0170 69737100 		.ascii	"isq\000"
+ 378 0174 01       		.byte	0x1
+ 379 0175 21       		.byte	0x21
+ 380 0176 76000000 		.4byte	0x76
+ 381 017a 05       		.uleb128 0x5
+ 382 017b 03       		.byte	0x3
+ 383 017c 00000000 		.4byte	isq
+ 384 0180 10       		.uleb128 0x10
+ 385 0181 00000000 		.4byte	.LASF20
+ 386 0185 01       		.byte	0x1
+ 387 0186 24       		.byte	0x24
+ 388 0187 76000000 		.4byte	0x76
+ 389 018b 05       		.uleb128 0x5
+ 390 018c 03       		.byte	0x3
+ 391 018d 00000000 		.4byte	sgn_real
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 10
+
+
+ 392 0191 10       		.uleb128 0x10
+ 393 0192 D5010000 		.4byte	.LASF21
+ 394 0196 01       		.byte	0x1
+ 395 0197 25       		.byte	0x25
+ 396 0198 76000000 		.4byte	0x76
+ 397 019c 05       		.uleb128 0x5
+ 398 019d 03       		.byte	0x3
+ 399 019e 00000000 		.4byte	sgn_imag
+ 400 01a2 12       		.uleb128 0x12
+ 401 01a3 F1000000 		.4byte	.LASF22
+ 402 01a7 F1000000 		.4byte	.LASF22
+ 403 01ab 05       		.byte	0x5
+ 404 01ac 54       		.byte	0x54
+ 405 01ad 12       		.uleb128 0x12
+ 406 01ae F9010000 		.4byte	.LASF23
+ 407 01b2 F9010000 		.4byte	.LASF23
+ 408 01b6 06       		.byte	0x6
+ 409 01b7 E7       		.byte	0xe7
+ 410 01b8 12       		.uleb128 0x12
+ 411 01b9 EA010000 		.4byte	.LASF24
+ 412 01bd EA010000 		.4byte	.LASF24
+ 413 01c1 05       		.byte	0x5
+ 414 01c2 8B       		.byte	0x8b
+ 415 01c3 00       		.byte	0
+ 416              		.section	.debug_abbrev,"",%progbits
+ 417              	.Ldebug_abbrev0:
+ 418 0000 01       		.uleb128 0x1
+ 419 0001 11       		.uleb128 0x11
+ 420 0002 01       		.byte	0x1
+ 421 0003 25       		.uleb128 0x25
+ 422 0004 0E       		.uleb128 0xe
+ 423 0005 13       		.uleb128 0x13
+ 424 0006 0B       		.uleb128 0xb
+ 425 0007 03       		.uleb128 0x3
+ 426 0008 0E       		.uleb128 0xe
+ 427 0009 1B       		.uleb128 0x1b
+ 428 000a 0E       		.uleb128 0xe
+ 429 000b 55       		.uleb128 0x55
+ 430 000c 17       		.uleb128 0x17
+ 431 000d 11       		.uleb128 0x11
+ 432 000e 01       		.uleb128 0x1
+ 433 000f 10       		.uleb128 0x10
+ 434 0010 17       		.uleb128 0x17
+ 435 0011 00       		.byte	0
+ 436 0012 00       		.byte	0
+ 437 0013 02       		.uleb128 0x2
+ 438 0014 24       		.uleb128 0x24
+ 439 0015 00       		.byte	0
+ 440 0016 0B       		.uleb128 0xb
+ 441 0017 0B       		.uleb128 0xb
+ 442 0018 3E       		.uleb128 0x3e
+ 443 0019 0B       		.uleb128 0xb
+ 444 001a 03       		.uleb128 0x3
+ 445 001b 0E       		.uleb128 0xe
+ 446 001c 00       		.byte	0
+ 447 001d 00       		.byte	0
+ 448 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 11
+
+
+ 449 001f 16       		.uleb128 0x16
+ 450 0020 00       		.byte	0
+ 451 0021 03       		.uleb128 0x3
+ 452 0022 0E       		.uleb128 0xe
+ 453 0023 3A       		.uleb128 0x3a
+ 454 0024 0B       		.uleb128 0xb
+ 455 0025 3B       		.uleb128 0x3b
+ 456 0026 0B       		.uleb128 0xb
+ 457 0027 49       		.uleb128 0x49
+ 458 0028 13       		.uleb128 0x13
+ 459 0029 00       		.byte	0
+ 460 002a 00       		.byte	0
+ 461 002b 04       		.uleb128 0x4
+ 462 002c 24       		.uleb128 0x24
+ 463 002d 00       		.byte	0
+ 464 002e 0B       		.uleb128 0xb
+ 465 002f 0B       		.uleb128 0xb
+ 466 0030 3E       		.uleb128 0x3e
+ 467 0031 0B       		.uleb128 0xb
+ 468 0032 03       		.uleb128 0x3
+ 469 0033 08       		.uleb128 0x8
+ 470 0034 00       		.byte	0
+ 471 0035 00       		.byte	0
+ 472 0036 05       		.uleb128 0x5
+ 473 0037 2E       		.uleb128 0x2e
+ 474 0038 01       		.byte	0x1
+ 475 0039 3F       		.uleb128 0x3f
+ 476 003a 19       		.uleb128 0x19
+ 477 003b 03       		.uleb128 0x3
+ 478 003c 0E       		.uleb128 0xe
+ 479 003d 3A       		.uleb128 0x3a
+ 480 003e 0B       		.uleb128 0xb
+ 481 003f 3B       		.uleb128 0x3b
+ 482 0040 0B       		.uleb128 0xb
+ 483 0041 27       		.uleb128 0x27
+ 484 0042 19       		.uleb128 0x19
+ 485 0043 49       		.uleb128 0x49
+ 486 0044 13       		.uleb128 0x13
+ 487 0045 11       		.uleb128 0x11
+ 488 0046 01       		.uleb128 0x1
+ 489 0047 12       		.uleb128 0x12
+ 490 0048 06       		.uleb128 0x6
+ 491 0049 40       		.uleb128 0x40
+ 492 004a 18       		.uleb128 0x18
+ 493 004b 9742     		.uleb128 0x2117
+ 494 004d 19       		.uleb128 0x19
+ 495 004e 01       		.uleb128 0x1
+ 496 004f 13       		.uleb128 0x13
+ 497 0050 00       		.byte	0
+ 498 0051 00       		.byte	0
+ 499 0052 06       		.uleb128 0x6
+ 500 0053 34       		.uleb128 0x34
+ 501 0054 00       		.byte	0
+ 502 0055 03       		.uleb128 0x3
+ 503 0056 08       		.uleb128 0x8
+ 504 0057 3A       		.uleb128 0x3a
+ 505 0058 0B       		.uleb128 0xb
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 12
+
+
+ 506 0059 3B       		.uleb128 0x3b
+ 507 005a 0B       		.uleb128 0xb
+ 508 005b 49       		.uleb128 0x49
+ 509 005c 13       		.uleb128 0x13
+ 510 005d 02       		.uleb128 0x2
+ 511 005e 17       		.uleb128 0x17
+ 512 005f 00       		.byte	0
+ 513 0060 00       		.byte	0
+ 514 0061 07       		.uleb128 0x7
+ 515 0062 34       		.uleb128 0x34
+ 516 0063 00       		.byte	0
+ 517 0064 03       		.uleb128 0x3
+ 518 0065 0E       		.uleb128 0xe
+ 519 0066 3A       		.uleb128 0x3a
+ 520 0067 0B       		.uleb128 0xb
+ 521 0068 3B       		.uleb128 0x3b
+ 522 0069 0B       		.uleb128 0xb
+ 523 006a 49       		.uleb128 0x49
+ 524 006b 13       		.uleb128 0x13
+ 525 006c 02       		.uleb128 0x2
+ 526 006d 18       		.uleb128 0x18
+ 527 006e 00       		.byte	0
+ 528 006f 00       		.byte	0
+ 529 0070 08       		.uleb128 0x8
+ 530 0071 898201   		.uleb128 0x4109
+ 531 0074 00       		.byte	0
+ 532 0075 11       		.uleb128 0x11
+ 533 0076 01       		.uleb128 0x1
+ 534 0077 31       		.uleb128 0x31
+ 535 0078 13       		.uleb128 0x13
+ 536 0079 00       		.byte	0
+ 537 007a 00       		.byte	0
+ 538 007b 09       		.uleb128 0x9
+ 539 007c 898201   		.uleb128 0x4109
+ 540 007f 01       		.byte	0x1
+ 541 0080 11       		.uleb128 0x11
+ 542 0081 01       		.uleb128 0x1
+ 543 0082 31       		.uleb128 0x31
+ 544 0083 13       		.uleb128 0x13
+ 545 0084 01       		.uleb128 0x1
+ 546 0085 13       		.uleb128 0x13
+ 547 0086 00       		.byte	0
+ 548 0087 00       		.byte	0
+ 549 0088 0A       		.uleb128 0xa
+ 550 0089 8A8201   		.uleb128 0x410a
+ 551 008c 00       		.byte	0
+ 552 008d 02       		.uleb128 0x2
+ 553 008e 18       		.uleb128 0x18
+ 554 008f 9142     		.uleb128 0x2111
+ 555 0091 18       		.uleb128 0x18
+ 556 0092 00       		.byte	0
+ 557 0093 00       		.byte	0
+ 558 0094 0B       		.uleb128 0xb
+ 559 0095 898201   		.uleb128 0x4109
+ 560 0098 01       		.byte	0x1
+ 561 0099 11       		.uleb128 0x11
+ 562 009a 01       		.uleb128 0x1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 13
+
+
+ 563 009b 31       		.uleb128 0x31
+ 564 009c 13       		.uleb128 0x13
+ 565 009d 00       		.byte	0
+ 566 009e 00       		.byte	0
+ 567 009f 0C       		.uleb128 0xc
+ 568 00a0 01       		.uleb128 0x1
+ 569 00a1 01       		.byte	0x1
+ 570 00a2 49       		.uleb128 0x49
+ 571 00a3 13       		.uleb128 0x13
+ 572 00a4 01       		.uleb128 0x1
+ 573 00a5 13       		.uleb128 0x13
+ 574 00a6 00       		.byte	0
+ 575 00a7 00       		.byte	0
+ 576 00a8 0D       		.uleb128 0xd
+ 577 00a9 21       		.uleb128 0x21
+ 578 00aa 00       		.byte	0
+ 579 00ab 49       		.uleb128 0x49
+ 580 00ac 13       		.uleb128 0x13
+ 581 00ad 2F       		.uleb128 0x2f
+ 582 00ae 05       		.uleb128 0x5
+ 583 00af 00       		.byte	0
+ 584 00b0 00       		.byte	0
+ 585 00b1 0E       		.uleb128 0xe
+ 586 00b2 34       		.uleb128 0x34
+ 587 00b3 00       		.byte	0
+ 588 00b4 03       		.uleb128 0x3
+ 589 00b5 0E       		.uleb128 0xe
+ 590 00b6 3A       		.uleb128 0x3a
+ 591 00b7 0B       		.uleb128 0xb
+ 592 00b8 3B       		.uleb128 0x3b
+ 593 00b9 05       		.uleb128 0x5
+ 594 00ba 49       		.uleb128 0x49
+ 595 00bb 13       		.uleb128 0x13
+ 596 00bc 3F       		.uleb128 0x3f
+ 597 00bd 19       		.uleb128 0x19
+ 598 00be 3C       		.uleb128 0x3c
+ 599 00bf 19       		.uleb128 0x19
+ 600 00c0 00       		.byte	0
+ 601 00c1 00       		.byte	0
+ 602 00c2 0F       		.uleb128 0xf
+ 603 00c3 35       		.uleb128 0x35
+ 604 00c4 00       		.byte	0
+ 605 00c5 49       		.uleb128 0x49
+ 606 00c6 13       		.uleb128 0x13
+ 607 00c7 00       		.byte	0
+ 608 00c8 00       		.byte	0
+ 609 00c9 10       		.uleb128 0x10
+ 610 00ca 34       		.uleb128 0x34
+ 611 00cb 00       		.byte	0
+ 612 00cc 03       		.uleb128 0x3
+ 613 00cd 0E       		.uleb128 0xe
+ 614 00ce 3A       		.uleb128 0x3a
+ 615 00cf 0B       		.uleb128 0xb
+ 616 00d0 3B       		.uleb128 0x3b
+ 617 00d1 0B       		.uleb128 0xb
+ 618 00d2 49       		.uleb128 0x49
+ 619 00d3 13       		.uleb128 0x13
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 14
+
+
+ 620 00d4 3F       		.uleb128 0x3f
+ 621 00d5 19       		.uleb128 0x19
+ 622 00d6 02       		.uleb128 0x2
+ 623 00d7 18       		.uleb128 0x18
+ 624 00d8 00       		.byte	0
+ 625 00d9 00       		.byte	0
+ 626 00da 11       		.uleb128 0x11
+ 627 00db 34       		.uleb128 0x34
+ 628 00dc 00       		.byte	0
+ 629 00dd 03       		.uleb128 0x3
+ 630 00de 08       		.uleb128 0x8
+ 631 00df 3A       		.uleb128 0x3a
+ 632 00e0 0B       		.uleb128 0xb
+ 633 00e1 3B       		.uleb128 0x3b
+ 634 00e2 0B       		.uleb128 0xb
+ 635 00e3 49       		.uleb128 0x49
+ 636 00e4 13       		.uleb128 0x13
+ 637 00e5 3F       		.uleb128 0x3f
+ 638 00e6 19       		.uleb128 0x19
+ 639 00e7 02       		.uleb128 0x2
+ 640 00e8 18       		.uleb128 0x18
+ 641 00e9 00       		.byte	0
+ 642 00ea 00       		.byte	0
+ 643 00eb 12       		.uleb128 0x12
+ 644 00ec 2E       		.uleb128 0x2e
+ 645 00ed 00       		.byte	0
+ 646 00ee 3F       		.uleb128 0x3f
+ 647 00ef 19       		.uleb128 0x19
+ 648 00f0 3C       		.uleb128 0x3c
+ 649 00f1 19       		.uleb128 0x19
+ 650 00f2 6E       		.uleb128 0x6e
+ 651 00f3 0E       		.uleb128 0xe
+ 652 00f4 03       		.uleb128 0x3
+ 653 00f5 0E       		.uleb128 0xe
+ 654 00f6 3A       		.uleb128 0x3a
+ 655 00f7 0B       		.uleb128 0xb
+ 656 00f8 3B       		.uleb128 0x3b
+ 657 00f9 0B       		.uleb128 0xb
+ 658 00fa 00       		.byte	0
+ 659 00fb 00       		.byte	0
+ 660 00fc 00       		.byte	0
+ 661              		.section	.debug_loc,"",%progbits
+ 662              	.Ldebug_loc0:
+ 663              	.LLST0:
+ 664 0000 0E000000 		.4byte	.LVL0
+ 665 0004 24000000 		.4byte	.LVL1
+ 666 0008 0200     		.2byte	0x2
+ 667 000a 30       		.byte	0x30
+ 668 000b 9F       		.byte	0x9f
+ 669 000c 00000000 		.4byte	0
+ 670 0010 00000000 		.4byte	0
+ 671              		.section	.debug_aranges,"",%progbits
+ 672 0000 1C000000 		.4byte	0x1c
+ 673 0004 0200     		.2byte	0x2
+ 674 0006 00000000 		.4byte	.Ldebug_info0
+ 675 000a 04       		.byte	0x4
+ 676 000b 00       		.byte	0
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 15
+
+
+ 677 000c 0000     		.2byte	0
+ 678 000e 0000     		.2byte	0
+ 679 0010 00000000 		.4byte	.LFB64
+ 680 0014 E8000000 		.4byte	.LFE64-.LFB64
+ 681 0018 00000000 		.4byte	0
+ 682 001c 00000000 		.4byte	0
+ 683              		.section	.debug_ranges,"",%progbits
+ 684              	.Ldebug_ranges0:
+ 685 0000 00000000 		.4byte	.LFB64
+ 686 0004 E8000000 		.4byte	.LFE64
+ 687 0008 00000000 		.4byte	0
+ 688 000c 00000000 		.4byte	0
+ 689              		.section	.debug_line,"",%progbits
+ 690              	.Ldebug_line0:
+ 691 0000 FA010000 		.section	.debug_str,"MS",%progbits,1
+ 691      0200BC01 
+ 691      00000201 
+ 691      FB0E0D00 
+ 691      01010101 
+ 692              	.LASF20:
+ 693 0000 73676E5F 		.ascii	"sgn_real\000"
+ 693      7265616C 
+ 693      00
+ 694              	.LASF25:
+ 695 0009 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 695      43313120 
+ 695      352E342E 
+ 695      31203230 
+ 695      31363036 
+ 696 003c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 696      20726576 
+ 696      6973696F 
+ 696      6E203233 
+ 696      37373135 
+ 697 006f 33202D66 		.ascii	"3 -ffunction-sections -ffat-lto-objects\000"
+ 697      66756E63 
+ 697      74696F6E 
+ 697      2D736563 
+ 697      74696F6E 
+ 698              	.LASF9:
+ 699 0097 5F5F696E 		.ascii	"__int32_t\000"
+ 699      7433325F 
+ 699      7400
+ 700              	.LASF19:
+ 701 00a1 785F696D 		.ascii	"x_imag\000"
+ 701      616700
+ 702              	.LASF10:
+ 703 00a8 696E7433 		.ascii	"int32_t\000"
+ 703      325F7400 
+ 704              	.LASF11:
+ 705 00b0 666C6F61 		.ascii	"float\000"
+ 705      7400
+ 706              	.LASF1:
+ 707 00b6 756E7369 		.ascii	"unsigned char\000"
+ 707      676E6564 
+ 707      20636861 
+ 707      7200
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 16
+
+
+ 708              	.LASF16:
+ 709 00c4 6D73675F 		.ascii	"msg_str\000"
+ 709      73747200 
+ 710              	.LASF5:
+ 711 00cc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 711      20756E73 
+ 711      69676E65 
+ 711      6420696E 
+ 711      7400
+ 712              	.LASF3:
+ 713 00de 73686F72 		.ascii	"short unsigned int\000"
+ 713      7420756E 
+ 713      7369676E 
+ 713      65642069 
+ 713      6E7400
+ 714              	.LASF22:
+ 715 00f1 55415254 		.ascii	"UART_Start\000"
+ 715      5F537461 
+ 715      727400
+ 716              	.LASF12:
+ 717 00fc 646F7562 		.ascii	"double\000"
+ 717      6C6500
+ 718              	.LASF28:
+ 719 0103 6D61696E 		.ascii	"main\000"
+ 719      00
+ 720              	.LASF17:
+ 721 0108 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 721      52784275 
+ 721      66666572 
+ 721      00
+ 722              	.LASF8:
+ 723 0115 756E7369 		.ascii	"unsigned int\000"
+ 723      676E6564 
+ 723      20696E74 
+ 723      00
+ 724              	.LASF7:
+ 725 0122 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 725      206C6F6E 
+ 725      6720756E 
+ 725      7369676E 
+ 725      65642069 
+ 726              	.LASF27:
+ 727 0139 433A5C55 		.ascii	"C:\\Users\\sinow\\Documents\\PSoC Creator\\DA3_ELC4"
+ 727      73657273 
+ 727      5C73696E 
+ 727      6F775C44 
+ 727      6F63756D 
+ 728 0167 31315C66 		.ascii	"11\\fa19_fixed_point_oscillator.cydsn\000"
+ 728      6131395F 
+ 728      66697865 
+ 728      645F706F 
+ 728      696E745F 
+ 729              	.LASF14:
+ 730 018c 6C6F6E67 		.ascii	"long double\000"
+ 730      20646F75 
+ 730      626C6500 
+ 731              	.LASF15:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cc6spXAd.s 			page 17
+
+
+ 732 0198 73697A65 		.ascii	"sizetype\000"
+ 732      74797065 
+ 732      00
+ 733              	.LASF6:
+ 734 01a1 6C6F6E67 		.ascii	"long long int\000"
+ 734      206C6F6E 
+ 734      6720696E 
+ 734      7400
+ 735              	.LASF26:
+ 736 01af 6D61696E 		.ascii	"main.c\000"
+ 736      2E6300
+ 737              	.LASF13:
+ 738 01b6 63686172 		.ascii	"char\000"
+ 738      00
+ 739              	.LASF18:
+ 740 01bb 785F7265 		.ascii	"x_real\000"
+ 740      616C00
+ 741              	.LASF2:
+ 742 01c2 73686F72 		.ascii	"short int\000"
+ 742      7420696E 
+ 742      7400
+ 743              	.LASF4:
+ 744 01cc 6C6F6E67 		.ascii	"long int\000"
+ 744      20696E74 
+ 744      00
+ 745              	.LASF21:
+ 746 01d5 73676E5F 		.ascii	"sgn_imag\000"
+ 746      696D6167 
+ 746      00
+ 747              	.LASF0:
+ 748 01de 7369676E 		.ascii	"signed char\000"
+ 748      65642063 
+ 748      68617200 
+ 749              	.LASF24:
+ 750 01ea 55415254 		.ascii	"UART_PutString\000"
+ 750      5F507574 
+ 750      53747269 
+ 750      6E6700
+ 751              	.LASF23:
+ 752 01f9 73707269 		.ascii	"sprintf\000"
+ 752      6E746600 
+ 753              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

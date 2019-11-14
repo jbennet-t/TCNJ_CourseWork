@@ -1,0 +1,2103 @@
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 1516
+  28              	cy_meta_configecc:
+  29 0000 03       		.byte	3
+  30 0001 64       		.byte	100
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 02       		.byte	2
+  34 0005 65       		.byte	101
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 28       		.byte	40
+  38 0009 02       		.byte	2
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 06       		.byte	6
+  42 000d 03       		.byte	3
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 35       		.byte	53
+  46 0011 04       		.byte	4
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 16       		.byte	22
+  50 0015 05       		.byte	5
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 12       		.byte	18
+  54 0019 06       		.byte	6
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 06       		.byte	6
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 2
+
+
+  58 001d 07       		.byte	7
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 2D       		.byte	45
+  62 0021 08       		.byte	8
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 0D       		.byte	13
+  66 0025 09       		.byte	9
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 43       		.byte	67
+  70 0029 0A       		.byte	10
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 2B       		.byte	43
+  74 002d 0B       		.byte	11
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 36       		.byte	54
+  78 0031 0C       		.byte	12
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 28       		.byte	40
+  82 0035 0D       		.byte	13
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 28       		.byte	40
+  86 0039 14       		.byte	20
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 0A       		.byte	10
+  90 003d 15       		.byte	21
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 33       		.byte	51
+  94 0041 16       		.byte	22
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 12       		.byte	18
+  98 0045 17       		.byte	23
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 28       		.byte	40
+ 102 0049 18       		.byte	24
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 04       		.byte	4
+ 106 004d 19       		.byte	25
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 33       		.byte	51
+ 110 0051 1A       		.byte	26
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 12       		.byte	18
+ 114 0055 1B       		.byte	27
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 05       		.byte	5
+ 118 0059 40       		.byte	64
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 05       		.byte	5
+ 122 005d 41       		.byte	65
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 05       		.byte	5
+ 126 0061 42       		.byte	66
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 02       		.byte	2
+ 130 0065 43       		.byte	67
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 02       		.byte	2
+ 134 0069 44       		.byte	68
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 02       		.byte	2
+ 138 006d 45       		.byte	69
+ 139 006e 01       		.byte	1
+ 140 006f 40       		.byte	64
+ 141 0070 04       		.byte	4
+ 142 0071 48       		.byte	72
+ 143 0072 01       		.byte	1
+ 144 0073 40       		.byte	64
+ 145 0074 03       		.byte	3
+ 146 0075 49       		.byte	73
+ 147 0076 01       		.byte	1
+ 148 0077 40       		.byte	64
+ 149 0078 0A       		.byte	10
+ 150 0079 50       		.byte	80
+ 151 007a 01       		.byte	1
+ 152 007b 40       		.byte	64
+ 153 007c 01       		.byte	1
+ 154 007d 51       		.byte	81
+ 155 007e 01       		.byte	1
+ 156 007f 40       		.byte	64
+ 157 0080 85       		.byte	-123
+ 158 0081 0D       		.byte	13
+ 159 0082 8A       		.byte	-118
+ 160 0083 0D       		.byte	13
+ 161 0084 8C       		.byte	-116
+ 162 0085 0F       		.byte	15
+ 163 0086 87       		.byte	-121
+ 164 0087 0D       		.byte	13
+ 165 0088 8B       		.byte	-117
+ 166 0089 0D       		.byte	13
+ 167 008a 40       		.byte	64
+ 168 008b 43       		.byte	67
+ 169 008c 49       		.byte	73
+ 170 008d FF       		.byte	-1
+ 171 008e 4A       		.byte	74
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 4
+
+
+ 172 008f FF       		.byte	-1
+ 173 0090 4B       		.byte	75
+ 174 0091 FF       		.byte	-1
+ 175 0092 4F       		.byte	79
+ 176 0093 01       		.byte	1
+ 177 0094 50       		.byte	80
+ 178 0095 18       		.byte	24
+ 179 0096 52       		.byte	82
+ 180 0097 80       		.byte	-128
+ 181 0098 5A       		.byte	90
+ 182 0099 04       		.byte	4
+ 183 009a 5B       		.byte	91
+ 184 009b 04       		.byte	4
+ 185 009c 5D       		.byte	93
+ 186 009d 99       		.byte	-103
+ 187 009e 5F       		.byte	95
+ 188 009f 01       		.byte	1
+ 189 00a0 60       		.byte	96
+ 190 00a1 40       		.byte	64
+ 191 00a2 62       		.byte	98
+ 192 00a3 40       		.byte	64
+ 193 00a4 64       		.byte	100
+ 194 00a5 40       		.byte	64
+ 195 00a6 65       		.byte	101
+ 196 00a7 40       		.byte	64
+ 197 00a8 66       		.byte	102
+ 198 00a9 80       		.byte	-128
+ 199 00aa 68       		.byte	104
+ 200 00ab 80       		.byte	-128
+ 201 00ac 6A       		.byte	106
+ 202 00ad 80       		.byte	-128
+ 203 00ae 6C       		.byte	108
+ 204 00af 80       		.byte	-128
+ 205 00b0 6E       		.byte	110
+ 206 00b1 80       		.byte	-128
+ 207 00b2 C0       		.byte	-64
+ 208 00b3 43       		.byte	67
+ 209 00b4 C9       		.byte	-55
+ 210 00b5 FF       		.byte	-1
+ 211 00b6 CA       		.byte	-54
+ 212 00b7 FF       		.byte	-1
+ 213 00b8 CB       		.byte	-53
+ 214 00b9 FF       		.byte	-1
+ 215 00ba CD       		.byte	-51
+ 216 00bb 83       		.byte	-125
+ 217 00bc CE       		.byte	-50
+ 218 00bd 03       		.byte	3
+ 219 00be CF       		.byte	-49
+ 220 00bf 01       		.byte	1
+ 221 00c0 D0       		.byte	-48
+ 222 00c1 18       		.byte	24
+ 223 00c2 DA       		.byte	-38
+ 224 00c3 04       		.byte	4
+ 225 00c4 DD       		.byte	-35
+ 226 00c5 09       		.byte	9
+ 227 00c6 DF       		.byte	-33
+ 228 00c7 01       		.byte	1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 5
+
+
+ 229 00c8 E0       		.byte	-32
+ 230 00c9 40       		.byte	64
+ 231 00ca E2       		.byte	-30
+ 232 00cb 40       		.byte	64
+ 233 00cc E4       		.byte	-28
+ 234 00cd 40       		.byte	64
+ 235 00ce E5       		.byte	-27
+ 236 00cf 40       		.byte	64
+ 237 00d0 E6       		.byte	-26
+ 238 00d1 80       		.byte	-128
+ 239 00d2 E8       		.byte	-24
+ 240 00d3 80       		.byte	-128
+ 241 00d4 EA       		.byte	-22
+ 242 00d5 80       		.byte	-128
+ 243 00d6 EC       		.byte	-20
+ 244 00d7 80       		.byte	-128
+ 245 00d8 EE       		.byte	-18
+ 246 00d9 80       		.byte	-128
+ 247 00da 42       		.byte	66
+ 248 00db A0       		.byte	-96
+ 249 00dc 46       		.byte	70
+ 250 00dd A0       		.byte	-96
+ 251 00de 76       		.byte	118
+ 252 00df 80       		.byte	-128
+ 253 00e0 9C       		.byte	-100
+ 254 00e1 80       		.byte	-128
+ 255 00e2 AC       		.byte	-84
+ 256 00e3 80       		.byte	-128
+ 257 00e4 D0       		.byte	-48
+ 258 00e5 C3       		.byte	-61
+ 259 00e6 40       		.byte	64
+ 260 00e7 43       		.byte	67
+ 261 00e8 49       		.byte	73
+ 262 00e9 FF       		.byte	-1
+ 263 00ea 4A       		.byte	74
+ 264 00eb FF       		.byte	-1
+ 265 00ec 4B       		.byte	75
+ 266 00ed FF       		.byte	-1
+ 267 00ee 4D       		.byte	77
+ 268 00ef 83       		.byte	-125
+ 269 00f0 4E       		.byte	78
+ 270 00f1 03       		.byte	3
+ 271 00f2 4F       		.byte	79
+ 272 00f3 01       		.byte	1
+ 273 00f4 50       		.byte	80
+ 274 00f5 18       		.byte	24
+ 275 00f6 52       		.byte	82
+ 276 00f7 80       		.byte	-128
+ 277 00f8 5A       		.byte	90
+ 278 00f9 04       		.byte	4
+ 279 00fa 5B       		.byte	91
+ 280 00fb 04       		.byte	4
+ 281 00fc 5D       		.byte	93
+ 282 00fd 99       		.byte	-103
+ 283 00fe 5F       		.byte	95
+ 284 00ff 01       		.byte	1
+ 285 0100 60       		.byte	96
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 6
+
+
+ 286 0101 40       		.byte	64
+ 287 0102 62       		.byte	98
+ 288 0103 40       		.byte	64
+ 289 0104 64       		.byte	100
+ 290 0105 40       		.byte	64
+ 291 0106 65       		.byte	101
+ 292 0107 40       		.byte	64
+ 293 0108 66       		.byte	102
+ 294 0109 80       		.byte	-128
+ 295 010a 68       		.byte	104
+ 296 010b 80       		.byte	-128
+ 297 010c 6A       		.byte	106
+ 298 010d 80       		.byte	-128
+ 299 010e 6C       		.byte	108
+ 300 010f 80       		.byte	-128
+ 301 0110 6E       		.byte	110
+ 302 0111 80       		.byte	-128
+ 303 0112 8B       		.byte	-117
+ 304 0113 01       		.byte	1
+ 305 0114 AF       		.byte	-81
+ 306 0115 01       		.byte	1
+ 307 0116 B1       		.byte	-79
+ 308 0117 01       		.byte	1
+ 309 0118 BF       		.byte	-65
+ 310 0119 01       		.byte	1
+ 311 011a C0       		.byte	-64
+ 312 011b 43       		.byte	67
+ 313 011c C5       		.byte	-59
+ 314 011d EC       		.byte	-20
+ 315 011e C6       		.byte	-58
+ 316 011f 20       		.byte	32
+ 317 0120 C8       		.byte	-56
+ 318 0121 0B       		.byte	11
+ 319 0122 C9       		.byte	-55
+ 320 0123 FF       		.byte	-1
+ 321 0124 CA       		.byte	-54
+ 322 0125 FF       		.byte	-1
+ 323 0126 CB       		.byte	-53
+ 324 0127 FF       		.byte	-1
+ 325 0128 CD       		.byte	-51
+ 326 0129 83       		.byte	-125
+ 327 012a CE       		.byte	-50
+ 328 012b 03       		.byte	3
+ 329 012c CF       		.byte	-49
+ 330 012d 01       		.byte	1
+ 331 012e D0       		.byte	-48
+ 332 012f 18       		.byte	24
+ 333 0130 D4       		.byte	-44
+ 334 0131 01       		.byte	1
+ 335 0132 D6       		.byte	-42
+ 336 0133 04       		.byte	4
+ 337 0134 D9       		.byte	-39
+ 338 0135 04       		.byte	4
+ 339 0136 DA       		.byte	-38
+ 340 0137 04       		.byte	4
+ 341 0138 DB       		.byte	-37
+ 342 0139 04       		.byte	4
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 7
+
+
+ 343 013a DD       		.byte	-35
+ 344 013b 99       		.byte	-103
+ 345 013c DF       		.byte	-33
+ 346 013d 01       		.byte	1
+ 347 013e E0       		.byte	-32
+ 348 013f 40       		.byte	64
+ 349 0140 E2       		.byte	-30
+ 350 0141 40       		.byte	64
+ 351 0142 E4       		.byte	-28
+ 352 0143 40       		.byte	64
+ 353 0144 E5       		.byte	-27
+ 354 0145 40       		.byte	64
+ 355 0146 E6       		.byte	-26
+ 356 0147 80       		.byte	-128
+ 357 0148 E8       		.byte	-24
+ 358 0149 80       		.byte	-128
+ 359 014a EA       		.byte	-22
+ 360 014b 80       		.byte	-128
+ 361 014c EC       		.byte	-20
+ 362 014d 80       		.byte	-128
+ 363 014e EE       		.byte	-18
+ 364 014f 80       		.byte	-128
+ 365 0150 27       		.byte	39
+ 366 0151 80       		.byte	-128
+ 367 0152 2E       		.byte	46
+ 368 0153 80       		.byte	-128
+ 369 0154 3E       		.byte	62
+ 370 0155 20       		.byte	32
+ 371 0156 42       		.byte	66
+ 372 0157 A0       		.byte	-96
+ 373 0158 46       		.byte	70
+ 374 0159 A0       		.byte	-96
+ 375 015a 4F       		.byte	79
+ 376 015b 05       		.byte	5
+ 377 015c 56       		.byte	86
+ 378 015d 20       		.byte	32
+ 379 015e 5F       		.byte	95
+ 380 015f 85       		.byte	-123
+ 381 0160 64       		.byte	100
+ 382 0161 80       		.byte	-128
+ 383 0162 70       		.byte	112
+ 384 0163 02       		.byte	2
+ 385 0164 84       		.byte	-124
+ 386 0165 02       		.byte	2
+ 387 0166 8C       		.byte	-116
+ 388 0167 02       		.byte	2
+ 389 0168 9A       		.byte	-102
+ 390 0169 80       		.byte	-128
+ 391 016a 9C       		.byte	-100
+ 392 016b 80       		.byte	-128
+ 393 016c 9E       		.byte	-98
+ 394 016d 20       		.byte	32
+ 395 016e CA       		.byte	-54
+ 396 016f 10       		.byte	16
+ 397 0170 CE       		.byte	-50
+ 398 0171 20       		.byte	32
+ 399 0172 D0       		.byte	-48
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 8
+
+
+ 400 0173 C3       		.byte	-61
+ 401 0174 D6       		.byte	-42
+ 402 0175 D0       		.byte	-48
+ 403 0176 D8       		.byte	-40
+ 404 0177 80       		.byte	-128
+ 405 0178 E2       		.byte	-30
+ 406 0179 02       		.byte	2
+ 407 017a E6       		.byte	-26
+ 408 017b 02       		.byte	2
+ 409 017c C0       		.byte	-64
+ 410 017d 51       		.byte	81
+ 411 017e C9       		.byte	-55
+ 412 017f FF       		.byte	-1
+ 413 0180 CA       		.byte	-54
+ 414 0181 FF       		.byte	-1
+ 415 0182 CB       		.byte	-53
+ 416 0183 FF       		.byte	-1
+ 417 0184 CF       		.byte	-49
+ 418 0185 01       		.byte	1
+ 419 0186 D0       		.byte	-48
+ 420 0187 18       		.byte	24
+ 421 0188 DA       		.byte	-38
+ 422 0189 04       		.byte	4
+ 423 018a DD       		.byte	-35
+ 424 018b 09       		.byte	9
+ 425 018c DF       		.byte	-33
+ 426 018d 01       		.byte	1
+ 427 018e E0       		.byte	-32
+ 428 018f 40       		.byte	64
+ 429 0190 E2       		.byte	-30
+ 430 0191 40       		.byte	64
+ 431 0192 E4       		.byte	-28
+ 432 0193 40       		.byte	64
+ 433 0194 E5       		.byte	-27
+ 434 0195 40       		.byte	64
+ 435 0196 E6       		.byte	-26
+ 436 0197 80       		.byte	-128
+ 437 0198 E8       		.byte	-24
+ 438 0199 80       		.byte	-128
+ 439 019a EA       		.byte	-22
+ 440 019b 80       		.byte	-128
+ 441 019c EC       		.byte	-20
+ 442 019d 80       		.byte	-128
+ 443 019e EE       		.byte	-18
+ 444 019f 80       		.byte	-128
+ 445 01a0 40       		.byte	64
+ 446 01a1 02       		.byte	2
+ 447 01a2 48       		.byte	72
+ 448 01a3 02       		.byte	2
+ 449 01a4 98       		.byte	-104
+ 450 01a5 02       		.byte	2
+ 451 01a6 A0       		.byte	-96
+ 452 01a7 02       		.byte	2
+ 453 01a8 D0       		.byte	-48
+ 454 01a9 08       		.byte	8
+ 455 01aa D2       		.byte	-46
+ 456 01ab 08       		.byte	8
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 9
+
+
+ 457 01ac 40       		.byte	64
+ 458 01ad 25       		.byte	37
+ 459 01ae 49       		.byte	73
+ 460 01af FF       		.byte	-1
+ 461 01b0 4A       		.byte	74
+ 462 01b1 FF       		.byte	-1
+ 463 01b2 4B       		.byte	75
+ 464 01b3 FF       		.byte	-1
+ 465 01b4 4D       		.byte	77
+ 466 01b5 83       		.byte	-125
+ 467 01b6 4E       		.byte	78
+ 468 01b7 03       		.byte	3
+ 469 01b8 4F       		.byte	79
+ 470 01b9 01       		.byte	1
+ 471 01ba 50       		.byte	80
+ 472 01bb 18       		.byte	24
+ 473 01bc 5A       		.byte	90
+ 474 01bd 04       		.byte	4
+ 475 01be 5D       		.byte	93
+ 476 01bf 09       		.byte	9
+ 477 01c0 5F       		.byte	95
+ 478 01c1 01       		.byte	1
+ 479 01c2 60       		.byte	96
+ 480 01c3 40       		.byte	64
+ 481 01c4 62       		.byte	98
+ 482 01c5 40       		.byte	64
+ 483 01c6 64       		.byte	100
+ 484 01c7 40       		.byte	64
+ 485 01c8 65       		.byte	101
+ 486 01c9 40       		.byte	64
+ 487 01ca 66       		.byte	102
+ 488 01cb 80       		.byte	-128
+ 489 01cc 68       		.byte	104
+ 490 01cd 80       		.byte	-128
+ 491 01ce 6A       		.byte	106
+ 492 01cf 80       		.byte	-128
+ 493 01d0 6C       		.byte	108
+ 494 01d1 80       		.byte	-128
+ 495 01d2 6E       		.byte	110
+ 496 01d3 80       		.byte	-128
+ 497 01d4 86       		.byte	-122
+ 498 01d5 01       		.byte	1
+ 499 01d6 8E       		.byte	-114
+ 500 01d7 01       		.byte	1
+ 501 01d8 B6       		.byte	-74
+ 502 01d9 01       		.byte	1
+ 503 01da BE       		.byte	-66
+ 504 01db 40       		.byte	64
+ 505 01dc C0       		.byte	-64
+ 506 01dd 25       		.byte	37
+ 507 01de C9       		.byte	-55
+ 508 01df FF       		.byte	-1
+ 509 01e0 CA       		.byte	-54
+ 510 01e1 FF       		.byte	-1
+ 511 01e2 CB       		.byte	-53
+ 512 01e3 FF       		.byte	-1
+ 513 01e4 CD       		.byte	-51
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 10
+
+
+ 514 01e5 83       		.byte	-125
+ 515 01e6 CE       		.byte	-50
+ 516 01e7 03       		.byte	3
+ 517 01e8 CF       		.byte	-49
+ 518 01e9 01       		.byte	1
+ 519 01ea D0       		.byte	-48
+ 520 01eb 18       		.byte	24
+ 521 01ec D8       		.byte	-40
+ 522 01ed 04       		.byte	4
+ 523 01ee DA       		.byte	-38
+ 524 01ef 04       		.byte	4
+ 525 01f0 DD       		.byte	-35
+ 526 01f1 09       		.byte	9
+ 527 01f2 DF       		.byte	-33
+ 528 01f3 01       		.byte	1
+ 529 01f4 E0       		.byte	-32
+ 530 01f5 40       		.byte	64
+ 531 01f6 E2       		.byte	-30
+ 532 01f7 40       		.byte	64
+ 533 01f8 E4       		.byte	-28
+ 534 01f9 40       		.byte	64
+ 535 01fa E5       		.byte	-27
+ 536 01fb 40       		.byte	64
+ 537 01fc E6       		.byte	-26
+ 538 01fd 80       		.byte	-128
+ 539 01fe E8       		.byte	-24
+ 540 01ff 80       		.byte	-128
+ 541 0200 EA       		.byte	-22
+ 542 0201 80       		.byte	-128
+ 543 0202 EC       		.byte	-20
+ 544 0203 80       		.byte	-128
+ 545 0204 EE       		.byte	-18
+ 546 0205 80       		.byte	-128
+ 547 0206 02       		.byte	2
+ 548 0207 02       		.byte	2
+ 549 0208 03       		.byte	3
+ 550 0209 10       		.byte	16
+ 551 020a 19       		.byte	25
+ 552 020b 80       		.byte	-128
+ 553 020c 43       		.byte	67
+ 554 020d 10       		.byte	16
+ 555 020e 47       		.byte	71
+ 556 020f 10       		.byte	16
+ 557 0210 4A       		.byte	74
+ 558 0211 02       		.byte	2
+ 559 0212 4E       		.byte	78
+ 560 0213 02       		.byte	2
+ 561 0214 9B       		.byte	-101
+ 562 0215 10       		.byte	16
+ 563 0216 9D       		.byte	-99
+ 564 0217 80       		.byte	-128
+ 565 0218 A2       		.byte	-94
+ 566 0219 02       		.byte	2
+ 567 021a C0       		.byte	-64
+ 568 021b 05       		.byte	5
+ 569 021c D0       		.byte	-48
+ 570 021d 24       		.byte	36
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 11
+
+
+ 571 021e D2       		.byte	-46
+ 572 021f 18       		.byte	24
+ 573 0220 40       		.byte	64
+ 574 0221 24       		.byte	36
+ 575 0222 45       		.byte	69
+ 576 0223 EC       		.byte	-20
+ 577 0224 47       		.byte	71
+ 578 0225 20       		.byte	32
+ 579 0226 48       		.byte	72
+ 580 0227 23       		.byte	35
+ 581 0228 49       		.byte	73
+ 582 0229 FF       		.byte	-1
+ 583 022a 4A       		.byte	74
+ 584 022b FF       		.byte	-1
+ 585 022c 4B       		.byte	75
+ 586 022d FF       		.byte	-1
+ 587 022e 4D       		.byte	77
+ 588 022f 83       		.byte	-125
+ 589 0230 4E       		.byte	78
+ 590 0231 03       		.byte	3
+ 591 0232 4F       		.byte	79
+ 592 0233 01       		.byte	1
+ 593 0234 50       		.byte	80
+ 594 0235 18       		.byte	24
+ 595 0236 54       		.byte	84
+ 596 0237 01       		.byte	1
+ 597 0238 56       		.byte	86
+ 598 0239 04       		.byte	4
+ 599 023a 5A       		.byte	90
+ 600 023b 04       		.byte	4
+ 601 023c 5B       		.byte	91
+ 602 023d 04       		.byte	4
+ 603 023e 5D       		.byte	93
+ 604 023f 99       		.byte	-103
+ 605 0240 5F       		.byte	95
+ 606 0241 01       		.byte	1
+ 607 0242 60       		.byte	96
+ 608 0243 40       		.byte	64
+ 609 0244 62       		.byte	98
+ 610 0245 40       		.byte	64
+ 611 0246 64       		.byte	100
+ 612 0247 40       		.byte	64
+ 613 0248 65       		.byte	101
+ 614 0249 40       		.byte	64
+ 615 024a 66       		.byte	102
+ 616 024b 80       		.byte	-128
+ 617 024c 68       		.byte	104
+ 618 024d 80       		.byte	-128
+ 619 024e 6A       		.byte	106
+ 620 024f 80       		.byte	-128
+ 621 0250 6C       		.byte	108
+ 622 0251 80       		.byte	-128
+ 623 0252 6E       		.byte	110
+ 624 0253 80       		.byte	-128
+ 625 0254 82       		.byte	-126
+ 626 0255 01       		.byte	1
+ 627 0256 83       		.byte	-125
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 12
+
+
+ 628 0257 13       		.byte	19
+ 629 0258 89       		.byte	-119
+ 630 0259 31       		.byte	49
+ 631 025a 8A       		.byte	-118
+ 632 025b 06       		.byte	6
+ 633 025c 8B       		.byte	-117
+ 634 025d 06       		.byte	6
+ 635 025e 95       		.byte	-107
+ 636 025f 2C       		.byte	44
+ 637 0260 96       		.byte	-106
+ 638 0261 05       		.byte	5
+ 639 0262 97       		.byte	-105
+ 640 0263 03       		.byte	3
+ 641 0264 9B       		.byte	-101
+ 642 0265 0C       		.byte	12
+ 643 0266 9E       		.byte	-98
+ 644 0267 03       		.byte	3
+ 645 0268 A1       		.byte	-95
+ 646 0269 31       		.byte	49
+ 647 026a A3       		.byte	-93
+ 648 026b 0E       		.byte	14
+ 649 026c A4       		.byte	-92
+ 650 026d 06       		.byte	6
+ 651 026e A6       		.byte	-90
+ 652 026f 01       		.byte	1
+ 653 0270 AA       		.byte	-86
+ 654 0271 02       		.byte	2
+ 655 0272 AB       		.byte	-85
+ 656 0273 08       		.byte	8
+ 657 0274 B3       		.byte	-77
+ 658 0275 30       		.byte	48
+ 659 0276 B5       		.byte	-75
+ 660 0277 0F       		.byte	15
+ 661 0278 B6       		.byte	-74
+ 662 0279 07       		.byte	7
+ 663 027a B9       		.byte	-71
+ 664 027b 08       		.byte	8
+ 665 027c BA       		.byte	-70
+ 666 027d 80       		.byte	-128
+ 667 027e BB       		.byte	-69
+ 668 027f 20       		.byte	32
+ 669 0280 BF       		.byte	-65
+ 670 0281 04       		.byte	4
+ 671 0282 C0       		.byte	-64
+ 672 0283 02       		.byte	2
+ 673 0284 C7       		.byte	-57
+ 674 0285 04       		.byte	4
+ 675 0286 C9       		.byte	-55
+ 676 0287 FF       		.byte	-1
+ 677 0288 CA       		.byte	-54
+ 678 0289 07       		.byte	7
+ 679 028a CB       		.byte	-53
+ 680 028b FF       		.byte	-1
+ 681 028c CC       		.byte	-52
+ 682 028d 40       		.byte	64
+ 683 028e CD       		.byte	-51
+ 684 028f 20       		.byte	32
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 13
+
+
+ 685 0290 CE       		.byte	-50
+ 686 0291 F0       		.byte	-16
+ 687 0292 CF       		.byte	-49
+ 688 0293 05       		.byte	5
+ 689 0294 D0       		.byte	-48
+ 690 0295 08       		.byte	8
+ 691 0296 D8       		.byte	-40
+ 692 0297 04       		.byte	4
+ 693 0298 D9       		.byte	-39
+ 694 0299 04       		.byte	4
+ 695 029a DA       		.byte	-38
+ 696 029b 04       		.byte	4
+ 697 029c DF       		.byte	-33
+ 698 029d 01       		.byte	1
+ 699 029e E0       		.byte	-32
+ 700 029f 40       		.byte	64
+ 701 02a0 E1       		.byte	-31
+ 702 02a1 A8       		.byte	-88
+ 703 02a2 E2       		.byte	-30
+ 704 02a3 40       		.byte	64
+ 705 02a4 E3       		.byte	-29
+ 706 02a5 20       		.byte	32
+ 707 02a6 05       		.byte	5
+ 708 02a7 12       		.byte	18
+ 709 02a8 07       		.byte	7
+ 710 02a9 04       		.byte	4
+ 711 02aa 0E       		.byte	14
+ 712 02ab 11       		.byte	17
+ 713 02ac 16       		.byte	22
+ 714 02ad 04       		.byte	4
+ 715 02ae 17       		.byte	23
+ 716 02af 08       		.byte	8
+ 717 02b0 1E       		.byte	30
+ 718 02b1 01       		.byte	1
+ 719 02b2 1F       		.byte	31
+ 720 02b3 40       		.byte	64
+ 721 02b4 27       		.byte	39
+ 722 02b5 28       		.byte	40
+ 723 02b6 2F       		.byte	47
+ 724 02b7 48       		.byte	72
+ 725 02b8 35       		.byte	53
+ 726 02b9 10       		.byte	16
+ 727 02ba 37       		.byte	55
+ 728 02bb 08       		.byte	8
+ 729 02bc 3E       		.byte	62
+ 730 02bd 10       		.byte	16
+ 731 02be 3F       		.byte	63
+ 732 02bf 01       		.byte	1
+ 733 02c0 41       		.byte	65
+ 734 02c1 01       		.byte	1
+ 735 02c2 43       		.byte	67
+ 736 02c3 10       		.byte	16
+ 737 02c4 47       		.byte	71
+ 738 02c5 20       		.byte	32
+ 739 02c6 49       		.byte	73
+ 740 02c7 05       		.byte	5
+ 741 02c8 4D       		.byte	77
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 14
+
+
+ 742 02c9 02       		.byte	2
+ 743 02ca 4F       		.byte	79
+ 744 02cb 01       		.byte	1
+ 745 02cc 51       		.byte	81
+ 746 02cd 01       		.byte	1
+ 747 02ce 52       		.byte	82
+ 748 02cf 02       		.byte	2
+ 749 02d0 56       		.byte	86
+ 750 02d1 04       		.byte	4
+ 751 02d2 57       		.byte	87
+ 752 02d3 08       		.byte	8
+ 753 02d4 59       		.byte	89
+ 754 02d5 85       		.byte	-123
+ 755 02d6 61       		.byte	97
+ 756 02d7 02       		.byte	2
+ 757 02d8 85       		.byte	-123
+ 758 02d9 03       		.byte	3
+ 759 02da 8F       		.byte	-113
+ 760 02db 10       		.byte	16
+ 761 02dc 92       		.byte	-110
+ 762 02dd 10       		.byte	16
+ 763 02de 96       		.byte	-106
+ 764 02df 01       		.byte	1
+ 765 02e0 9B       		.byte	-101
+ 766 02e1 04       		.byte	4
+ 767 02e2 9D       		.byte	-99
+ 768 02e3 02       		.byte	2
+ 769 02e4 9F       		.byte	-97
+ 770 02e5 08       		.byte	8
+ 771 02e6 A7       		.byte	-89
+ 772 02e7 08       		.byte	8
+ 773 02e8 C0       		.byte	-64
+ 774 02e9 50       		.byte	80
+ 775 02ea C2       		.byte	-62
+ 776 02eb A0       		.byte	-96
+ 777 02ec C4       		.byte	-60
+ 778 02ed 60       		.byte	96
+ 779 02ee CA       		.byte	-54
+ 780 02ef A0       		.byte	-96
+ 781 02f0 CC       		.byte	-52
+ 782 02f1 60       		.byte	96
+ 783 02f2 CE       		.byte	-50
+ 784 02f3 A0       		.byte	-96
+ 785 02f4 D0       		.byte	-48
+ 786 02f5 25       		.byte	37
+ 787 02f6 D6       		.byte	-42
+ 788 02f7 0B       		.byte	11
+ 789 02f8 D8       		.byte	-40
+ 790 02f9 01       		.byte	1
+ 791 02fa E4       		.byte	-28
+ 792 02fb 40       		.byte	64
+ 793 02fc 01       		.byte	1
+ 794 02fd 4C       		.byte	76
+ 795 02fe 02       		.byte	2
+ 796 02ff 15       		.byte	21
+ 797 0300 03       		.byte	3
+ 798 0301 11       		.byte	17
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 15
+
+
+ 799 0302 04       		.byte	4
+ 800 0303 13       		.byte	19
+ 801 0304 05       		.byte	5
+ 802 0305 20       		.byte	32
+ 803 0306 06       		.byte	6
+ 804 0307 0C       		.byte	12
+ 805 0308 07       		.byte	7
+ 806 0309 03       		.byte	3
+ 807 030a 09       		.byte	9
+ 808 030b 50       		.byte	80
+ 809 030c 0A       		.byte	10
+ 810 030d 08       		.byte	8
+ 811 030e 0B       		.byte	11
+ 812 030f 0C       		.byte	12
+ 813 0310 0D       		.byte	13
+ 814 0311 14       		.byte	20
+ 815 0312 11       		.byte	17
+ 816 0313 80       		.byte	-128
+ 817 0314 15       		.byte	21
+ 818 0315 1C       		.byte	28
+ 819 0316 17       		.byte	23
+ 820 0317 42       		.byte	66
+ 821 0318 19       		.byte	25
+ 822 0319 09       		.byte	9
+ 823 031a 1B       		.byte	27
+ 824 031b 10       		.byte	16
+ 825 031c 1C       		.byte	28
+ 826 031d 13       		.byte	19
+ 827 031e 1E       		.byte	30
+ 828 031f 04       		.byte	4
+ 829 0320 24       		.byte	36
+ 830 0321 0A       		.byte	10
+ 831 0322 26       		.byte	38
+ 832 0323 14       		.byte	20
+ 833 0324 28       		.byte	40
+ 834 0325 03       		.byte	3
+ 835 0326 29       		.byte	41
+ 836 0327 10       		.byte	16
+ 837 0328 2A       		.byte	42
+ 838 0329 14       		.byte	20
+ 839 032a 2C       		.byte	44
+ 840 032b 20       		.byte	32
+ 841 032c 30       		.byte	48
+ 842 032d 10       		.byte	16
+ 843 032e 32       		.byte	50
+ 844 032f 0F       		.byte	15
+ 845 0330 33       		.byte	51
+ 846 0331 1F       		.byte	31
+ 847 0332 34       		.byte	52
+ 848 0333 20       		.byte	32
+ 849 0334 35       		.byte	53
+ 850 0335 C0       		.byte	-64
+ 851 0336 37       		.byte	55
+ 852 0337 20       		.byte	32
+ 853 0338 39       		.byte	57
+ 854 0339 20       		.byte	32
+ 855 033a 3A       		.byte	58
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 16
+
+
+ 856 033b 08       		.byte	8
+ 857 033c 3E       		.byte	62
+ 858 033d 11       		.byte	17
+ 859 033e 3F       		.byte	63
+ 860 033f 40       		.byte	64
+ 861 0340 40       		.byte	64
+ 862 0341 25       		.byte	37
+ 863 0342 41       		.byte	65
+ 864 0343 04       		.byte	4
+ 865 0344 46       		.byte	70
+ 866 0345 0B       		.byte	11
+ 867 0346 47       		.byte	71
+ 868 0347 EC       		.byte	-20
+ 869 0348 48       		.byte	72
+ 870 0349 34       		.byte	52
+ 871 034a 49       		.byte	73
+ 872 034b FF       		.byte	-1
+ 873 034c 4A       		.byte	74
+ 874 034d FF       		.byte	-1
+ 875 034e 4B       		.byte	75
+ 876 034f FF       		.byte	-1
+ 877 0350 4E       		.byte	78
+ 878 0351 F0       		.byte	-16
+ 879 0352 4F       		.byte	79
+ 880 0353 44       		.byte	68
+ 881 0354 50       		.byte	80
+ 882 0355 0C       		.byte	12
+ 883 0356 54       		.byte	84
+ 884 0357 01       		.byte	1
+ 885 0358 58       		.byte	88
+ 886 0359 04       		.byte	4
+ 887 035a 59       		.byte	89
+ 888 035b 04       		.byte	4
+ 889 035c 5A       		.byte	90
+ 890 035d 04       		.byte	4
+ 891 035e 5B       		.byte	91
+ 892 035f 04       		.byte	4
+ 893 0360 5F       		.byte	95
+ 894 0361 01       		.byte	1
+ 895 0362 66       		.byte	102
+ 896 0363 C0       		.byte	-64
+ 897 0364 6A       		.byte	106
+ 898 0365 40       		.byte	64
+ 899 0366 6B       		.byte	107
+ 900 0367 02       		.byte	2
+ 901 0368 04       		.byte	4
+ 902 0369 02       		.byte	2
+ 903 036a 05       		.byte	5
+ 904 036b 06       		.byte	6
+ 905 036c 07       		.byte	7
+ 906 036d 04       		.byte	4
+ 907 036e 0C       		.byte	12
+ 908 036f 40       		.byte	64
+ 909 0370 0E       		.byte	14
+ 910 0371 01       		.byte	1
+ 911 0372 14       		.byte	20
+ 912 0373 02       		.byte	2
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 17
+
+
+ 913 0374 16       		.byte	22
+ 914 0375 09       		.byte	9
+ 915 0376 17       		.byte	23
+ 916 0377 28       		.byte	40
+ 917 0378 1D       		.byte	29
+ 918 0379 04       		.byte	4
+ 919 037a 1E       		.byte	30
+ 920 037b 58       		.byte	88
+ 921 037c 24       		.byte	36
+ 922 037d 01       		.byte	1
+ 923 037e 25       		.byte	37
+ 924 037f 04       		.byte	4
+ 925 0380 26       		.byte	38
+ 926 0381 10       		.byte	16
+ 927 0382 27       		.byte	39
+ 928 0383 04       		.byte	4
+ 929 0384 2F       		.byte	47
+ 930 0385 08       		.byte	8
+ 931 0386 35       		.byte	53
+ 932 0387 02       		.byte	2
+ 933 0388 36       		.byte	54
+ 934 0389 10       		.byte	16
+ 935 038a 37       		.byte	55
+ 936 038b 08       		.byte	8
+ 937 038c 3D       		.byte	61
+ 938 038d 28       		.byte	40
+ 939 038e 3E       		.byte	62
+ 940 038f 11       		.byte	17
+ 941 0390 3F       		.byte	63
+ 942 0391 80       		.byte	-128
+ 943 0392 44       		.byte	68
+ 944 0393 40       		.byte	64
+ 945 0394 45       		.byte	69
+ 946 0395 10       		.byte	16
+ 947 0396 4C       		.byte	76
+ 948 0397 01       		.byte	1
+ 949 0398 56       		.byte	86
+ 950 0399 09       		.byte	9
+ 951 039a 57       		.byte	87
+ 952 039b 40       		.byte	64
+ 953 039c 5C       		.byte	92
+ 954 039d 02       		.byte	2
+ 955 039e 5E       		.byte	94
+ 956 039f 48       		.byte	72
+ 957 03a0 5F       		.byte	95
+ 958 03a1 20       		.byte	32
+ 959 03a2 80       		.byte	-128
+ 960 03a3 01       		.byte	1
+ 961 03a4 C0       		.byte	-64
+ 962 03a5 70       		.byte	112
+ 963 03a6 C2       		.byte	-62
+ 964 03a7 80       		.byte	-128
+ 965 03a8 C4       		.byte	-60
+ 966 03a9 E0       		.byte	-32
+ 967 03aa CA       		.byte	-54
+ 968 03ab 20       		.byte	32
+ 969 03ac CC       		.byte	-52
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 18
+
+
+ 970 03ad E0       		.byte	-32
+ 971 03ae CE       		.byte	-50
+ 972 03af F0       		.byte	-16
+ 973 03b0 D0       		.byte	-48
+ 974 03b1 A0       		.byte	-96
+ 975 03b2 D2       		.byte	-46
+ 976 03b3 10       		.byte	16
+ 977 03b4 D6       		.byte	-42
+ 978 03b5 F0       		.byte	-16
+ 979 03b6 E0       		.byte	-32
+ 980 03b7 01       		.byte	1
+ 981 03b8 40       		.byte	64
+ 982 03b9 46       		.byte	70
+ 983 03ba 49       		.byte	73
+ 984 03bb FF       		.byte	-1
+ 985 03bc 4A       		.byte	74
+ 986 03bd FF       		.byte	-1
+ 987 03be 4B       		.byte	75
+ 988 03bf FF       		.byte	-1
+ 989 03c0 4F       		.byte	79
+ 990 03c1 01       		.byte	1
+ 991 03c2 50       		.byte	80
+ 992 03c3 18       		.byte	24
+ 993 03c4 52       		.byte	82
+ 994 03c5 80       		.byte	-128
+ 995 03c6 5A       		.byte	90
+ 996 03c7 04       		.byte	4
+ 997 03c8 5B       		.byte	91
+ 998 03c9 04       		.byte	4
+ 999 03ca 5D       		.byte	93
+ 1000 03cb 99       		.byte	-103
+ 1001 03cc 5F       		.byte	95
+ 1002 03cd 01       		.byte	1
+ 1003 03ce 60       		.byte	96
+ 1004 03cf 40       		.byte	64
+ 1005 03d0 62       		.byte	98
+ 1006 03d1 40       		.byte	64
+ 1007 03d2 64       		.byte	100
+ 1008 03d3 40       		.byte	64
+ 1009 03d4 65       		.byte	101
+ 1010 03d5 40       		.byte	64
+ 1011 03d6 66       		.byte	102
+ 1012 03d7 80       		.byte	-128
+ 1013 03d8 68       		.byte	104
+ 1014 03d9 80       		.byte	-128
+ 1015 03da 6A       		.byte	106
+ 1016 03db 80       		.byte	-128
+ 1017 03dc 6C       		.byte	108
+ 1018 03dd 80       		.byte	-128
+ 1019 03de 6E       		.byte	110
+ 1020 03df 80       		.byte	-128
+ 1021 03e0 C0       		.byte	-64
+ 1022 03e1 46       		.byte	70
+ 1023 03e2 C9       		.byte	-55
+ 1024 03e3 FF       		.byte	-1
+ 1025 03e4 CA       		.byte	-54
+ 1026 03e5 FF       		.byte	-1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 19
+
+
+ 1027 03e6 CB       		.byte	-53
+ 1028 03e7 FF       		.byte	-1
+ 1029 03e8 CD       		.byte	-51
+ 1030 03e9 83       		.byte	-125
+ 1031 03ea CE       		.byte	-50
+ 1032 03eb 03       		.byte	3
+ 1033 03ec CF       		.byte	-49
+ 1034 03ed 01       		.byte	1
+ 1035 03ee D0       		.byte	-48
+ 1036 03ef 18       		.byte	24
+ 1037 03f0 DA       		.byte	-38
+ 1038 03f1 04       		.byte	4
+ 1039 03f2 DD       		.byte	-35
+ 1040 03f3 09       		.byte	9
+ 1041 03f4 DF       		.byte	-33
+ 1042 03f5 01       		.byte	1
+ 1043 03f6 E0       		.byte	-32
+ 1044 03f7 40       		.byte	64
+ 1045 03f8 E2       		.byte	-30
+ 1046 03f9 40       		.byte	64
+ 1047 03fa E4       		.byte	-28
+ 1048 03fb 40       		.byte	64
+ 1049 03fc E5       		.byte	-27
+ 1050 03fd 40       		.byte	64
+ 1051 03fe E6       		.byte	-26
+ 1052 03ff 80       		.byte	-128
+ 1053 0400 E8       		.byte	-24
+ 1054 0401 80       		.byte	-128
+ 1055 0402 EA       		.byte	-22
+ 1056 0403 80       		.byte	-128
+ 1057 0404 EC       		.byte	-20
+ 1058 0405 80       		.byte	-128
+ 1059 0406 EE       		.byte	-18
+ 1060 0407 80       		.byte	-128
+ 1061 0408 41       		.byte	65
+ 1062 0409 02       		.byte	2
+ 1063 040a 45       		.byte	69
+ 1064 040b 02       		.byte	2
+ 1065 040c 48       		.byte	72
+ 1066 040d 08       		.byte	8
+ 1067 040e 4C       		.byte	76
+ 1068 040f 08       		.byte	8
+ 1069 0410 71       		.byte	113
+ 1070 0411 02       		.byte	2
+ 1071 0412 A0       		.byte	-96
+ 1072 0413 08       		.byte	8
+ 1073 0414 A5       		.byte	-91
+ 1074 0415 02       		.byte	2
+ 1075 0416 D0       		.byte	-48
+ 1076 0417 81       		.byte	-127
+ 1077 0418 D2       		.byte	-46
+ 1078 0419 24       		.byte	36
+ 1079 041a E6       		.byte	-26
+ 1080 041b 02       		.byte	2
+ 1081 041c 40       		.byte	64
+ 1082 041d 46       		.byte	70
+ 1083 041e 49       		.byte	73
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 20
+
+
+ 1084 041f FF       		.byte	-1
+ 1085 0420 4A       		.byte	74
+ 1086 0421 FF       		.byte	-1
+ 1087 0422 4B       		.byte	75
+ 1088 0423 FF       		.byte	-1
+ 1089 0424 4D       		.byte	77
+ 1090 0425 83       		.byte	-125
+ 1091 0426 4E       		.byte	78
+ 1092 0427 03       		.byte	3
+ 1093 0428 4F       		.byte	79
+ 1094 0429 01       		.byte	1
+ 1095 042a 50       		.byte	80
+ 1096 042b 18       		.byte	24
+ 1097 042c 5A       		.byte	90
+ 1098 042d 04       		.byte	4
+ 1099 042e 5D       		.byte	93
+ 1100 042f 09       		.byte	9
+ 1101 0430 5F       		.byte	95
+ 1102 0431 01       		.byte	1
+ 1103 0432 60       		.byte	96
+ 1104 0433 40       		.byte	64
+ 1105 0434 62       		.byte	98
+ 1106 0435 40       		.byte	64
+ 1107 0436 64       		.byte	100
+ 1108 0437 40       		.byte	64
+ 1109 0438 65       		.byte	101
+ 1110 0439 40       		.byte	64
+ 1111 043a 66       		.byte	102
+ 1112 043b 80       		.byte	-128
+ 1113 043c 68       		.byte	104
+ 1114 043d 80       		.byte	-128
+ 1115 043e 6A       		.byte	106
+ 1116 043f 80       		.byte	-128
+ 1117 0440 6C       		.byte	108
+ 1118 0441 80       		.byte	-128
+ 1119 0442 6E       		.byte	110
+ 1120 0443 80       		.byte	-128
+ 1121 0444 92       		.byte	-110
+ 1122 0445 01       		.byte	1
+ 1123 0446 AA       		.byte	-86
+ 1124 0447 01       		.byte	1
+ 1125 0448 B6       		.byte	-74
+ 1126 0449 01       		.byte	1
+ 1127 044a BE       		.byte	-66
+ 1128 044b 40       		.byte	64
+ 1129 044c C0       		.byte	-64
+ 1130 044d 46       		.byte	70
+ 1131 044e C5       		.byte	-59
+ 1132 044f EC       		.byte	-20
+ 1133 0450 C7       		.byte	-57
+ 1134 0451 02       		.byte	2
+ 1135 0452 C8       		.byte	-56
+ 1136 0453 13       		.byte	19
+ 1137 0454 C9       		.byte	-55
+ 1138 0455 FF       		.byte	-1
+ 1139 0456 CA       		.byte	-54
+ 1140 0457 FF       		.byte	-1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 21
+
+
+ 1141 0458 CB       		.byte	-53
+ 1142 0459 FF       		.byte	-1
+ 1143 045a CD       		.byte	-51
+ 1144 045b 83       		.byte	-125
+ 1145 045c CE       		.byte	-50
+ 1146 045d 03       		.byte	3
+ 1147 045e CF       		.byte	-49
+ 1148 045f 01       		.byte	1
+ 1149 0460 D0       		.byte	-48
+ 1150 0461 18       		.byte	24
+ 1151 0462 D4       		.byte	-44
+ 1152 0463 01       		.byte	1
+ 1153 0464 D6       		.byte	-42
+ 1154 0465 04       		.byte	4
+ 1155 0466 D8       		.byte	-40
+ 1156 0467 04       		.byte	4
+ 1157 0468 DA       		.byte	-38
+ 1158 0469 04       		.byte	4
+ 1159 046a DB       		.byte	-37
+ 1160 046b 04       		.byte	4
+ 1161 046c DD       		.byte	-35
+ 1162 046d 99       		.byte	-103
+ 1163 046e DF       		.byte	-33
+ 1164 046f 01       		.byte	1
+ 1165 0470 E0       		.byte	-32
+ 1166 0471 40       		.byte	64
+ 1167 0472 E2       		.byte	-30
+ 1168 0473 40       		.byte	64
+ 1169 0474 E4       		.byte	-28
+ 1170 0475 40       		.byte	64
+ 1171 0476 E5       		.byte	-27
+ 1172 0477 40       		.byte	64
+ 1173 0478 E6       		.byte	-26
+ 1174 0479 80       		.byte	-128
+ 1175 047a E8       		.byte	-24
+ 1176 047b 80       		.byte	-128
+ 1177 047c EA       		.byte	-22
+ 1178 047d 80       		.byte	-128
+ 1179 047e EC       		.byte	-20
+ 1180 047f 80       		.byte	-128
+ 1181 0480 EE       		.byte	-18
+ 1182 0481 80       		.byte	-128
+ 1183 0482 09       		.byte	9
+ 1184 0483 02       		.byte	2
+ 1185 0484 10       		.byte	16
+ 1186 0485 08       		.byte	8
+ 1187 0486 19       		.byte	25
+ 1188 0487 40       		.byte	64
+ 1189 0488 41       		.byte	65
+ 1190 0489 02       		.byte	2
+ 1191 048a 45       		.byte	69
+ 1192 048b 02       		.byte	2
+ 1193 048c 48       		.byte	72
+ 1194 048d 08       		.byte	8
+ 1195 048e 49       		.byte	73
+ 1196 048f 05       		.byte	5
+ 1197 0490 4C       		.byte	76
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 22
+
+
+ 1198 0491 08       		.byte	8
+ 1199 0492 50       		.byte	80
+ 1200 0493 08       		.byte	8
+ 1201 0494 59       		.byte	89
+ 1202 0495 45       		.byte	69
+ 1203 0496 60       		.byte	96
+ 1204 0497 40       		.byte	64
+ 1205 0498 80       		.byte	-128
+ 1206 0499 40       		.byte	64
+ 1207 049a C2       		.byte	-62
+ 1208 049b 08       		.byte	8
+ 1209 049c C4       		.byte	-60
+ 1210 049d 02       		.byte	2
+ 1211 049e D0       		.byte	-48
+ 1212 049f 81       		.byte	-127
+ 1213 04a0 D2       		.byte	-46
+ 1214 04a1 24       		.byte	36
+ 1215 04a2 D6       		.byte	-42
+ 1216 04a3 0B       		.byte	11
+ 1217 04a4 D8       		.byte	-40
+ 1218 04a5 01       		.byte	1
+ 1219 04a6 40       		.byte	64
+ 1220 04a7 43       		.byte	67
+ 1221 04a8 49       		.byte	73
+ 1222 04a9 FF       		.byte	-1
+ 1223 04aa 4A       		.byte	74
+ 1224 04ab FF       		.byte	-1
+ 1225 04ac 4B       		.byte	75
+ 1226 04ad FF       		.byte	-1
+ 1227 04ae 4F       		.byte	79
+ 1228 04af 01       		.byte	1
+ 1229 04b0 50       		.byte	80
+ 1230 04b1 18       		.byte	24
+ 1231 04b2 52       		.byte	82
+ 1232 04b3 80       		.byte	-128
+ 1233 04b4 5A       		.byte	90
+ 1234 04b5 04       		.byte	4
+ 1235 04b6 5B       		.byte	91
+ 1236 04b7 04       		.byte	4
+ 1237 04b8 5D       		.byte	93
+ 1238 04b9 99       		.byte	-103
+ 1239 04ba 5F       		.byte	95
+ 1240 04bb 01       		.byte	1
+ 1241 04bc 60       		.byte	96
+ 1242 04bd 40       		.byte	64
+ 1243 04be 62       		.byte	98
+ 1244 04bf 40       		.byte	64
+ 1245 04c0 64       		.byte	100
+ 1246 04c1 40       		.byte	64
+ 1247 04c2 65       		.byte	101
+ 1248 04c3 40       		.byte	64
+ 1249 04c4 66       		.byte	102
+ 1250 04c5 80       		.byte	-128
+ 1251 04c6 68       		.byte	104
+ 1252 04c7 80       		.byte	-128
+ 1253 04c8 6A       		.byte	106
+ 1254 04c9 80       		.byte	-128
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 23
+
+
+ 1255 04ca 6C       		.byte	108
+ 1256 04cb 80       		.byte	-128
+ 1257 04cc 6E       		.byte	110
+ 1258 04cd 80       		.byte	-128
+ 1259 04ce C0       		.byte	-64
+ 1260 04cf 43       		.byte	67
+ 1261 04d0 C9       		.byte	-55
+ 1262 04d1 FF       		.byte	-1
+ 1263 04d2 CA       		.byte	-54
+ 1264 04d3 FF       		.byte	-1
+ 1265 04d4 CB       		.byte	-53
+ 1266 04d5 FF       		.byte	-1
+ 1267 04d6 CD       		.byte	-51
+ 1268 04d7 83       		.byte	-125
+ 1269 04d8 CE       		.byte	-50
+ 1270 04d9 03       		.byte	3
+ 1271 04da CF       		.byte	-49
+ 1272 04db 01       		.byte	1
+ 1273 04dc D0       		.byte	-48
+ 1274 04dd 18       		.byte	24
+ 1275 04de DA       		.byte	-38
+ 1276 04df 04       		.byte	4
+ 1277 04e0 DD       		.byte	-35
+ 1278 04e1 09       		.byte	9
+ 1279 04e2 DF       		.byte	-33
+ 1280 04e3 01       		.byte	1
+ 1281 04e4 E0       		.byte	-32
+ 1282 04e5 40       		.byte	64
+ 1283 04e6 E2       		.byte	-30
+ 1284 04e7 40       		.byte	64
+ 1285 04e8 E4       		.byte	-28
+ 1286 04e9 40       		.byte	64
+ 1287 04ea E5       		.byte	-27
+ 1288 04eb 40       		.byte	64
+ 1289 04ec E6       		.byte	-26
+ 1290 04ed 80       		.byte	-128
+ 1291 04ee E8       		.byte	-24
+ 1292 04ef 80       		.byte	-128
+ 1293 04f0 EA       		.byte	-22
+ 1294 04f1 80       		.byte	-128
+ 1295 04f2 EC       		.byte	-20
+ 1296 04f3 80       		.byte	-128
+ 1297 04f4 EE       		.byte	-18
+ 1298 04f5 80       		.byte	-128
+ 1299 04f6 42       		.byte	66
+ 1300 04f7 A0       		.byte	-96
+ 1301 04f8 46       		.byte	70
+ 1302 04f9 A0       		.byte	-96
+ 1303 04fa 76       		.byte	118
+ 1304 04fb 80       		.byte	-128
+ 1305 04fc D0       		.byte	-48
+ 1306 04fd C3       		.byte	-61
+ 1307 04fe 40       		.byte	64
+ 1308 04ff 43       		.byte	67
+ 1309 0500 49       		.byte	73
+ 1310 0501 FF       		.byte	-1
+ 1311 0502 4A       		.byte	74
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 24
+
+
+ 1312 0503 FF       		.byte	-1
+ 1313 0504 4B       		.byte	75
+ 1314 0505 FF       		.byte	-1
+ 1315 0506 4D       		.byte	77
+ 1316 0507 83       		.byte	-125
+ 1317 0508 4E       		.byte	78
+ 1318 0509 03       		.byte	3
+ 1319 050a 4F       		.byte	79
+ 1320 050b 01       		.byte	1
+ 1321 050c 50       		.byte	80
+ 1322 050d 18       		.byte	24
+ 1323 050e 5A       		.byte	90
+ 1324 050f 04       		.byte	4
+ 1325 0510 5D       		.byte	93
+ 1326 0511 09       		.byte	9
+ 1327 0512 5F       		.byte	95
+ 1328 0513 01       		.byte	1
+ 1329 0514 60       		.byte	96
+ 1330 0515 40       		.byte	64
+ 1331 0516 62       		.byte	98
+ 1332 0517 40       		.byte	64
+ 1333 0518 64       		.byte	100
+ 1334 0519 40       		.byte	64
+ 1335 051a 65       		.byte	101
+ 1336 051b 40       		.byte	64
+ 1337 051c 66       		.byte	102
+ 1338 051d 80       		.byte	-128
+ 1339 051e 68       		.byte	104
+ 1340 051f 80       		.byte	-128
+ 1341 0520 6A       		.byte	106
+ 1342 0521 80       		.byte	-128
+ 1343 0522 6C       		.byte	108
+ 1344 0523 80       		.byte	-128
+ 1345 0524 6E       		.byte	110
+ 1346 0525 80       		.byte	-128
+ 1347 0526 8B       		.byte	-117
+ 1348 0527 01       		.byte	1
+ 1349 0528 AF       		.byte	-81
+ 1350 0529 01       		.byte	1
+ 1351 052a B7       		.byte	-73
+ 1352 052b 01       		.byte	1
+ 1353 052c BF       		.byte	-65
+ 1354 052d 40       		.byte	64
+ 1355 052e C0       		.byte	-64
+ 1356 052f 43       		.byte	67
+ 1357 0530 C5       		.byte	-59
+ 1358 0531 EC       		.byte	-20
+ 1359 0532 C6       		.byte	-58
+ 1360 0533 20       		.byte	32
+ 1361 0534 C8       		.byte	-56
+ 1362 0535 0B       		.byte	11
+ 1363 0536 C9       		.byte	-55
+ 1364 0537 FF       		.byte	-1
+ 1365 0538 CA       		.byte	-54
+ 1366 0539 FF       		.byte	-1
+ 1367 053a CB       		.byte	-53
+ 1368 053b FF       		.byte	-1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 25
+
+
+ 1369 053c CD       		.byte	-51
+ 1370 053d 83       		.byte	-125
+ 1371 053e CE       		.byte	-50
+ 1372 053f 03       		.byte	3
+ 1373 0540 CF       		.byte	-49
+ 1374 0541 01       		.byte	1
+ 1375 0542 D0       		.byte	-48
+ 1376 0543 18       		.byte	24
+ 1377 0544 D4       		.byte	-44
+ 1378 0545 01       		.byte	1
+ 1379 0546 D6       		.byte	-42
+ 1380 0547 04       		.byte	4
+ 1381 0548 D9       		.byte	-39
+ 1382 0549 04       		.byte	4
+ 1383 054a DA       		.byte	-38
+ 1384 054b 04       		.byte	4
+ 1385 054c DB       		.byte	-37
+ 1386 054d 04       		.byte	4
+ 1387 054e DD       		.byte	-35
+ 1388 054f 99       		.byte	-103
+ 1389 0550 DF       		.byte	-33
+ 1390 0551 01       		.byte	1
+ 1391 0552 E0       		.byte	-32
+ 1392 0553 40       		.byte	64
+ 1393 0554 E2       		.byte	-30
+ 1394 0555 40       		.byte	64
+ 1395 0556 E4       		.byte	-28
+ 1396 0557 40       		.byte	64
+ 1397 0558 E5       		.byte	-27
+ 1398 0559 40       		.byte	64
+ 1399 055a E6       		.byte	-26
+ 1400 055b 80       		.byte	-128
+ 1401 055c E8       		.byte	-24
+ 1402 055d 80       		.byte	-128
+ 1403 055e EA       		.byte	-22
+ 1404 055f 80       		.byte	-128
+ 1405 0560 EC       		.byte	-20
+ 1406 0561 80       		.byte	-128
+ 1407 0562 EE       		.byte	-18
+ 1408 0563 80       		.byte	-128
+ 1409 0564 26       		.byte	38
+ 1410 0565 40       		.byte	64
+ 1411 0566 2E       		.byte	46
+ 1412 0567 80       		.byte	-128
+ 1413 0568 3E       		.byte	62
+ 1414 0569 20       		.byte	32
+ 1415 056a 42       		.byte	66
+ 1416 056b A0       		.byte	-96
+ 1417 056c 46       		.byte	70
+ 1418 056d A0       		.byte	-96
+ 1419 056e 4F       		.byte	79
+ 1420 056f 05       		.byte	5
+ 1421 0570 56       		.byte	86
+ 1422 0571 20       		.byte	32
+ 1423 0572 5E       		.byte	94
+ 1424 0573 80       		.byte	-128
+ 1425 0574 5F       		.byte	95
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 26
+
+
+ 1426 0575 05       		.byte	5
+ 1427 0576 67       		.byte	103
+ 1428 0577 40       		.byte	64
+ 1429 0578 87       		.byte	-121
+ 1430 0579 40       		.byte	64
+ 1431 057a 9A       		.byte	-102
+ 1432 057b 80       		.byte	-128
+ 1433 057c 9E       		.byte	-98
+ 1434 057d 20       		.byte	32
+ 1435 057e CA       		.byte	-54
+ 1436 057f 10       		.byte	16
+ 1437 0580 CE       		.byte	-50
+ 1438 0581 20       		.byte	32
+ 1439 0582 D0       		.byte	-48
+ 1440 0583 C3       		.byte	-61
+ 1441 0584 D6       		.byte	-42
+ 1442 0585 D0       		.byte	-48
+ 1443 0586 D8       		.byte	-40
+ 1444 0587 80       		.byte	-128
+ 1445 0588 30       		.byte	48
+ 1446 0589 08       		.byte	8
+ 1447 058a 33       		.byte	51
+ 1448 058b 80       		.byte	-128
+ 1449 058c 34       		.byte	52
+ 1450 058d 02       		.byte	2
+ 1451 058e 36       		.byte	54
+ 1452 058f 20       		.byte	32
+ 1453 0590 CC       		.byte	-52
+ 1454 0591 F0       		.byte	-16
+ 1455 0592 A4       		.byte	-92
+ 1456 0593 08       		.byte	8
+ 1457 0594 A6       		.byte	-90
+ 1458 0595 20       		.byte	32
+ 1459 0596 A7       		.byte	-89
+ 1460 0597 80       		.byte	-128
+ 1461 0598 AC       		.byte	-84
+ 1462 0599 02       		.byte	2
+ 1463 059a EE       		.byte	-18
+ 1464 059b 40       		.byte	64
+ 1465 059c 84       		.byte	-124
+ 1466 059d 08       		.byte	8
+ 1467 059e A4       		.byte	-92
+ 1468 059f 08       		.byte	8
+ 1469 05a0 A6       		.byte	-90
+ 1470 05a1 20       		.byte	32
+ 1471 05a2 A7       		.byte	-89
+ 1472 05a3 80       		.byte	-128
+ 1473 05a4 E2       		.byte	-30
+ 1474 05a5 40       		.byte	64
+ 1475 05a6 A6       		.byte	-90
+ 1476 05a7 20       		.byte	32
+ 1477 05a8 A7       		.byte	-89
+ 1478 05a9 80       		.byte	-128
+ 1479 05aa 72       		.byte	114
+ 1480 05ab 80       		.byte	-128
+ 1481 05ac DC       		.byte	-36
+ 1482 05ad 01       		.byte	1
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 27
+
+
+ 1483 05ae 82       		.byte	-126
+ 1484 05af 80       		.byte	-128
+ 1485 05b0 9E       		.byte	-98
+ 1486 05b1 80       		.byte	-128
+ 1487 05b2 83       		.byte	-125
+ 1488 05b3 80       		.byte	-128
+ 1489 05b4 A6       		.byte	-90
+ 1490 05b5 20       		.byte	32
+ 1491 05b6 A7       		.byte	-89
+ 1492 05b7 80       		.byte	-128
+ 1493 05b8 E6       		.byte	-26
+ 1494 05b9 20       		.byte	32
+ 1495 05ba 86       		.byte	-122
+ 1496 05bb 20       		.byte	32
+ 1497 05bc A6       		.byte	-90
+ 1498 05bd 20       		.byte	32
+ 1499 05be E6       		.byte	-26
+ 1500 05bf 40       		.byte	64
+ 1501 05c0 00       		.byte	0
+ 1502 05c1 01       		.byte	1
+ 1503 05c2 01       		.byte	1
+ 1504 05c3 01       		.byte	1
+ 1505 05c4 09       		.byte	9
+ 1506 05c5 01       		.byte	1
+ 1507 05c6 0B       		.byte	11
+ 1508 05c7 01       		.byte	1
+ 1509 05c8 0C       		.byte	12
+ 1510 05c9 01       		.byte	1
+ 1511 05ca 0D       		.byte	13
+ 1512 05cb 01       		.byte	1
+ 1513 05cc 0E       		.byte	14
+ 1514 05cd 01       		.byte	1
+ 1515 05ce 11       		.byte	17
+ 1516 05cf 01       		.byte	1
+ 1517 05d0 1B       		.byte	27
+ 1518 05d1 01       		.byte	1
+ 1519 05d2 1D       		.byte	29
+ 1520 05d3 01       		.byte	1
+ 1521 05d4 00       		.byte	0
+ 1522 05d5 FF       		.byte	-1
+ 1523 05d6 00       		.byte	0
+ 1524 05d7 00       		.byte	0
+ 1525 05d8 80       		.byte	-128
+ 1526 05d9 00       		.byte	0
+ 1527 05da 00       		.byte	0
+ 1528 05db 80       		.byte	-128
+ 1529 05dc 80       		.byte	-128
+ 1530 05dd 00       		.byte	0
+ 1531 05de 80       		.byte	-128
+ 1532 05df 00       		.byte	0
+ 1533 05e0 00       		.byte	0
+ 1534 05e1 00       		.byte	0
+ 1535 05e2 00       		.byte	0
+ 1536 05e3 00       		.byte	0
+ 1537 05e4 00       		.byte	0
+ 1538 05e5 0B       		.byte	11
+ 1539 05e6 0B       		.byte	11
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 28
+
+
+ 1540 05e7 00       		.byte	0
+ 1541 05e8 00       		.byte	0
+ 1542 05e9 00       		.byte	0
+ 1543 05ea 00       		.byte	0
+ 1544 05eb 00       		.byte	0
+ 1545              		.section	.cywolatch,"a",%progbits
+ 1546              		.align	2
+ 1547              		.type	cy_meta_wonvl, %object
+ 1548              		.size	cy_meta_wonvl, 4
+ 1549              	cy_meta_wonvl:
+ 1550 0000 BC       		.byte	-68
+ 1551 0001 90       		.byte	-112
+ 1552 0002 AC       		.byte	-84
+ 1553 0003 AF       		.byte	-81
+ 1554              		.section	.cycustnvl,"a",%progbits
+ 1555              		.align	2
+ 1556              		.type	cy_meta_custnvl, %object
+ 1557              		.size	cy_meta_custnvl, 4
+ 1558              	cy_meta_custnvl:
+ 1559 0000 00       		.byte	0
+ 1560 0001 00       		.byte	0
+ 1561 0002 40       		.byte	64
+ 1562 0003 05       		.byte	5
+ 1563              		.section	.cymeta,"a",%progbits
+ 1564              		.align	2
+ 1565              		.type	cy_metadata, %object
+ 1566              		.size	cy_metadata, 12
+ 1567              	cy_metadata:
+ 1568 0000 00       		.byte	0
+ 1569 0001 01       		.byte	1
+ 1570 0002 2E       		.byte	46
+ 1571 0003 16       		.byte	22
+ 1572 0004 10       		.byte	16
+ 1573 0005 69       		.byte	105
+ 1574 0006 00       		.byte	0
+ 1575 0007 01       		.byte	1
+ 1576 0008 00       		.byte	0
+ 1577 0009 00       		.byte	0
+ 1578 000a 00       		.byte	0
+ 1579 000b 00       		.byte	0
+ 1580              		.section	.cyflashprotect,"a",%progbits
+ 1581              		.align	2
+ 1582              		.type	cy_meta_flashprotect, %object
+ 1583              		.size	cy_meta_flashprotect, 256
+ 1584              	cy_meta_flashprotect:
+ 1585 0000 00000000 		.space	256
+ 1585      00000000 
+ 1585      00000000 
+ 1585      00000000 
+ 1585      00000000 
+ 1586              		.text
+ 1587              	.Letext0:
+ 1588              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1589              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1590              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1591              		.section	.debug_info,"",%progbits
+ 1592              	.Ldebug_info0:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 29
+
+
+ 1593 0000 33010000 		.4byte	0x133
+ 1594 0004 0400     		.2byte	0x4
+ 1595 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1596 000a 04       		.byte	0x4
+ 1597 000b 01       		.uleb128 0x1
+ 1598 000c 24000000 		.4byte	.LASF17
+ 1599 0010 0C       		.byte	0xc
+ 1600 0011 DB010000 		.4byte	.LASF18
+ 1601 0015 72010000 		.4byte	.LASF19
+ 1602 0019 00000000 		.4byte	.Ldebug_line0
+ 1603 001d 02       		.uleb128 0x2
+ 1604 001e 01       		.byte	0x1
+ 1605 001f 06       		.byte	0x6
+ 1606 0020 CF010000 		.4byte	.LASF0
+ 1607 0024 03       		.uleb128 0x3
+ 1608 0025 00000000 		.4byte	.LASF9
+ 1609 0029 01       		.byte	0x1
+ 1610 002a 1D       		.byte	0x1d
+ 1611 002b 2F000000 		.4byte	0x2f
+ 1612 002f 02       		.uleb128 0x2
+ 1613 0030 01       		.byte	0x1
+ 1614 0031 08       		.byte	0x8
+ 1615 0032 16000000 		.4byte	.LASF1
+ 1616 0036 02       		.uleb128 0x2
+ 1617 0037 02       		.byte	0x2
+ 1618 0038 05       		.byte	0x5
+ 1619 0039 5F010000 		.4byte	.LASF2
+ 1620 003d 02       		.uleb128 0x2
+ 1621 003e 02       		.byte	0x2
+ 1622 003f 07       		.byte	0x7
+ 1623 0040 C4000000 		.4byte	.LASF3
+ 1624 0044 02       		.uleb128 0x2
+ 1625 0045 04       		.byte	0x4
+ 1626 0046 05       		.byte	0x5
+ 1627 0047 69010000 		.4byte	.LASF4
+ 1628 004b 02       		.uleb128 0x2
+ 1629 004c 04       		.byte	0x4
+ 1630 004d 07       		.byte	0x7
+ 1631 004e B2000000 		.4byte	.LASF5
+ 1632 0052 02       		.uleb128 0x2
+ 1633 0053 08       		.byte	0x8
+ 1634 0054 05       		.byte	0x5
+ 1635 0055 51010000 		.4byte	.LASF6
+ 1636 0059 02       		.uleb128 0x2
+ 1637 005a 08       		.byte	0x8
+ 1638 005b 07       		.byte	0x7
+ 1639 005c 06010000 		.4byte	.LASF7
+ 1640 0060 04       		.uleb128 0x4
+ 1641 0061 04       		.byte	0x4
+ 1642 0062 05       		.byte	0x5
+ 1643 0063 696E7400 		.ascii	"int\000"
+ 1644 0067 02       		.uleb128 0x2
+ 1645 0068 04       		.byte	0x4
+ 1646 0069 07       		.byte	0x7
+ 1647 006a F9000000 		.4byte	.LASF8
+ 1648 006e 03       		.uleb128 0x3
+ 1649 006f 1D010000 		.4byte	.LASF10
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 30
+
+
+ 1650 0073 02       		.byte	0x2
+ 1651 0074 18       		.byte	0x18
+ 1652 0075 24000000 		.4byte	0x24
+ 1653 0079 05       		.uleb128 0x5
+ 1654 007a 91000000 		.4byte	0x91
+ 1655 007e 8A000000 		.4byte	0x8a
+ 1656 0082 06       		.uleb128 0x6
+ 1657 0083 8A000000 		.4byte	0x8a
+ 1658 0087 EB05     		.2byte	0x5eb
+ 1659 0089 00       		.byte	0
+ 1660 008a 02       		.uleb128 0x2
+ 1661 008b 04       		.byte	0x4
+ 1662 008c 07       		.byte	0x7
+ 1663 008d 48010000 		.4byte	.LASF11
+ 1664 0091 07       		.uleb128 0x7
+ 1665 0092 6E000000 		.4byte	0x6e
+ 1666 0096 08       		.uleb128 0x8
+ 1667 0097 E7000000 		.4byte	.LASF12
+ 1668 009b 03       		.byte	0x3
+ 1669 009c 1F       		.byte	0x1f
+ 1670 009d A7000000 		.4byte	0xa7
+ 1671 00a1 05       		.uleb128 0x5
+ 1672 00a2 03       		.byte	0x3
+ 1673 00a3 00000000 		.4byte	cy_meta_configecc
+ 1674 00a7 07       		.uleb128 0x7
+ 1675 00a8 79000000 		.4byte	0x79
+ 1676 00ac 05       		.uleb128 0x5
+ 1677 00ad 91000000 		.4byte	0x91
+ 1678 00b1 BC000000 		.4byte	0xbc
+ 1679 00b5 09       		.uleb128 0x9
+ 1680 00b6 8A000000 		.4byte	0x8a
+ 1681 00ba 03       		.byte	0x3
+ 1682 00bb 00       		.byte	0
+ 1683 00bc 08       		.uleb128 0x8
+ 1684 00bd D7000000 		.4byte	.LASF13
+ 1685 00c1 03       		.byte	0x3
+ 1686 00c2 EA       		.byte	0xea
+ 1687 00c3 CD000000 		.4byte	0xcd
+ 1688 00c7 05       		.uleb128 0x5
+ 1689 00c8 03       		.byte	0x3
+ 1690 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1691 00cd 07       		.uleb128 0x7
+ 1692 00ce AC000000 		.4byte	0xac
+ 1693 00d2 08       		.uleb128 0x8
+ 1694 00d3 3A010000 		.4byte	.LASF14
+ 1695 00d7 03       		.byte	0x3
+ 1696 00d8 F8       		.byte	0xf8
+ 1697 00d9 E3000000 		.4byte	0xe3
+ 1698 00dd 05       		.uleb128 0x5
+ 1699 00de 03       		.byte	0x3
+ 1700 00df 00000000 		.4byte	cy_meta_wonvl
+ 1701 00e3 07       		.uleb128 0x7
+ 1702 00e4 AC000000 		.4byte	0xac
+ 1703 00e8 05       		.uleb128 0x5
+ 1704 00e9 91000000 		.4byte	0x91
+ 1705 00ed F8000000 		.4byte	0xf8
+ 1706 00f1 09       		.uleb128 0x9
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 31
+
+
+ 1707 00f2 8A000000 		.4byte	0x8a
+ 1708 00f6 FF       		.byte	0xff
+ 1709 00f7 00       		.byte	0
+ 1710 00f8 0A       		.uleb128 0xa
+ 1711 00f9 25010000 		.4byte	.LASF15
+ 1712 00fd 03       		.byte	0x3
+ 1713 00fe 0601     		.2byte	0x106
+ 1714 0100 0A010000 		.4byte	0x10a
+ 1715 0104 05       		.uleb128 0x5
+ 1716 0105 03       		.byte	0x3
+ 1717 0106 00000000 		.4byte	cy_meta_flashprotect
+ 1718 010a 07       		.uleb128 0x7
+ 1719 010b E8000000 		.4byte	0xe8
+ 1720 010f 05       		.uleb128 0x5
+ 1721 0110 91000000 		.4byte	0x91
+ 1722 0114 1F010000 		.4byte	0x11f
+ 1723 0118 09       		.uleb128 0x9
+ 1724 0119 8A000000 		.4byte	0x8a
+ 1725 011d 0B       		.byte	0xb
+ 1726 011e 00       		.byte	0
+ 1727 011f 0A       		.uleb128 0xa
+ 1728 0120 0A000000 		.4byte	.LASF16
+ 1729 0124 03       		.byte	0x3
+ 1730 0125 3301     		.2byte	0x133
+ 1731 0127 31010000 		.4byte	0x131
+ 1732 012b 05       		.uleb128 0x5
+ 1733 012c 03       		.byte	0x3
+ 1734 012d 00000000 		.4byte	cy_metadata
+ 1735 0131 07       		.uleb128 0x7
+ 1736 0132 0F010000 		.4byte	0x10f
+ 1737 0136 00       		.byte	0
+ 1738              		.section	.debug_abbrev,"",%progbits
+ 1739              	.Ldebug_abbrev0:
+ 1740 0000 01       		.uleb128 0x1
+ 1741 0001 11       		.uleb128 0x11
+ 1742 0002 01       		.byte	0x1
+ 1743 0003 25       		.uleb128 0x25
+ 1744 0004 0E       		.uleb128 0xe
+ 1745 0005 13       		.uleb128 0x13
+ 1746 0006 0B       		.uleb128 0xb
+ 1747 0007 03       		.uleb128 0x3
+ 1748 0008 0E       		.uleb128 0xe
+ 1749 0009 1B       		.uleb128 0x1b
+ 1750 000a 0E       		.uleb128 0xe
+ 1751 000b 10       		.uleb128 0x10
+ 1752 000c 17       		.uleb128 0x17
+ 1753 000d 00       		.byte	0
+ 1754 000e 00       		.byte	0
+ 1755 000f 02       		.uleb128 0x2
+ 1756 0010 24       		.uleb128 0x24
+ 1757 0011 00       		.byte	0
+ 1758 0012 0B       		.uleb128 0xb
+ 1759 0013 0B       		.uleb128 0xb
+ 1760 0014 3E       		.uleb128 0x3e
+ 1761 0015 0B       		.uleb128 0xb
+ 1762 0016 03       		.uleb128 0x3
+ 1763 0017 0E       		.uleb128 0xe
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 32
+
+
+ 1764 0018 00       		.byte	0
+ 1765 0019 00       		.byte	0
+ 1766 001a 03       		.uleb128 0x3
+ 1767 001b 16       		.uleb128 0x16
+ 1768 001c 00       		.byte	0
+ 1769 001d 03       		.uleb128 0x3
+ 1770 001e 0E       		.uleb128 0xe
+ 1771 001f 3A       		.uleb128 0x3a
+ 1772 0020 0B       		.uleb128 0xb
+ 1773 0021 3B       		.uleb128 0x3b
+ 1774 0022 0B       		.uleb128 0xb
+ 1775 0023 49       		.uleb128 0x49
+ 1776 0024 13       		.uleb128 0x13
+ 1777 0025 00       		.byte	0
+ 1778 0026 00       		.byte	0
+ 1779 0027 04       		.uleb128 0x4
+ 1780 0028 24       		.uleb128 0x24
+ 1781 0029 00       		.byte	0
+ 1782 002a 0B       		.uleb128 0xb
+ 1783 002b 0B       		.uleb128 0xb
+ 1784 002c 3E       		.uleb128 0x3e
+ 1785 002d 0B       		.uleb128 0xb
+ 1786 002e 03       		.uleb128 0x3
+ 1787 002f 08       		.uleb128 0x8
+ 1788 0030 00       		.byte	0
+ 1789 0031 00       		.byte	0
+ 1790 0032 05       		.uleb128 0x5
+ 1791 0033 01       		.uleb128 0x1
+ 1792 0034 01       		.byte	0x1
+ 1793 0035 49       		.uleb128 0x49
+ 1794 0036 13       		.uleb128 0x13
+ 1795 0037 01       		.uleb128 0x1
+ 1796 0038 13       		.uleb128 0x13
+ 1797 0039 00       		.byte	0
+ 1798 003a 00       		.byte	0
+ 1799 003b 06       		.uleb128 0x6
+ 1800 003c 21       		.uleb128 0x21
+ 1801 003d 00       		.byte	0
+ 1802 003e 49       		.uleb128 0x49
+ 1803 003f 13       		.uleb128 0x13
+ 1804 0040 2F       		.uleb128 0x2f
+ 1805 0041 05       		.uleb128 0x5
+ 1806 0042 00       		.byte	0
+ 1807 0043 00       		.byte	0
+ 1808 0044 07       		.uleb128 0x7
+ 1809 0045 26       		.uleb128 0x26
+ 1810 0046 00       		.byte	0
+ 1811 0047 49       		.uleb128 0x49
+ 1812 0048 13       		.uleb128 0x13
+ 1813 0049 00       		.byte	0
+ 1814 004a 00       		.byte	0
+ 1815 004b 08       		.uleb128 0x8
+ 1816 004c 34       		.uleb128 0x34
+ 1817 004d 00       		.byte	0
+ 1818 004e 03       		.uleb128 0x3
+ 1819 004f 0E       		.uleb128 0xe
+ 1820 0050 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 33
+
+
+ 1821 0051 0B       		.uleb128 0xb
+ 1822 0052 3B       		.uleb128 0x3b
+ 1823 0053 0B       		.uleb128 0xb
+ 1824 0054 49       		.uleb128 0x49
+ 1825 0055 13       		.uleb128 0x13
+ 1826 0056 3F       		.uleb128 0x3f
+ 1827 0057 19       		.uleb128 0x19
+ 1828 0058 02       		.uleb128 0x2
+ 1829 0059 18       		.uleb128 0x18
+ 1830 005a 00       		.byte	0
+ 1831 005b 00       		.byte	0
+ 1832 005c 09       		.uleb128 0x9
+ 1833 005d 21       		.uleb128 0x21
+ 1834 005e 00       		.byte	0
+ 1835 005f 49       		.uleb128 0x49
+ 1836 0060 13       		.uleb128 0x13
+ 1837 0061 2F       		.uleb128 0x2f
+ 1838 0062 0B       		.uleb128 0xb
+ 1839 0063 00       		.byte	0
+ 1840 0064 00       		.byte	0
+ 1841 0065 0A       		.uleb128 0xa
+ 1842 0066 34       		.uleb128 0x34
+ 1843 0067 00       		.byte	0
+ 1844 0068 03       		.uleb128 0x3
+ 1845 0069 0E       		.uleb128 0xe
+ 1846 006a 3A       		.uleb128 0x3a
+ 1847 006b 0B       		.uleb128 0xb
+ 1848 006c 3B       		.uleb128 0x3b
+ 1849 006d 05       		.uleb128 0x5
+ 1850 006e 49       		.uleb128 0x49
+ 1851 006f 13       		.uleb128 0x13
+ 1852 0070 3F       		.uleb128 0x3f
+ 1853 0071 19       		.uleb128 0x19
+ 1854 0072 02       		.uleb128 0x2
+ 1855 0073 18       		.uleb128 0x18
+ 1856 0074 00       		.byte	0
+ 1857 0075 00       		.byte	0
+ 1858 0076 00       		.byte	0
+ 1859              		.section	.debug_aranges,"",%progbits
+ 1860 0000 14000000 		.4byte	0x14
+ 1861 0004 0200     		.2byte	0x2
+ 1862 0006 00000000 		.4byte	.Ldebug_info0
+ 1863 000a 04       		.byte	0x4
+ 1864 000b 00       		.byte	0
+ 1865 000c 0000     		.2byte	0
+ 1866 000e 0000     		.2byte	0
+ 1867 0010 00000000 		.4byte	0
+ 1868 0014 00000000 		.4byte	0
+ 1869              		.section	.debug_line,"",%progbits
+ 1870              	.Ldebug_line0:
+ 1871 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1871      02003701 
+ 1871      00000201 
+ 1871      FB0E0D00 
+ 1871      01010101 
+ 1872              	.LASF9:
+ 1873 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 34
+
+
+ 1873      6E74385F 
+ 1873      7400
+ 1874              	.LASF16:
+ 1875 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 1875      65746164 
+ 1875      61746100 
+ 1876              	.LASF1:
+ 1877 0016 756E7369 		.ascii	"unsigned char\000"
+ 1877      676E6564 
+ 1877      20636861 
+ 1877      7200
+ 1878              	.LASF17:
+ 1879 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1879      43313120 
+ 1879      352E342E 
+ 1879      31203230 
+ 1879      31363036 
+ 1880 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1880      20726576 
+ 1880      6973696F 
+ 1880      6E203233 
+ 1880      37373135 
+ 1881 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1881      66756E63 
+ 1881      74696F6E 
+ 1881      2D736563 
+ 1881      74696F6E 
+ 1882              	.LASF5:
+ 1883 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1883      20756E73 
+ 1883      69676E65 
+ 1883      6420696E 
+ 1883      7400
+ 1884              	.LASF3:
+ 1885 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 1885      7420756E 
+ 1885      7369676E 
+ 1885      65642069 
+ 1885      6E7400
+ 1886              	.LASF13:
+ 1887 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1887      6574615F 
+ 1887      63757374 
+ 1887      6E766C00 
+ 1888              	.LASF12:
+ 1889 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1889      6574615F 
+ 1889      636F6E66 
+ 1889      69676563 
+ 1889      6300
+ 1890              	.LASF8:
+ 1891 00f9 756E7369 		.ascii	"unsigned int\000"
+ 1891      676E6564 
+ 1891      20696E74 
+ 1891      00
+ 1892              	.LASF7:
+ 1893 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 35
+
+
+ 1893      206C6F6E 
+ 1893      6720756E 
+ 1893      7369676E 
+ 1893      65642069 
+ 1894              	.LASF10:
+ 1895 011d 75696E74 		.ascii	"uint8_t\000"
+ 1895      385F7400 
+ 1896              	.LASF15:
+ 1897 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1897      6574615F 
+ 1897      666C6173 
+ 1897      6870726F 
+ 1897      74656374 
+ 1898              	.LASF14:
+ 1899 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1899      6574615F 
+ 1899      776F6E76 
+ 1899      6C00
+ 1900              	.LASF11:
+ 1901 0148 73697A65 		.ascii	"sizetype\000"
+ 1901      74797065 
+ 1901      00
+ 1902              	.LASF6:
+ 1903 0151 6C6F6E67 		.ascii	"long long int\000"
+ 1903      206C6F6E 
+ 1903      6720696E 
+ 1903      7400
+ 1904              	.LASF2:
+ 1905 015f 73686F72 		.ascii	"short int\000"
+ 1905      7420696E 
+ 1905      7400
+ 1906              	.LASF4:
+ 1907 0169 6C6F6E67 		.ascii	"long int\000"
+ 1907      20696E74 
+ 1907      00
+ 1908              	.LASF19:
+ 1909 0172 433A5C55 		.ascii	"C:\\Users\\sinow\\Documents\\PSoC Creator\\DA4_ELC4"
+ 1909      73657273 
+ 1909      5C73696E 
+ 1909      6F775C44 
+ 1909      6F63756D 
+ 1910 01a0 31315C66 		.ascii	"11\\fixed_point_osc_w_timer_and_interrupt.cydsn\000"
+ 1910      69786564 
+ 1910      5F706F69 
+ 1910      6E745F6F 
+ 1910      73635F77 
+ 1911              	.LASF0:
+ 1912 01cf 7369676E 		.ascii	"signed char\000"
+ 1912      65642063 
+ 1912      68617200 
+ 1913              	.LASF18:
+ 1914 01db 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1914      72617465 
+ 1914      645F536F 
+ 1914      75726365 
+ 1914      5C50536F 
+ 1915              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\cctvVFyb.s 			page 36
+
+

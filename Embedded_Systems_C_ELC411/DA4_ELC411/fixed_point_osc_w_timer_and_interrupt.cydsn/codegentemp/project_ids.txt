@@ -1,0 +1,6 @@
+C:\Users\sinow\Documents\PSoC Creator\DA4_ELC411\fixed_point_osc_w_timer_and_interrupt.cydsn\fixed_point_osc_w_timer_and_interrupt.cyprj|db5cf101-0087-4a5d-b0c8-292c4420cec8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|485b18d8-965c-43da-a207-0c1fe62697a9
+C:\Users\sinow\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a17e23b4-6842-4a8f-a55b-bea76c904f31
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9db7a782-aa55-4a52-a668-b528fb7d58d8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cd7bc9d6-e942-4117-b72f-9bfcc4b1ca60
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|61fb5eed-6b04-41c7-a5f9-f1e623292f02

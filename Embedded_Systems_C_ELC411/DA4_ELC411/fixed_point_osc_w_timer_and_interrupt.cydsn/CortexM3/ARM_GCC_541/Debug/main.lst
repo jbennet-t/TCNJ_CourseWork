@@ -1,0 +1,623 @@
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        ****     
+   3:main.c        **** int main(void)
+   4:main.c        **** {
+  28              		.loc 1 4 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+   5:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 5 0
+  38              		.syntax unified
+  39              	@ 5 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+   6:main.c        **** 
+   7:main.c        ****     UART_Start();
+  42              		.loc 1 7 0
+  43              		.thumb
+  44              		.syntax unified
+  45 0004 FFF7FEFF 		bl	UART_Start
+  46              	.LVL0:
+   8:main.c        **** 
+   9:main.c        ****     Timer_1_Start();
+  47              		.loc 1 9 0
+  48 0008 FFF7FEFF 		bl	Timer_1_Start
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 2
+
+
+  49              	.LVL1:
+  10:main.c        ****     Timer_2_Start();
+  50              		.loc 1 10 0
+  51 000c FFF7FEFF 		bl	Timer_2_Start
+  52              	.LVL2:
+  11:main.c        ****     Timer_3_Start();
+  53              		.loc 1 11 0
+  54 0010 FFF7FEFF 		bl	Timer_3_Start
+  55              	.LVL3:
+  12:main.c        ****     Timer_4_Start();
+  56              		.loc 1 12 0
+  57 0014 FFF7FEFF 		bl	Timer_4_Start
+  58              	.LVL4:
+  13:main.c        ****     
+  14:main.c        ****     isr_1_Start();
+  59              		.loc 1 14 0
+  60 0018 FFF7FEFF 		bl	isr_1_Start
+  61              	.LVL5:
+  15:main.c        ****     isr_2_Start();
+  62              		.loc 1 15 0
+  63 001c FFF7FEFF 		bl	isr_2_Start
+  64              	.LVL6:
+  16:main.c        ****     isr_3_Start();
+  65              		.loc 1 16 0
+  66 0020 FFF7FEFF 		bl	isr_3_Start
+  67              	.LVL7:
+  17:main.c        ****     isr_4_Start();
+  68              		.loc 1 17 0
+  69 0024 FFF7FEFF 		bl	isr_4_Start
+  70              	.LVL8:
+  71              	.L2:
+  72 0028 FEE7     		b	.L2
+  73              		.cfi_endproc
+  74              	.LFE63:
+  75              		.size	main, .-main
+  76 002a 00BF     		.text
+  77              	.Letext0:
+  78              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  79              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  80              		.file 4 "Generated_Source\\PSoC5/UART.h"
+  81              		.file 5 "Generated_Source\\PSoC5/Timer_1.h"
+  82              		.file 6 "Generated_Source\\PSoC5/Timer_2.h"
+  83              		.file 7 "Generated_Source\\PSoC5/Timer_3.h"
+  84              		.file 8 "Generated_Source\\PSoC5/Timer_4.h"
+  85              		.file 9 "Generated_Source\\PSoC5/isr_1.h"
+  86              		.file 10 "Generated_Source\\PSoC5/isr_2.h"
+  87              		.file 11 "Generated_Source\\PSoC5/isr_3.h"
+  88              		.file 12 "Generated_Source\\PSoC5/isr_4.h"
+  89              		.file 13 "Generated_Source\\PSoC5/core_cm3.h"
+  90              		.section	.debug_info,"",%progbits
+  91              	.Ldebug_info0:
+  92 0000 80010000 		.4byte	0x180
+  93 0004 0400     		.2byte	0x4
+  94 0006 00000000 		.4byte	.Ldebug_abbrev0
+  95 000a 04       		.byte	0x4
+  96 000b 01       		.uleb128 0x1
+  97 000c 44000000 		.4byte	.LASF25
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 3
+
+
+  98 0010 0C       		.byte	0xc
+  99 0011 E1010000 		.4byte	.LASF26
+ 100 0015 27010000 		.4byte	.LASF27
+ 101 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 102 001d 00000000 		.4byte	0
+ 103 0021 00000000 		.4byte	.Ldebug_line0
+ 104 0025 02       		.uleb128 0x2
+ 105 0026 01       		.byte	0x1
+ 106 0027 06       		.byte	0x6
+ 107 0028 28020000 		.4byte	.LASF0
+ 108 002c 02       		.uleb128 0x2
+ 109 002d 01       		.byte	0x1
+ 110 002e 08       		.byte	0x8
+ 111 002f 36000000 		.4byte	.LASF1
+ 112 0033 02       		.uleb128 0x2
+ 113 0034 02       		.byte	0x2
+ 114 0035 05       		.byte	0x5
+ 115 0036 FB010000 		.4byte	.LASF2
+ 116 003a 02       		.uleb128 0x2
+ 117 003b 02       		.byte	0x2
+ 118 003c 07       		.byte	0x7
+ 119 003d F0000000 		.4byte	.LASF3
+ 120 0041 03       		.uleb128 0x3
+ 121 0042 0E000000 		.4byte	.LASF9
+ 122 0046 02       		.byte	0x2
+ 123 0047 3F       		.byte	0x3f
+ 124 0048 4C000000 		.4byte	0x4c
+ 125 004c 02       		.uleb128 0x2
+ 126 004d 04       		.byte	0x4
+ 127 004e 05       		.byte	0x5
+ 128 004f 13020000 		.4byte	.LASF4
+ 129 0053 02       		.uleb128 0x2
+ 130 0054 04       		.byte	0x4
+ 131 0055 07       		.byte	0x7
+ 132 0056 DE000000 		.4byte	.LASF5
+ 133 005a 02       		.uleb128 0x2
+ 134 005b 08       		.byte	0x8
+ 135 005c 05       		.byte	0x5
+ 136 005d D3010000 		.4byte	.LASF6
+ 137 0061 02       		.uleb128 0x2
+ 138 0062 08       		.byte	0x8
+ 139 0063 07       		.byte	0x7
+ 140 0064 9D010000 		.4byte	.LASF7
+ 141 0068 04       		.uleb128 0x4
+ 142 0069 04       		.byte	0x4
+ 143 006a 05       		.byte	0x5
+ 144 006b 696E7400 		.ascii	"int\000"
+ 145 006f 02       		.uleb128 0x2
+ 146 0070 04       		.byte	0x4
+ 147 0071 07       		.byte	0x7
+ 148 0072 90010000 		.4byte	.LASF8
+ 149 0076 03       		.uleb128 0x3
+ 150 0077 C2010000 		.4byte	.LASF10
+ 151 007b 03       		.byte	0x3
+ 152 007c 2C       		.byte	0x2c
+ 153 007d 41000000 		.4byte	0x41
+ 154 0081 02       		.uleb128 0x2
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 4
+
+
+ 155 0082 04       		.byte	0x4
+ 156 0083 04       		.byte	0x4
+ 157 0084 30000000 		.4byte	.LASF11
+ 158 0088 02       		.uleb128 0x2
+ 159 0089 08       		.byte	0x8
+ 160 008a 04       		.byte	0x4
+ 161 008b 84010000 		.4byte	.LASF12
+ 162 008f 02       		.uleb128 0x2
+ 163 0090 01       		.byte	0x1
+ 164 0091 08       		.byte	0x8
+ 165 0092 E8010000 		.4byte	.LASF13
+ 166 0096 02       		.uleb128 0x2
+ 167 0097 08       		.byte	0x8
+ 168 0098 04       		.byte	0x4
+ 169 0099 1C020000 		.4byte	.LASF14
+ 170 009d 02       		.uleb128 0x2
+ 171 009e 04       		.byte	0x4
+ 172 009f 07       		.byte	0x7
+ 173 00a0 CA010000 		.4byte	.LASF15
+ 174 00a4 05       		.uleb128 0x5
+ 175 00a5 8B010000 		.4byte	.LASF28
+ 176 00a9 01       		.byte	0x1
+ 177 00aa 03       		.byte	0x3
+ 178 00ab 68000000 		.4byte	0x68
+ 179 00af 00000000 		.4byte	.LFB63
+ 180 00b3 2A000000 		.4byte	.LFE63-.LFB63
+ 181 00b7 01       		.uleb128 0x1
+ 182 00b8 9C       		.byte	0x9c
+ 183 00b9 0F010000 		.4byte	0x10f
+ 184 00bd 06       		.uleb128 0x6
+ 185 00be 08000000 		.4byte	.LVL0
+ 186 00c2 20010000 		.4byte	0x120
+ 187 00c6 06       		.uleb128 0x6
+ 188 00c7 0C000000 		.4byte	.LVL1
+ 189 00cb 2B010000 		.4byte	0x12b
+ 190 00cf 06       		.uleb128 0x6
+ 191 00d0 10000000 		.4byte	.LVL2
+ 192 00d4 36010000 		.4byte	0x136
+ 193 00d8 06       		.uleb128 0x6
+ 194 00d9 14000000 		.4byte	.LVL3
+ 195 00dd 41010000 		.4byte	0x141
+ 196 00e1 06       		.uleb128 0x6
+ 197 00e2 18000000 		.4byte	.LVL4
+ 198 00e6 4C010000 		.4byte	0x14c
+ 199 00ea 06       		.uleb128 0x6
+ 200 00eb 1C000000 		.4byte	.LVL5
+ 201 00ef 57010000 		.4byte	0x157
+ 202 00f3 06       		.uleb128 0x6
+ 203 00f4 20000000 		.4byte	.LVL6
+ 204 00f8 62010000 		.4byte	0x162
+ 205 00fc 06       		.uleb128 0x6
+ 206 00fd 24000000 		.4byte	.LVL7
+ 207 0101 6D010000 		.4byte	0x16d
+ 208 0105 06       		.uleb128 0x6
+ 209 0106 28000000 		.4byte	.LVL8
+ 210 010a 78010000 		.4byte	0x178
+ 211 010e 00       		.byte	0
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 5
+
+
+ 212 010f 07       		.uleb128 0x7
+ 213 0110 0E010000 		.4byte	.LASF29
+ 214 0114 0D       		.byte	0xd
+ 215 0115 1207     		.2byte	0x712
+ 216 0117 1B010000 		.4byte	0x11b
+ 217 011b 08       		.uleb128 0x8
+ 218 011c 76000000 		.4byte	0x76
+ 219 0120 09       		.uleb128 0x9
+ 220 0121 03010000 		.4byte	.LASF16
+ 221 0125 03010000 		.4byte	.LASF16
+ 222 0129 04       		.byte	0x4
+ 223 012a 54       		.byte	0x54
+ 224 012b 09       		.uleb128 0x9
+ 225 012c 00000000 		.4byte	.LASF17
+ 226 0130 00000000 		.4byte	.LASF17
+ 227 0134 05       		.byte	0x5
+ 228 0135 5A       		.byte	0x5a
+ 229 0136 09       		.uleb128 0x9
+ 230 0137 B4010000 		.4byte	.LASF18
+ 231 013b B4010000 		.4byte	.LASF18
+ 232 013f 06       		.byte	0x6
+ 233 0140 5A       		.byte	0x5a
+ 234 0141 09       		.uleb128 0x9
+ 235 0142 ED010000 		.4byte	.LASF19
+ 236 0146 ED010000 		.4byte	.LASF19
+ 237 014a 07       		.byte	0x7
+ 238 014b 5A       		.byte	0x5a
+ 239 014c 09       		.uleb128 0x9
+ 240 014d 05020000 		.4byte	.LASF20
+ 241 0151 05020000 		.4byte	.LASF20
+ 242 0155 08       		.byte	0x8
+ 243 0156 5A       		.byte	0x5a
+ 244 0157 09       		.uleb128 0x9
+ 245 0158 18000000 		.4byte	.LASF21
+ 246 015c 18000000 		.4byte	.LASF21
+ 247 0160 09       		.byte	0x9
+ 248 0161 17       		.byte	0x17
+ 249 0162 09       		.uleb128 0x9
+ 250 0163 24000000 		.4byte	.LASF22
+ 251 0167 24000000 		.4byte	.LASF22
+ 252 016b 0A       		.byte	0xa
+ 253 016c 17       		.byte	0x17
+ 254 016d 09       		.uleb128 0x9
+ 255 016e D2000000 		.4byte	.LASF23
+ 256 0172 D2000000 		.4byte	.LASF23
+ 257 0176 0B       		.byte	0xb
+ 258 0177 17       		.byte	0x17
+ 259 0178 09       		.uleb128 0x9
+ 260 0179 1B010000 		.4byte	.LASF24
+ 261 017d 1B010000 		.4byte	.LASF24
+ 262 0181 0C       		.byte	0xc
+ 263 0182 17       		.byte	0x17
+ 264 0183 00       		.byte	0
+ 265              		.section	.debug_abbrev,"",%progbits
+ 266              	.Ldebug_abbrev0:
+ 267 0000 01       		.uleb128 0x1
+ 268 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 6
+
+
+ 269 0002 01       		.byte	0x1
+ 270 0003 25       		.uleb128 0x25
+ 271 0004 0E       		.uleb128 0xe
+ 272 0005 13       		.uleb128 0x13
+ 273 0006 0B       		.uleb128 0xb
+ 274 0007 03       		.uleb128 0x3
+ 275 0008 0E       		.uleb128 0xe
+ 276 0009 1B       		.uleb128 0x1b
+ 277 000a 0E       		.uleb128 0xe
+ 278 000b 55       		.uleb128 0x55
+ 279 000c 17       		.uleb128 0x17
+ 280 000d 11       		.uleb128 0x11
+ 281 000e 01       		.uleb128 0x1
+ 282 000f 10       		.uleb128 0x10
+ 283 0010 17       		.uleb128 0x17
+ 284 0011 00       		.byte	0
+ 285 0012 00       		.byte	0
+ 286 0013 02       		.uleb128 0x2
+ 287 0014 24       		.uleb128 0x24
+ 288 0015 00       		.byte	0
+ 289 0016 0B       		.uleb128 0xb
+ 290 0017 0B       		.uleb128 0xb
+ 291 0018 3E       		.uleb128 0x3e
+ 292 0019 0B       		.uleb128 0xb
+ 293 001a 03       		.uleb128 0x3
+ 294 001b 0E       		.uleb128 0xe
+ 295 001c 00       		.byte	0
+ 296 001d 00       		.byte	0
+ 297 001e 03       		.uleb128 0x3
+ 298 001f 16       		.uleb128 0x16
+ 299 0020 00       		.byte	0
+ 300 0021 03       		.uleb128 0x3
+ 301 0022 0E       		.uleb128 0xe
+ 302 0023 3A       		.uleb128 0x3a
+ 303 0024 0B       		.uleb128 0xb
+ 304 0025 3B       		.uleb128 0x3b
+ 305 0026 0B       		.uleb128 0xb
+ 306 0027 49       		.uleb128 0x49
+ 307 0028 13       		.uleb128 0x13
+ 308 0029 00       		.byte	0
+ 309 002a 00       		.byte	0
+ 310 002b 04       		.uleb128 0x4
+ 311 002c 24       		.uleb128 0x24
+ 312 002d 00       		.byte	0
+ 313 002e 0B       		.uleb128 0xb
+ 314 002f 0B       		.uleb128 0xb
+ 315 0030 3E       		.uleb128 0x3e
+ 316 0031 0B       		.uleb128 0xb
+ 317 0032 03       		.uleb128 0x3
+ 318 0033 08       		.uleb128 0x8
+ 319 0034 00       		.byte	0
+ 320 0035 00       		.byte	0
+ 321 0036 05       		.uleb128 0x5
+ 322 0037 2E       		.uleb128 0x2e
+ 323 0038 01       		.byte	0x1
+ 324 0039 3F       		.uleb128 0x3f
+ 325 003a 19       		.uleb128 0x19
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 7
+
+
+ 326 003b 03       		.uleb128 0x3
+ 327 003c 0E       		.uleb128 0xe
+ 328 003d 3A       		.uleb128 0x3a
+ 329 003e 0B       		.uleb128 0xb
+ 330 003f 3B       		.uleb128 0x3b
+ 331 0040 0B       		.uleb128 0xb
+ 332 0041 27       		.uleb128 0x27
+ 333 0042 19       		.uleb128 0x19
+ 334 0043 49       		.uleb128 0x49
+ 335 0044 13       		.uleb128 0x13
+ 336 0045 8701     		.uleb128 0x87
+ 337 0047 19       		.uleb128 0x19
+ 338 0048 11       		.uleb128 0x11
+ 339 0049 01       		.uleb128 0x1
+ 340 004a 12       		.uleb128 0x12
+ 341 004b 06       		.uleb128 0x6
+ 342 004c 40       		.uleb128 0x40
+ 343 004d 18       		.uleb128 0x18
+ 344 004e 9742     		.uleb128 0x2117
+ 345 0050 19       		.uleb128 0x19
+ 346 0051 01       		.uleb128 0x1
+ 347 0052 13       		.uleb128 0x13
+ 348 0053 00       		.byte	0
+ 349 0054 00       		.byte	0
+ 350 0055 06       		.uleb128 0x6
+ 351 0056 898201   		.uleb128 0x4109
+ 352 0059 00       		.byte	0
+ 353 005a 11       		.uleb128 0x11
+ 354 005b 01       		.uleb128 0x1
+ 355 005c 31       		.uleb128 0x31
+ 356 005d 13       		.uleb128 0x13
+ 357 005e 00       		.byte	0
+ 358 005f 00       		.byte	0
+ 359 0060 07       		.uleb128 0x7
+ 360 0061 34       		.uleb128 0x34
+ 361 0062 00       		.byte	0
+ 362 0063 03       		.uleb128 0x3
+ 363 0064 0E       		.uleb128 0xe
+ 364 0065 3A       		.uleb128 0x3a
+ 365 0066 0B       		.uleb128 0xb
+ 366 0067 3B       		.uleb128 0x3b
+ 367 0068 05       		.uleb128 0x5
+ 368 0069 49       		.uleb128 0x49
+ 369 006a 13       		.uleb128 0x13
+ 370 006b 3F       		.uleb128 0x3f
+ 371 006c 19       		.uleb128 0x19
+ 372 006d 3C       		.uleb128 0x3c
+ 373 006e 19       		.uleb128 0x19
+ 374 006f 00       		.byte	0
+ 375 0070 00       		.byte	0
+ 376 0071 08       		.uleb128 0x8
+ 377 0072 35       		.uleb128 0x35
+ 378 0073 00       		.byte	0
+ 379 0074 49       		.uleb128 0x49
+ 380 0075 13       		.uleb128 0x13
+ 381 0076 00       		.byte	0
+ 382 0077 00       		.byte	0
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 8
+
+
+ 383 0078 09       		.uleb128 0x9
+ 384 0079 2E       		.uleb128 0x2e
+ 385 007a 00       		.byte	0
+ 386 007b 3F       		.uleb128 0x3f
+ 387 007c 19       		.uleb128 0x19
+ 388 007d 3C       		.uleb128 0x3c
+ 389 007e 19       		.uleb128 0x19
+ 390 007f 6E       		.uleb128 0x6e
+ 391 0080 0E       		.uleb128 0xe
+ 392 0081 03       		.uleb128 0x3
+ 393 0082 0E       		.uleb128 0xe
+ 394 0083 3A       		.uleb128 0x3a
+ 395 0084 0B       		.uleb128 0xb
+ 396 0085 3B       		.uleb128 0x3b
+ 397 0086 0B       		.uleb128 0xb
+ 398 0087 00       		.byte	0
+ 399 0088 00       		.byte	0
+ 400 0089 00       		.byte	0
+ 401              		.section	.debug_aranges,"",%progbits
+ 402 0000 1C000000 		.4byte	0x1c
+ 403 0004 0200     		.2byte	0x2
+ 404 0006 00000000 		.4byte	.Ldebug_info0
+ 405 000a 04       		.byte	0x4
+ 406 000b 00       		.byte	0
+ 407 000c 0000     		.2byte	0
+ 408 000e 0000     		.2byte	0
+ 409 0010 00000000 		.4byte	.LFB63
+ 410 0014 2A000000 		.4byte	.LFE63-.LFB63
+ 411 0018 00000000 		.4byte	0
+ 412 001c 00000000 		.4byte	0
+ 413              		.section	.debug_ranges,"",%progbits
+ 414              	.Ldebug_ranges0:
+ 415 0000 00000000 		.4byte	.LFB63
+ 416 0004 2A000000 		.4byte	.LFE63
+ 417 0008 00000000 		.4byte	0
+ 418 000c 00000000 		.4byte	0
+ 419              		.section	.debug_line,"",%progbits
+ 420              	.Ldebug_line0:
+ 421 0000 C6010000 		.section	.debug_str,"MS",%progbits,1
+ 421      0200A901 
+ 421      00000201 
+ 421      FB0E0D00 
+ 421      01010101 
+ 422              	.LASF17:
+ 423 0000 54696D65 		.ascii	"Timer_1_Start\000"
+ 423      725F315F 
+ 423      53746172 
+ 423      7400
+ 424              	.LASF9:
+ 425 000e 5F5F696E 		.ascii	"__int32_t\000"
+ 425      7433325F 
+ 425      7400
+ 426              	.LASF21:
+ 427 0018 6973725F 		.ascii	"isr_1_Start\000"
+ 427      315F5374 
+ 427      61727400 
+ 428              	.LASF22:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 9
+
+
+ 429 0024 6973725F 		.ascii	"isr_2_Start\000"
+ 429      325F5374 
+ 429      61727400 
+ 430              	.LASF11:
+ 431 0030 666C6F61 		.ascii	"float\000"
+ 431      7400
+ 432              	.LASF1:
+ 433 0036 756E7369 		.ascii	"unsigned char\000"
+ 433      676E6564 
+ 433      20636861 
+ 433      7200
+ 434              	.LASF25:
+ 435 0044 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 435      43313120 
+ 435      352E342E 
+ 435      31203230 
+ 435      31363036 
+ 436 0077 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 436      20726576 
+ 436      6973696F 
+ 436      6E203233 
+ 436      37373135 
+ 437 00aa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 437      66756E63 
+ 437      74696F6E 
+ 437      2D736563 
+ 437      74696F6E 
+ 438              	.LASF23:
+ 439 00d2 6973725F 		.ascii	"isr_3_Start\000"
+ 439      335F5374 
+ 439      61727400 
+ 440              	.LASF5:
+ 441 00de 6C6F6E67 		.ascii	"long unsigned int\000"
+ 441      20756E73 
+ 441      69676E65 
+ 441      6420696E 
+ 441      7400
+ 442              	.LASF3:
+ 443 00f0 73686F72 		.ascii	"short unsigned int\000"
+ 443      7420756E 
+ 443      7369676E 
+ 443      65642069 
+ 443      6E7400
+ 444              	.LASF16:
+ 445 0103 55415254 		.ascii	"UART_Start\000"
+ 445      5F537461 
+ 445      727400
+ 446              	.LASF29:
+ 447 010e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 447      52784275 
+ 447      66666572 
+ 447      00
+ 448              	.LASF24:
+ 449 011b 6973725F 		.ascii	"isr_4_Start\000"
+ 449      345F5374 
+ 449      61727400 
+ 450              	.LASF27:
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 10
+
+
+ 451 0127 433A5C55 		.ascii	"C:\\Users\\sinow\\Documents\\PSoC Creator\\DA4_ELC4"
+ 451      73657273 
+ 451      5C73696E 
+ 451      6F775C44 
+ 451      6F63756D 
+ 452 0155 31315C66 		.ascii	"11\\fixed_point_osc_w_timer_and_interrupt.cydsn\000"
+ 452      69786564 
+ 452      5F706F69 
+ 452      6E745F6F 
+ 452      73635F77 
+ 453              	.LASF12:
+ 454 0184 646F7562 		.ascii	"double\000"
+ 454      6C6500
+ 455              	.LASF28:
+ 456 018b 6D61696E 		.ascii	"main\000"
+ 456      00
+ 457              	.LASF8:
+ 458 0190 756E7369 		.ascii	"unsigned int\000"
+ 458      676E6564 
+ 458      20696E74 
+ 458      00
+ 459              	.LASF7:
+ 460 019d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 460      206C6F6E 
+ 460      6720756E 
+ 460      7369676E 
+ 460      65642069 
+ 461              	.LASF18:
+ 462 01b4 54696D65 		.ascii	"Timer_2_Start\000"
+ 462      725F325F 
+ 462      53746172 
+ 462      7400
+ 463              	.LASF10:
+ 464 01c2 696E7433 		.ascii	"int32_t\000"
+ 464      325F7400 
+ 465              	.LASF15:
+ 466 01ca 73697A65 		.ascii	"sizetype\000"
+ 466      74797065 
+ 466      00
+ 467              	.LASF6:
+ 468 01d3 6C6F6E67 		.ascii	"long long int\000"
+ 468      206C6F6E 
+ 468      6720696E 
+ 468      7400
+ 469              	.LASF26:
+ 470 01e1 6D61696E 		.ascii	"main.c\000"
+ 470      2E6300
+ 471              	.LASF13:
+ 472 01e8 63686172 		.ascii	"char\000"
+ 472      00
+ 473              	.LASF19:
+ 474 01ed 54696D65 		.ascii	"Timer_3_Start\000"
+ 474      725F335F 
+ 474      53746172 
+ 474      7400
+ 475              	.LASF2:
+ 476 01fb 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\sinow\AppData\Local\Temp\ccHOEojj.s 			page 11
+
+
+ 476      7420696E 
+ 476      7400
+ 477              	.LASF20:
+ 478 0205 54696D65 		.ascii	"Timer_4_Start\000"
+ 478      725F345F 
+ 478      53746172 
+ 478      7400
+ 479              	.LASF4:
+ 480 0213 6C6F6E67 		.ascii	"long int\000"
+ 480      20696E74 
+ 480      00
+ 481              	.LASF14:
+ 482 021c 6C6F6E67 		.ascii	"long double\000"
+ 482      20646F75 
+ 482      626C6500 
+ 483              	.LASF0:
+ 484 0228 7369676E 		.ascii	"signed char\000"
+ 484      65642063 
+ 484      68617200 
+ 485              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,55 @@
+# fixed_point_osc_w_timer_and_interrupt
+# 2019-11-14 20:13:52Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "Tx_1(0)" iocell 12 7
+set_location "Net_2" 1 4 1 1
+set_location "\UART:BUART:counter_load_not\" 1 3 1 1
+set_location "\UART:BUART:tx_status_0\" 1 4 0 1
+set_location "\UART:BUART:tx_status_2\" 1 4 0 2
+set_location "\Timer_1:TimerUDB:status_tc\" 2 1 0 0
+set_location "\Timer_2:TimerUDB:status_tc\" 1 0 1 1
+set_location "\Timer_3:TimerUDB:status_tc\" 0 2 0 0
+set_location "\Timer_4:TimerUDB:status_tc\" 3 3 1 0
+set_location "\UART:BUART:sTX:TxShifter:u0\" 1 4 2
+set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" 1 3 2
+set_location "\UART:BUART:sTX:TxSts\" 1 4 4
+set_location "isr_1" interrupt -1 -1 0
+set_location "\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 2 0 6
+set_location "\Timer_1:TimerUDB:rstSts:stsreg\" 2 1 4
+set_location "\Timer_1:TimerUDB:sT32:timerdp:u0\" 2 0 2
+set_location "\Timer_1:TimerUDB:sT32:timerdp:u1\" 3 0 2
+set_location "\Timer_1:TimerUDB:sT32:timerdp:u2\" 3 1 2
+set_location "\Timer_1:TimerUDB:sT32:timerdp:u3\" 2 1 2
+set_location "isr_2" interrupt -1 -1 1
+set_location "\Timer_2:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 1 6
+set_location "\Timer_2:TimerUDB:rstSts:stsreg\" 1 0 4
+set_location "\Timer_2:TimerUDB:sT32:timerdp:u0\" 1 1 2
+set_location "\Timer_2:TimerUDB:sT32:timerdp:u1\" 0 1 2
+set_location "\Timer_2:TimerUDB:sT32:timerdp:u2\" 0 0 2
+set_location "\Timer_2:TimerUDB:sT32:timerdp:u3\" 1 0 2
+set_location "isr_3" interrupt -1 -1 2
+set_location "\Timer_3:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 2 3 6
+set_location "\Timer_3:TimerUDB:rstSts:stsreg\" 0 3 4
+set_location "\Timer_3:TimerUDB:sT32:timerdp:u0\" 2 2 2
+set_location "\Timer_3:TimerUDB:sT32:timerdp:u1\" 1 2 2
+set_location "\Timer_3:TimerUDB:sT32:timerdp:u2\" 0 2 2
+set_location "\Timer_3:TimerUDB:sT32:timerdp:u3\" 0 3 2
+set_location "isr_4" interrupt -1 -1 3
+set_location "\Timer_4:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 3 4 6
+set_location "\Timer_4:TimerUDB:rstSts:stsreg\" 3 3 4
+set_location "\Timer_4:TimerUDB:sT32:timerdp:u0\" 3 4 2
+set_location "\Timer_4:TimerUDB:sT32:timerdp:u1\" 2 4 2
+set_location "\Timer_4:TimerUDB:sT32:timerdp:u2\" 2 3 2
+set_location "\Timer_4:TimerUDB:sT32:timerdp:u3\" 3 3 2
+set_location "\UART:BUART:txn\" 1 4 1 0
+set_location "\UART:BUART:tx_state_1\" 1 3 0 3
+set_location "\UART:BUART:tx_state_0\" 1 4 0 0
+set_location "\UART:BUART:tx_state_2\" 1 3 1 0
+set_location "\UART:BUART:tx_bitclk\" 1 4 1 3

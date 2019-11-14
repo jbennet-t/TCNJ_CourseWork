@@ -1,0 +1,6 @@
+C:\Users\sinow\Documents\PSoC Creator\DA3_ELC411\fa19_fixed_point_oscillator.cydsn\fa19_fixed_point_oscillator.cyprj|556adccc-bf97-4940-8592-3d1dc9446e45
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|fff17f07-8f83-49c6-a419-1985756eb3c3
+C:\Users\sinow\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|dc63efa6-6744-46d8-be93-3d9393fcb037
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ba9f1501-06b7-44c4-a437-d11078933bb6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9e979e9d-61fc-4f73-993c-18792e664408
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|7a9e0495-50a6-461d-8d29-7a44180380ad
