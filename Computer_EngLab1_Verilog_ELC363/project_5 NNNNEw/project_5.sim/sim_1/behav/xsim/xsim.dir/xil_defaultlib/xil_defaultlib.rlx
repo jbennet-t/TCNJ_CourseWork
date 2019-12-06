@@ -1,0 +1,7 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.sim/sim_1/behav/xsim/glbl.v,1513215260,verilog,,,,glbl,,,,,,,,
+C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sim_1/new/CPU_TEST.v,1575495899,verilog,,,,CPU_TEST,,,,,,,,
+C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v,1575501999,verilog,,C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sim_1/new/CPU_TEST.v,,ALU;ARM_CPU;Data_Memory;Instruction_Memory;Registers,,,,,,,,

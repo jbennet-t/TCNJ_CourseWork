@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec  3 21:59:53 2019
+# Process ID: 11860
+# Current directory: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.runs/synth_1
+# Command line: vivado.exe -log ARM_CPU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARM_CPU.tcl
+# Log file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.runs/synth_1/ARM_CPU.vds
+# Journal file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ARM_CPU.tcl -notrace

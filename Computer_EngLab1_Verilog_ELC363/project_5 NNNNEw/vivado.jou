@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec  3 22:24:48 2019
+# Process ID: 14772
+# Current directory: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10644 C:\Users\sinow\Documents\ELC363-Lab\project_5 NNNNEw\project_5.xpr
+# Log file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/vivado.log
+# Journal file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source CPU_TEST.tcl
+save_wave_config {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}}
+set_property xsim.view {{C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}
+source CPU_TEST.tcl
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+open_project C:/Users/sinow/Documents/ELC363-Lab/Lab4/Lab_4/Lab_4.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Users/sinow/Documents/ELC363-Lab/Lab4/project_4/project_4.xpr
+update_compile_order -fileset sources_1
+current_project project_5
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+current_project project_4
+close_project
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source CPU_TEST.tcl
+relaunch_sim
+save_wave_config {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}}
+set_property xsim.view {{C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg} {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/CPU_TEST_behav.wcfg}} [get_filesets sim_1]
+close_sim

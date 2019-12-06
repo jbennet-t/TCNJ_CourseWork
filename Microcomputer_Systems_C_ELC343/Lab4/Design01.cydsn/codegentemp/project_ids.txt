@@ -1,6 +1,6 @@
-C:\Users\sinow\Documents\PSoC Creator\Lab4\Design01.cydsn\Design01.cyprj|aa40043c-778b-48ad-b334-2b0b3b2c4cd1
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2871ebbc-cc30-413e-b8dc-cf568110576b
-C:\Users\sinow\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|804dc430-02cd-4dc0-a2b4-5479818cb02f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a37c9e29-4003-4acb-8110-68d28f29bb85
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a69a84e1-6216-437b-8b2f-0a958c3f1e49
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a8af67b4-3abf-47d7-8967-36b85f14253e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e3107b5c-cad8-4a74-9b6c-b1a05bd1593d
+C:\Users\sinow\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|1b5c3417-e3e4-4b23-a543-9c822cc2eb4c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2aed1a83-7d37-4450-9ac5-71674b83784f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|02e8baca-a49b-4a0c-a0d4-11bc632ca741
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8076976a-e642-4212-a675-70b10999ae72
+C:\Users\sinow\Documents\GitHub\TCNJ_CourseWork\Microcomputer_Systems_C_ELC343\Lab4\Design01.cydsn\Design01.cyprj|def3a4cf-052b-4791-9b8f-8fc0dad7b5a5

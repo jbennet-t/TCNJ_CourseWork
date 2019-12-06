@@ -33,6 +33,7 @@
 #include "ADC_SAR_1_Bypass.h"
 #include "LCD_Char_1_LCDPort_aliases.h"
 #include "LCD_Char_1_LCDPort.h"
+#include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"
@@ -41,7 +42,6 @@
 #include "cyPm.h"
 #include "CySpc.h"
 #include "cytypes.h"
-#include "cy_em_eeprom.h"
 
 /*[]*/
 

@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec  3 21:57:57 2019
+# Process ID: 17256
+# Current directory: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17512 C:\Users\sinow\Documents\ELC363-Lab\project_5 NNNNEw\project_5.xpr
+# Log file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/vivado.log
+# Journal file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source CPU_TEST.tcl
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim

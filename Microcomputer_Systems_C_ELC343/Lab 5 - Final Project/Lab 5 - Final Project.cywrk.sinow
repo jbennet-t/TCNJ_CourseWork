@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Lab 5 - Final Project\Pot_Control">
+<ExpandedNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\TopDesign</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Pins</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Analog</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Clocks</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Interrupts</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\DMA</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\System</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Directives</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Flash Security</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\EEPROM</v>
+<v>Lab 5 - Final Project\Pot_Control\Header Files</v>
+<v>Lab 5 - Final Project\Pot_Control\Header Files\cyapicallbacks.h</v>
+<v>Lab 5 - Final Project\Pot_Control\Source Files</v>
+<v>Lab 5 - Final Project\Pot_Control\Source Files\main.c</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5</v>
+<v>Lab 5 - Final Project\Servo_PWM</v>
+<v>Lab 5 - Final Project\Servo_PWM\TopDesign</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\Pins</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\Analog</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\Clocks</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\Interrupts</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\DMA</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\System</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\Directives</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\Flash Security</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.cydwr\EEPROM</v>
+<v>Lab 5 - Final Project\Servo_PWM\Header Files</v>
+<v>Lab 5 - Final Project\Servo_PWM\Header Files\cyapicallbacks.h</v>
+<v>Lab 5 - Final Project\Servo_PWM\Source Files</v>
+<v>Lab 5 - Final Project\Servo_PWM\Source Files\main.c</v>
+<v>Lab 5 - Final Project\Servo_PWM\Generated_Source</v>
+<v>Lab 5 - Final Project\Servo_PWM\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Directives</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\Flash Security</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.cydwr\EEPROM</v>
+<v>Lab 5 - Final Project\Pot_Control\Header Files</v>
+<v>Lab 5 - Final Project\Pot_Control\Header Files\cyapicallbacks.h</v>
+<v>Lab 5 - Final Project\Pot_Control\Source Files</v>
+<v>Lab 5 - Final Project\Pot_Control\Source Files\main.c</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\A</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_DelSig_1</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_DelSig_1_AMux</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_DelSig_1_Ext_CP_Clk</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_DelSig_1_IRQ</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_SAR_2</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\ADC_SAR_2_IRQ</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\B</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\C</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\CapSense_CSD</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\CapSense_CSD_AMuxCH0</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\CapSense_CSD_CompCH0</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\CapSense_CSD_IdacCH0</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\CapSense_CSD_IntClock</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\Clock_1</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\Clock_2</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\cy_boot</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\D</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\LCD_Char_1</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\LCD_Char_1_LCDPort</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\Potentiometer_1</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\Potentiometer_2</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\Potentiometer_3</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\PWM_1</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\PWM_2</v>
+<v>Lab 5 - Final Project\Pot_Control\Generated_Source\PSoC5\PWM_3</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\TopDesign</v>
+<v>Lab 5 - Final Project\Pot_Control\TopDesign\TopDesign.cysch</v>
+<v>Lab 5 - Final Project\Servo_PWM</v>
+<v>Lab 5 - Final Project\Servo_PWM\TopDesign</v>
+<v>Lab 5 - Final Project\Servo_PWM\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\TopDesign</v>
+<v>Lab 5 - Final Project\Pot_Control\TopDesign\TopDesign.cysch</v>
+<v>Lab 5 - Final Project\Servo_PWM</v>
+<v>Lab 5 - Final Project\Servo_PWM\TopDesign</v>
+<v>Lab 5 - Final Project\Servo_PWM\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\A.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_AMux.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_Ext_CP_Clk.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_IRQ.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\B.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\C.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_AMuxCH0.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_CompCH0.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_CompCH0_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_CSHL.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_IdacCH0.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_IdacCH0_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_IntClock.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_Pins.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_SMS_Wrapper.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_TunerHelper.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\D.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_Char_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_Char_1_LCDPort.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_Char_1_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Potentiometer_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Potentiometer_2.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Potentiometer_3.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo2.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo3.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Pot_Control.elf</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Pot_Control.hex</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Pot_Control.map</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.gpdsc</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control.rpt</v>
+<v>Lab 5 - Final Project\Pot_Control\Pot_Control_timing.html</v>
+<v>Lab 5 - Final Project\Servo_PWM</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo1.lst</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Servo_PWM.elf</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Servo_PWM.hex</v>
+<v>Lab 5 - Final Project\Servo_PWM\CortexM3\ARM_GCC_541\Debug\Servo_PWM.map</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.gpdsc</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM.rpt</v>
+<v>Lab 5 - Final Project\Servo_PWM\Servo_PWM_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\A.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_AMux.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_Ext_CP_Clk.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_IRQ.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\B.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\C.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_AMuxCH0.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_CompCH0.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_CompCH0_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_CSHL.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_IdacCH0.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_IdacCH0_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_INT.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_IntClock.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_Pins.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_PM.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_SMS_Wrapper.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\CapSense_CSD_TunerHelper.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Lab 5 - Final Project\Pot_Control\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\PSoC 5LP Architecture TRM</v>
+<v>Lab 5 - Final Project\Pot_Control\CY8C58LP Family Datasheet</v>
+<v>Lab 5 - Final Project\Pot_Control\System Reference Guides</v>
+<v>Lab 5 - Final Project\Pot_Control\System Reference Guides\cy_boot_v5_80</v>
+<v>Lab 5 - Final Project\Pot_Control\ADC_DelSig_v3_30.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\ADC_SAR_v3_10</v>
+<v>Lab 5 - Final Project\Pot_Control\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\CapSense_CSD_v3_50.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\CharLCD_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_clock_v2_20</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_pins_v2_20</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\PWM_v3_30</v>
+<v>Lab 5 - Final Project\Pot_Control\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Lab 5 - Final Project\Servo_PWM</v>
+<v>Lab 5 - Final Project\Servo_PWM\PSoC 5LP Architecture TRM</v>
+<v>Lab 5 - Final Project\Servo_PWM\CY8C58LP Family Datasheet</v>
+<v>Lab 5 - Final Project\Servo_PWM\System Reference Guides</v>
+<v>Lab 5 - Final Project\Servo_PWM\System Reference Guides\cy_boot_v5_70</v>
+<v>Lab 5 - Final Project\Servo_PWM\cy_clock_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Servo_PWM\cy_pins_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Servo_PWM\PWM_v3_30.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Lab 5 - Final Project</v>
+<v>Lab 5 - Final Project\Pot_Control</v>
+<v>Lab 5 - Final Project\Pot_Control\PSoC 5LP Architecture TRM</v>
+<v>Lab 5 - Final Project\Pot_Control\CY8C58LP Family Datasheet</v>
+<v>Lab 5 - Final Project\Pot_Control\System Reference Guides</v>
+<v>Lab 5 - Final Project\Pot_Control\System Reference Guides\cy_boot_v5_80</v>
+<v>Lab 5 - Final Project\Pot_Control\ADC_DelSig_v3_30.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\ADC_SAR_v3_10</v>
+<v>Lab 5 - Final Project\Pot_Control\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\CapSense_CSD_v3_50.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\CharLCD_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_clock_v2_20</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_pins_v2_20</v>
+<v>Lab 5 - Final Project\Pot_Control\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Pot_Control\PWM_v3_30</v>
+<v>Lab 5 - Final Project\Pot_Control\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Lab 5 - Final Project\Servo_PWM</v>
+<v>Lab 5 - Final Project\Servo_PWM\PSoC 5LP Architecture TRM</v>
+<v>Lab 5 - Final Project\Servo_PWM\CY8C58LP Family Datasheet</v>
+<v>Lab 5 - Final Project\Servo_PWM\System Reference Guides</v>
+<v>Lab 5 - Final Project\Servo_PWM\System Reference Guides\cy_boot_v5_70</v>
+<v>Lab 5 - Final Project\Servo_PWM\cy_clock_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Servo_PWM\cy_pins_v2_20.pdf</v>
+<v>Lab 5 - Final Project\Servo_PWM\PWM_v3_30.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Pot_Control.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Pot_Control.cydsn\Pot_Control.cydwr" />
+<name v=".\Pot_Control.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1004, 544" SelectedTabbedMdiWindow="c53c9b92-c368-421d-b58d-0afb643f493d"><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Lab 5 - Final Project\Pot_Control.cydsn\TopDesign\TopDesign.cysch" Guid="72a12bef-8ebe-441c-9a1b-10a481e8f345" /><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Lab 5 - Final Project\Pot_Control.cydsn\Pot_Control.cydwr" Guid="f46eae81-324b-4165-b4cd-10033aec97a3" /><DocumentWindow Key="C:\Users\sinow\Documents\PSoC Creator\Lab 5 - Final Project\Pot_Control.cydsn\main.c" Guid="c53c9b92-c368-421d-b58d-0afb643f493d" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="3da0a786-3890-485f-a8a8-b83e58ab1387" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

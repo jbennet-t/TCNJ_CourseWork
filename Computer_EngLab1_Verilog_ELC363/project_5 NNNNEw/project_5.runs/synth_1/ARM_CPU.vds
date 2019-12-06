@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec  3 21:59:53 2019
+# Process ID: 11860
+# Current directory: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.runs/synth_1
+# Command line: vivado.exe -log ARM_CPU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARM_CPU.tcl
+# Log file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.runs/synth_1/ARM_CPU.vds
+# Journal file: C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ARM_CPU.tcl -notrace
+Command: synth_design -top ARM_CPU -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15664 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 470.281 ; gain = 175.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ARM_CPU' [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:238]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:228]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:455]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:475]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (1#1) [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:455]
+ERROR: [Synth 8-434] mixed level sensitive and edge triggered event controls are not supported for synthesis [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:292]
+ERROR: [Synth 8-6156] failed synthesizing module 'ARM_CPU' [C:/Users/sinow/Documents/ELC363-Lab/project_5 NNNNEw/project_5.srcs/sources_1/new/ARM_CPU.v:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 533.805 ; gain = 239.098
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  3 22:00:12 2019...

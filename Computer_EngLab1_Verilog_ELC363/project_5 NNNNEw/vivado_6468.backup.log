@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Dec  3 21:53:54 2019
+# Process ID: 6468
+# Current directory: H:/ELC 363/project_5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9496 H:\ELC 363\project_5\project_5.xpr
+# Log file: H:/ELC 363/project_5/vivado.log
+# Journal file: H:/ELC 363/project_5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {H:/ELC 363/project_5/project_5.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.

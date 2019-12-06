@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CPU_TEST_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CPU_TEST" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="3055917fs"></ZoomEndTime>
+      <Cursor1Time time="9014000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="183"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/CPU_TEST/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/instructionOut" type="array">
+      <obj_property name="ElementShortName">instructionOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instructionOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/instructionPC" type="array">
+      <obj_property name="ElementShortName">instructionPC[63:0]</obj_property>
+      <obj_property name="ObjectShortName">instructionPC[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Read_Reg1" type="array">
+      <obj_property name="ElementShortName">Read_Reg1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Read_Reg1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Read_Reg2" type="array">
+      <obj_property name="ElementShortName">Read_Reg2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Read_Reg2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Write_Reg" type="array">
+      <obj_property name="ElementShortName">Write_Reg[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Write_Reg[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Write_RegData" type="array">
+      <obj_property name="ElementShortName">Write_RegData[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Write_RegData[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Reg_Data1" type="array">
+      <obj_property name="ElementShortName">Reg_Data1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_Data1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Reg_Data2" type="array">
+      <obj_property name="ElementShortName">Reg_Data2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_Data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/data_mem_out" type="array">
+      <obj_property name="ElementShortName">data_mem_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data_mem_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/ALU_Output" type="array">
+      <obj_property name="ElementShortName">ALU_Output[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_Output[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Reg2Loc_C" type="logic">
+      <obj_property name="ElementShortName">Reg2Loc_C</obj_property>
+      <obj_property name="ObjectShortName">Reg2Loc_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/RegWrite_C" type="logic">
+      <obj_property name="ElementShortName">RegWrite_C</obj_property>
+      <obj_property name="ObjectShortName">RegWrite_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/MemRead_C" type="logic">
+      <obj_property name="ElementShortName">MemRead_C</obj_property>
+      <obj_property name="ObjectShortName">MemRead_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/MemWrite_C" type="logic">
+      <obj_property name="ElementShortName">MemWrite_C</obj_property>
+      <obj_property name="ObjectShortName">MemWrite_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/Branch_C" type="logic">
+      <obj_property name="ElementShortName">Branch_C</obj_property>
+      <obj_property name="ObjectShortName">Branch_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/uut/jump_C" type="logic">
+      <obj_property name="ElementShortName">jump_C</obj_property>
+      <obj_property name="ObjectShortName">jump_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/uut/ALU_Src_C" type="logic">
+      <obj_property name="ElementShortName">ALU_Src_C</obj_property>
+      <obj_property name="ObjectShortName">ALU_Src_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/uut/MemToReg_C" type="logic">
+      <obj_property name="ElementShortName">MemToReg_C</obj_property>
+      <obj_property name="ObjectShortName">MemToReg_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TEST/uut/aluResult/Zero_Flag" type="logic">
+      <obj_property name="ElementShortName">Zero_Flag</obj_property>
+      <obj_property name="ObjectShortName">Zero_Flag</obj_property>
+   </wvobject>
+</wave_config>
