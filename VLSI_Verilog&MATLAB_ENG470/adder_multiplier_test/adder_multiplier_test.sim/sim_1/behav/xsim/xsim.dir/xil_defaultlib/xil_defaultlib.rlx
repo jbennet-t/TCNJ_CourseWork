@@ -1,0 +1,8 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/sinow/Documents/VLSI/adder_multiplier_test/adder_multiplier_test.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/sinow/Documents/VLSI/adder_multiplier_test/adder_multiplier_test.srcs/sim_1/new/add_mul_tb.v,1600453836,verilog,,,,add_mul_tb,,,,,,,,
+C:/Users/sinow/Documents/VLSI/adder_multiplier_test/adder_multiplier_test.srcs/sources_1/new/adder.v,1600453919,verilog,,C:/Users/sinow/Documents/VLSI/adder_multiplier_test/adder_multiplier_test.srcs/sources_1/new/mult.v,,adder,,,,,,,,
+C:/Users/sinow/Documents/VLSI/adder_multiplier_test/adder_multiplier_test.srcs/sources_1/new/mult.v,1600453300,verilog,,C:/Users/sinow/Documents/VLSI/adder_multiplier_test/adder_multiplier_test.srcs/sim_1/new/add_mul_tb.v,,mult,,,,,,,,

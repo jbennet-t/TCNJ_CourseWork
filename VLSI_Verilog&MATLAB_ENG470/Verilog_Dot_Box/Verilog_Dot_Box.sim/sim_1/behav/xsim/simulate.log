@@ -1,0 +1,72 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: file C:UserssinowDocumentsVLSIscriptsdot_box_stim_resp_2 could not be opened
+Couldn't open file for read
+$finish called at time : 0 fs : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 48
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 150 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 270 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 390 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 510 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 630 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 750 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 870 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 990 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 1110 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118
+checking 32 
+checking 16
+
+ERROR: File descriptor (0) passed to $fgets in file C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv at line 113 is not valid.
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 1230 ns : File "C:/Users/sinow/Documents/VLSI/Verilog_Dot_Box/project1_tb.sv" Line 118

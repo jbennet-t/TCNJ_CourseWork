@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../DC_Removal.srcs/sources_1/new/DCR.sv" \
+"../../../../DC_Removal.srcs/sim_1/new/DCR_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

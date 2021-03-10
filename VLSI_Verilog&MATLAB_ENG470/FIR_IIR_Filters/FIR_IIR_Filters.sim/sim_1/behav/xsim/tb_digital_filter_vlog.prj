@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../FIR_IIR_Filters.srcs/sources_1/new/direct_form_2.sv" \
+"../../../../FIR_IIR_Filters.srcs/sources_1/new/sig_flow_graph.sv" \
+"../../../../tb_df1.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

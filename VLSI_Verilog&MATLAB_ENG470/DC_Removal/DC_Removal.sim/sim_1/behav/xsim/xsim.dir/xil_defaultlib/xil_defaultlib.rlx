@@ -1,0 +1,7 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/sinow/Documents/VLSI/DC_Removal/DC_Removal.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/sinow/Documents/VLSI/DC_Removal/DC_Removal.srcs/sim_1/new/DCR_tb.sv,1605242389,systemVerilog,,,,DCR_tb;math_pkg,,,,,,,,
+C:/Users/sinow/Documents/VLSI/DC_Removal/DC_Removal.srcs/sources_1/new/DCR.sv,1605289083,systemVerilog,,C:/Users/sinow/Documents/VLSI/DC_Removal/DC_Removal.srcs/sim_1/new/DCR_tb.sv,,DCR;prod;round;saturate;sum_A;sum_B;unit_delay,,,,,,,,

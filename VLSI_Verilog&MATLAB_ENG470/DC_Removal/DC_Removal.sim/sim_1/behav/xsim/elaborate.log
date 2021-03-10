@@ -1,0 +1,21 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 8746d8116bd14e549f32064dba89eacf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DCR_tb_behav xil_defaultlib.DCR_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 18 for port 'DCR_DATA_IN' [C:/Users/sinow/Documents/VLSI/DC_Removal/DC_Removal.srcs/sim_1/new/DCR_tb.sv:106]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.math_pkg
+Compiling module xil_defaultlib.sum_A
+Compiling module xil_defaultlib.saturate
+Compiling module xil_defaultlib.unit_delay
+Compiling module xil_defaultlib.prod
+Compiling module xil_defaultlib.round
+Compiling module xil_defaultlib.sum_B
+Compiling module xil_defaultlib.DCR
+Compiling module xil_defaultlib.DCR_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DCR_tb_behav

@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+***** ----> PASS <---- ***** !!!
+
+$finish called at time : 3790330 ns : File "C:/Users/sinow/Documents/VLSI/SoundEffectBoard_VLSI/SoundEffectBoard_VLSI.srcs/sim_1/new/distortion_tb.v" Line 69

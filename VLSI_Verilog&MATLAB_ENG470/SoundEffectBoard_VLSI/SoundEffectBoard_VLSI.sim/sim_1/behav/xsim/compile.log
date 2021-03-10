@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/sinow/Documents/VLSI/SoundEffectBoard_VLSI/SoundEffectBoard_VLSI.srcs/sources_1/new/distortion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module distortion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/sinow/Documents/VLSI/SoundEffectBoard_VLSI/SoundEffectBoard_VLSI.srcs/sim_1/new/distortion_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module distortion_tb

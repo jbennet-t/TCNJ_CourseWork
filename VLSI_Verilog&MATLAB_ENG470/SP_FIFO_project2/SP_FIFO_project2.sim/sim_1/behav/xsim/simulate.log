@@ -1,0 +1,6 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+*** PASS ***
+Correctly matched  10000 elements
+Efficiency =  99.91%
+$finish called at time : 1001025 ns : File "C:/Users/sinow/Documents/VLSI/SP_FIFO_project2/SP_FIFO_project2.srcs/sim_1/new/tb.sv" Line 110
