@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8bb3ded6-3092-463c-9f62-332b8bfd90d1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="DA1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1X53LP4dAbywsuGEZWyUSt5IPZ2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HackTCNJ2020" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="DA1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="images" type="PythonConfigurationType" factoryName="Python">
+      <module name="DA1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\sinow\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fm_images.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bb3ded6-3092-463c-9f62-332b8bfd90d1" name="Default Changelist" comment="" />
+      <created>1580322072310</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580322072310</updated>
+      <workItem from="1580322079636" duration="1419000" />
+      <workItem from="1580323884719" duration="5062000" />
+      <workItem from="1580346321082" duration="2629000" />
+      <workItem from="1580404762745" duration="3175000" />
+      <workItem from="1580431782360" duration="5167000" />
+      <workItem from="1580482286806" duration="635000" />
+      <workItem from="1580484806765" duration="600000" />
+      <workItem from="1581471308696" duration="333000" />
+      <workItem from="1581627412573" duration="224000" />
+      <workItem from="1582996030488" duration="247000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="264" y="88" width="1089" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580435431465">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state x="264" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/82.0.1454.864/1982.0.1538.900@82.0.1454.864" timestamp="1580435431465" />
+    <state x="264" y="88" width="1089" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/82.0.1454.864@82.0.1454.864" timestamp="1580323544786" />
+    <state x="589" y="197" key="FileChooserDialogImpl" timestamp="1582996273754">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state x="589" y="197" key="FileChooserDialogImpl/82.0.1454.864/1982.0.1538.900@82.0.1454.864" timestamp="1580435429551" />
+    <state x="589" y="197" key="FileChooserDialogImpl/82.0.1454.864@82.0.1454.864" timestamp="1582996273754" />
+    <state x="318" y="76" key="SettingsEditor" timestamp="1580435750078">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state x="318" y="76" key="SettingsEditor/82.0.1454.864/1982.0.1538.900@82.0.1454.864" timestamp="1580435750078" />
+    <state x="318" y="76" key="SettingsEditor/82.0.1454.864@82.0.1454.864" timestamp="1580324589818" />
+    <state x="511" y="258" key="com.intellij.ide.util.TipDialog" timestamp="1582996230896">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state x="511" y="258" key="com.intellij.ide.util.TipDialog/82.0.1454.864/1982.0.1538.900@82.0.1454.864" timestamp="1580431783624" />
+    <state x="511" y="258" key="com.intellij.ide.util.TipDialog/82.0.1454.864@82.0.1454.864" timestamp="1582996230896" />
+  </component>
+</project>
